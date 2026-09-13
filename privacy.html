@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Privacy Policy | YOVIRA</title>
+
+  <meta name="description"
+        content="YOVIRA Privacy Policy explaining how information is collected, used and protected.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --ivory: #F7F3EC;
+      --champagne: #C9B38A;
+      --charcoal: #252525;
+      --taupe: #8A7A62;
+      --beige: #EEE8DE;
+      --border: #D8D1C5;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247,243,236,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1250px;
+      margin: auto;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .shop-btn {
+      border: 1px solid var(--charcoal);
+      padding: 10px 18px;
+    }
+
+    /* HERO */
+
+    .hero {
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      padding: 100px 30px 80px;
+    }
+
+    .eyebrow {
+      color: var(--taupe);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(55px, 8vw, 90px);
+      font-weight: 500;
+      line-height: .95;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      color: #666;
+      font-size: 13px;
+    }
+
+    /* CONTENT */
+
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 0 30px 110px;
+    }
+
+    .notice {
+      background: var(--beige);
+      padding: 25px 30px;
+      margin-bottom: 55px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .content section {
+      margin-bottom: 55px;
+    }
+
+    .content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .content h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 27px;
+      font-weight: 500;
+      margin: 25px 0 10px;
+    }
+
+    .content p {
+      color: #5f5f5f;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .content ul {
+      margin: 15px 0 20px 22px;
+      color: #5f5f5f;
+      font-size: 13px;
+    }
+
+    .content li {
+      margin-bottom: 8px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #1c1c1c;
+      color: #ddd;
+      padding: 60px 30px 30px;
+    }
+
+    .footer-inner {
+      max-width: 1250px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 50px;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      letter-spacing: 5px;
+      margin-bottom: 15px;
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: #aaa;
+      max-width: 300px;
+    }
+
+    .footer-column h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--champagne);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #bbb;
+      text-decoration: none;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .copyright {
+      max-width: 1250px;
+      margin: auto;
+      border-top: 1px solid #383838;
+      padding-top: 25px;
+      color: #777;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 800px) {
+
+      .nav {
+        padding: 17px 20px;
+      }
+
+      .logo {
+        font-size: 28px;
+      }
+
+      .nav-links {
+        gap: 12px;
+        font-size: 9px;
+      }
+
+      .nav-links a:nth-child(2),
+      .nav-links a:nth-child(3) {
+        display: none;
+      }
+
+      .shop-btn {
+        padding: 8px 12px;
+      }
+
+      .hero {
+        padding: 75px 20px 60px;
+      }
+
+      .content {
+        padding: 0 20px 80px;
+      }
+
+      .content h2 {
+        font-size: 34px;
+      }
+
+      .content h3 {
+        font-size: 25px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+      }
+
+      .footer-inner > div:first-child {
+        grid-column: 1 / -1;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <nav class="nav">
+
+    <a href="index.html" class="logo">
+      YOVIRA
+    </a>
+
+    <div class="nav-links">
+
+      <a href="planners.html">Planners</a>
+
+      <a href="wedding-planners.html">Wedding</a>
+
+      <a href="about.html">Our Story</a>
+
+      <a href="contact.html">Contact</a>
+
+      <a href="planners.html" class="shop-btn">
+        Shop
+      </a>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+<main>
+
+  <section class="hero">
+
+    <div class="eyebrow">
+      YOVIRA Legal
+    </div>
+
+    <h1>
+      Privacy<br>Policy
+    </h1>
+
+    <p>
+      Last updated: September 2026
+    </p>
+
+  </section>
+
+
+  <div class="content">
+
+    <div class="notice">
+
+      <strong>Important:</strong>
+      This is a general website privacy-policy template.
+      Before launching paid sales, have the final policy reviewed
+      for the laws and payment providers applicable to your business.
+
+    </div>
+
+
+    <section>
+
+      <h2>1. Introduction</h2>
+
+      <p>
+        YOVIRA ("we", "us", "our") respects your privacy and is
+        committed to protecting the information you provide when
+        using our website and purchasing our digital products.
+      </p>
+
+      <p>
+        This Privacy Policy explains what information we may collect,
+        how we use it, how it may be shared, and the choices available
+        to you.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>2. Information We Collect</h2>
+
+      <p>
+        Depending on how you interact with YOVIRA, we may collect
+        information such as:
+      </p>
+
+      <ul>
+
+        <li>
+          Name and email address.
+        </li>
+
+        <li>
+          Billing and transaction information required to process
+          purchases.
+        </li>
+
+        <li>
+          Information you provide when contacting customer support.
+        </li>
+
+        <li>
+          Information relating to products you purchase.
+        </li>
+
+        <li>
+          Basic technical information such as browser type,
+          device information and website usage data.
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>3. How We Use Information</h2>
+
+      <p>
+        We may use collected information to:
+      </p>
+
+      <ul>
+
+        <li>
+          Process and fulfill purchases.
+        </li>
+
+        <li>
+          Deliver purchased digital products.
+        </li>
+
+        <li>
+          Provide customer support.
+        </li>
+
+        <li>
+          Communicate with you about your order.
+        </li>
+
+        <li>
+          Improve our website, products and customer experience.
+        </li>
+
+        <li>
+          Prevent fraud, abuse and unauthorized activity.
+        </li>
+
+        <li>
+          Comply with applicable legal obligations.
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>4. Payment Information</h2>
+
+      <p>
+        Payments may be processed by third-party payment providers.
+        YOVIRA does not intend to store complete payment card
+        information on its own website.
+      </p>
+
+      <p>
+        Payment providers may collect and process information
+        according to their own privacy policies and terms.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>5. Cookies and Analytics</h2>
+
+      <p>
+        Our website may use cookies or similar technologies to
+        remember preferences, understand website usage and improve
+        website performance.
+      </p>
+
+      <p>
+        If analytics, advertising or other tracking services are
+        added to the website, additional information about those
+        services may be provided through an updated privacy notice.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>6. Email Communications</h2>
+
+      <p>
+        If you provide your email address during a purchase or
+        contact request, we may use it to communicate with you
+        about your order, support requests or important service
+        information.
+      </p>
+
+      <p>
+        Marketing communications will only be sent where permitted
+        by applicable law and may include an option to unsubscribe.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>7. Third-Party Services</h2>
+
+      <p>
+        YOVIRA may use trusted third-party services for functions
+        such as payment processing, email delivery, analytics,
+        website hosting and secure digital-product delivery.
+      </p>
+
+      <p>
+        These providers may process information according to their
+        own terms and privacy policies.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>8. Data Security</h2>
+
+      <p>
+        We take reasonable technical and organizational measures
+        to protect information against unauthorized access,
+        alteration, disclosure or destruction.
+      </p>
+
+      <p>
+        However, no internet transmission or electronic storage
+        system can be guaranteed to be completely secure.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>9. Data Retention</h2>
+
+      <p>
+        We may retain information for as long as reasonably
+        necessary to provide services, maintain transaction records,
+        resolve disputes, comply with legal obligations and protect
+        our legitimate business interests.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>10. Your Privacy Choices</h2>
+
+      <p>
+        Depending on applicable law, you may have rights relating
+        to your personal information, including rights to request
+        access, correction or deletion of certain information.
+      </p>
+
+      <p>
+        To make a privacy-related request, contact us using the
+        information provided below.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>11. Children's Privacy</h2>
+
+      <p>
+        YOVIRA products and services are not intentionally directed
+        toward children. We do not knowingly collect personal
+        information from children where prohibited by applicable law.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>12. Changes to This Policy</h2>
+
+      <p>
+        We may update this Privacy Policy from time to time to
+        reflect changes in our services, technology, legal
+        requirements or business practices.
+      </p>
+
+      <p>
+        The updated version will be posted on this page with
+        a revised "Last updated" date.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>13. Contact Us</h2>
+
+      <p>
+        If you have questions about this Privacy Policy or how
+        your information is handled, contact:
+      </p>
+
+      <p>
+        <strong>YOVIRA</strong><br>
+        Email:
+        <a href="mailto:trendorahomebuisness@gmail.com">
+          trendorahomebuisness@gmail.com
+        </a>
+      </p>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-logo">
+        YOVIRA
+      </div>
+
+      <p class="footer-tagline">
+        Beautiful planners for beautifully organized lives.
+      </p>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>Explore</h3>
+
+      <a href="planners.html">All Planners</a>
+
+      <a href="wedding-planners.html">
+        Wedding Planners
+      </a>
+
+      <a href="about.html">
+        Our Story
+      </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>Help</h3>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+      <a href="faq.html">
+        FAQ
+      </a>
+
+      <a href="privacy.html">
+        Privacy
+      </a>
+
+      <a href="terms.html">
+        Terms
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="copyright">
+
+    © 2026 YOVIRA. All rights reserved.
+
+  </div>
+
+</footer>
+
+</body>
+</html>
