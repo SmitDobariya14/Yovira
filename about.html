@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Story | YOVIRA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#F7F3EC;
+    color:#252525;
+    font-family:'Montserrat',sans-serif;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* HEADER */
+
+.header{
+    padding:22px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #D8D1C5;
+    position:sticky;
+    top:0;
+    background:rgba(247,243,236,.96);
+    backdrop-filter:blur(10px);
+    z-index:20;
+}
+
+.logo{
+    font-size:27px;
+    letter-spacing:5px;
+    font-weight:600;
+}
+
+.nav{
+    display:flex;
+    gap:30px;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.nav a:hover{
+    opacity:.55;
+}
+
+/* HERO */
+
+.hero{
+    min-height:70vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.hero-text{
+    padding:90px 10%;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.eyebrow{
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#8A7A62;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(65px,8vw,110px);
+    line-height:.85;
+    font-weight:500;
+}
+
+.hero-text p{
+    margin-top:30px;
+    max-width:500px;
+    color:#70695F;
+    font-size:14px;
+}
+
+.hero-image{
+    min-height:70vh;
+    background-image:url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1400&q=85');
+    background-size:cover;
+    background-position:center;
+}
+
+/* STORY */
+
+.story{
+    padding:120px 8%;
+    background:#EEE8DE;
+}
+
+.story-inner{
+    max-width:1000px;
+    margin:auto;
+}
+
+.story-label{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:80px;
+}
+
+.story-label h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:55px;
+    line-height:.95;
+    font-weight:500;
+}
+
+.story-copy p{
+    margin-bottom:25px;
+    color:#625D55;
+    font-size:14px;
+}
+
+.story-copy p:first-child{
+    font-family:'Cormorant Garamond',serif;
+    font-size:29px;
+    line-height:1.25;
+    color:#252525;
+}
+
+/* PHILOSOPHY */
+
+.philosophy{
+    padding:120px 7%;
+}
+
+.philosophy-header{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.philosophy-header h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:62px;
+    font-weight:500;
+}
+
+.philosophy-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:50px;
+}
+
+.philosophy-item{
+    border-top:1px solid #D8D1C5;
+    padding-top:25px;
+}
+
+.number{
+    font-family:'Cormorant Garamond',serif;
+    color:#C9B38A;
+    font-size:32px;
+}
+
+.philosophy-item h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    font-weight:500;
+    margin-top:10px;
+}
+
+.philosophy-item p{
+    margin-top:12px;
+    color:#70695F;
+    font-size:12px;
+}
+
+/* IMAGE SECTION */
+
+.image-section{
+    padding:0 6% 120px;
+}
+
+.image-section img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    display:block;
+}
+
+/* BRAND VISION */
+
+.vision{
+    background:#252525;
+    color:white;
+    padding:120px 7%;
+    text-align:center;
+}
+
+.vision .eyebrow{
+    color:#C9B38A;
+}
+
+.vision h2{
+    max-width:900px;
+    margin:auto;
+    font-family:'Cormorant Garamond',serif;
+    font-size:70px;
+    line-height:.95;
+    font-weight:500;
+}
+
+.vision p{
+    max-width:650px;
+    margin:30px auto 0;
+    color:#D8D1C5;
+    font-size:14px;
+}
+
+/* COLLECTIONS */
+
+.collections{
+    padding:120px 7%;
+}
+
+.collections-heading{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+.collections-heading h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    font-weight:500;
+}
+
+.collections-heading p{
+    max-width:650px;
+    margin:20px auto 0;
+    color:#70695F;
+    font-size:13px;
+}
+
+.collection-list{
+    max-width:1000px;
+    margin:65px auto 0;
+    border-top:1px solid #D8D1C5;
+}
+
+.collection{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 0;
+    border-bottom:1px solid #D8D1C5;
+}
+
+.collection-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:31px;
+}
+
+.collection-status{
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#8A7A62;
+}
+
+/* CTA */
+
+.cta{
+    margin:0 6% 100px;
+    padding:100px 7%;
+    background:#EEE8DE;
+    text-align:center;
+}
+
+.cta h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:62px;
+    font-weight:500;
+    line-height:.95;
+}
+
+.cta p{
+    max-width:600px;
+    margin:20px auto 0;
+    color:#70695F;
+    font-size:13px;
+}
+
+.button{
+    display:inline-block;
+    margin-top:30px;
+    background:#252525;
+    color:white;
+    padding:16px 28px;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#8A7A62;
+}
+
+/* FOOTER */
+
+footer{
+    padding:50px 6%;
+    border-top:1px solid #D8D1C5;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.footer-logo{
+    font-size:22px;
+    letter-spacing:4px;
+}
+
+.footer-links{
+    display:flex;
+    gap:25px;
+    font-size:10px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.copyright{
+    margin-top:12px;
+    font-size:9px;
+    color:#8A7A62;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .nav{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero-text{
+        padding:80px 7%;
+        min-height:55vh;
+    }
+
+    .hero-image{
+        min-height:55vh;
+    }
+
+    .story{
+        padding:80px 7%;
+    }
+
+    .story-label{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .story-label h2{
+        font-size:47px;
+    }
+
+    .philosophy{
+        padding:80px 7%;
+    }
+
+    .philosophy-header h2{
+        font-size:47px;
+    }
+
+    .philosophy-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .image-section{
+        padding:0 6% 80px;
+    }
+
+    .image-section img{
+        height:450px;
+    }
+
+    .vision{
+        padding:80px 7%;
+    }
+
+    .vision h2{
+        font-size:48px;
+    }
+
+    .collections{
+        padding:80px 7%;
+    }
+
+    .collections-heading h2{
+        font-size:47px;
+    }
+
+    .collection-name{
+        font-size:25px;
+    }
+
+    .cta{
+        margin-bottom:70px;
+        padding:75px 7%;
+    }
+
+    .cta h2{
+        font-size:47px;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header class="header">
+
+    <a href="index.html" class="logo">YOVIRA</a>
+
+    <nav class="nav">
+
+        <a href="planners.html">Planners</a>
+
+        <a href="wedding-planners.html">Wedding</a>
+
+        <a href="about.html">Our Story</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <div class="eyebrow">
+            THE YOVIRA STORY
+        </div>
+
+        <h1>
+            Beautifully
+            organized.
+        </h1>
+
+        <p>
+            YOVIRA creates thoughtfully designed digital
+            planners for people who want more clarity,
+            intention and beauty in the way they organize life.
+        </p>
+
+    </div>
+
+
+    <div class="hero-image"></div>
+
+</section>
+
+
+<!-- STORY -->
+
+<section class="story">
+
+    <div class="story-inner">
+
+        <div class="eyebrow">
+            WHY YOVIRA EXISTS
+        </div>
+
+
+        <div class="story-label">
+
+            <h2>
+                Planning shouldn't
+                feel like paperwork.
+            </h2>
+
+
+            <div class="story-copy">
+
+                <p>
+                    We believe organization can be useful
+                    without feeling cold, complicated or boring.
+                </p>
+
+                <p>
+                    Modern life comes with an endless list of
+                    things to remember, decisions to make and
+                    goals to manage. Yet many planning tools
+                    focus only on function.
+                </p>
+
+                <p>
+                    YOVIRA was created to bring something
+                    different: thoughtful tools that combine
+                    practical organization with an elevated,
+                    enjoyable experience.
+                </p>
+
+                <p>
+                    Our planners are designed to help you slow
+                    down, see what matters and move forward
+                    with greater clarity.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PHILOSOPHY -->
+
+<section class="philosophy">
+
+    <div class="philosophy-header">
+
+        <div class="eyebrow">
+            OUR PHILOSOPHY
+        </div>
+
+        <h2>
+            Three things guide everything we create.
+        </h2>
+
+    </div>
+
+
+    <div class="philosophy-grid">
+
+
+        <div class="philosophy-item">
+
+            <div class="number">01</div>
+
+            <h3>
+                Thoughtful
+            </h3>
+
+            <p>
+                Every page should have a purpose. We focus
+                on useful structures, clear decisions and
+                practical organization rather than filling
+                pages simply to increase page count.
+            </p>
+
+        </div>
+
+
+        <div class="philosophy-item">
+
+            <div class="number">02</div>
+
+            <h3>
+                Beautiful
+            </h3>
+
+            <p>
+                The tools you use regularly should be enjoyable
+                to look at. We combine editorial-inspired
+                layouts with calm, timeless aesthetics.
+            </p>
+
+        </div>
+
+
+        <div class="philosophy-item">
+
+            <div class="number">03</div>
+
+            <h3>
+                Practical
+            </h3>
+
+            <p>
+                Beautiful design means little if it doesn't
+                make life easier. Our planners are created
+                to turn ideas into organized action.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- IMAGE -->
+
+<section class="image-section">
+
+    <img
+    src="https://images.unsplash.com/photo-1456324504439-367cee3b3c4?auto=format&fit=crop&w=1600&q=85"
+    alt="Planning and organization">
+
+</section>
+
+
+<!-- VISION -->
+
+<section class="vision">
+
+    <div class="eyebrow">
+        OUR VISION
+    </div>
+
+    <h2>
+        Make organization feel like a part of living well.
+    </h2>
+
+    <p>
+        YOVIRA is being built as a collection of beautiful,
+        practical digital tools for different chapters of life —
+        from weddings and finances to goals, travel, wellness
+        and everyday planning.
+    </p>
+
+</section>
+
+
+<!-- COLLECTIONS -->
+
+<section class="collections">
+
+    <div class="collections-heading">
+
+        <div class="eyebrow">
+            WHAT'S AHEAD
+        </div>
+
+        <h2>
+            One brand.<br>
+            Many chapters of life.
+        </h2>
+
+        <p>
+            Wedding planning is where YOVIRA begins.
+            The vision is much bigger.
+        </p>
+
+    </div>
+
+
+    <div class="collection-list">
+
+
+        <div class="collection">
+
+            <div class="collection-name">
+                Wedding
+            </div>
+
+            <div class="collection-status">
+                Available Now
+            </div>
+
+        </div>
+
+
+        <div class="collection">
+
+            <div class="collection-name">
+                Life Planning
+            </div>
+
+            <div class="collection-status">
+                Coming Soon
+            </div>
+
+        </div>
+
+
+        <div class="collection">
+
+            <div class="collection-name">
+                Budget & Money
+            </div>
+
+            <div class="collection-status">
+                Coming Soon
+            </div>
+
+        </div>
+
+
+        <div class="collection">
+
+            <div class="collection-name">
+                Productivity
+            </div>
+
+            <div class="collection-status">
+                Coming Soon
+            </div>
+
+        </div>
+
+
+        <div class="collection">
+
+            <div class="collection-name">
+                Travel
+            </div>
+
+            <div class="collection-status">
+                Coming Soon
+            </div>
+
+        </div>
+
+
+        <div class="collection">
+
+            <div class="collection-name">
+                Wellness
+            </div>
+
+            <div class="collection-status">
+                Coming Soon
+            </div>
+
+        </div>
+
+
+        <div class="collection">
+
+            <div class="collection-name">
+                Goals & Growth
+            </div>
+
+            <div class="collection-status">
+                Coming Soon
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="eyebrow">
+        START WITH YOVIRA
+    </div>
+
+    <h2>
+        Plan beautifully.<br>
+        Live fully.
+    </h2>
+
+    <p>
+        Explore our planners and find the tool that fits
+        the chapter of life you're planning right now.
+    </p>
+
+    <a href="planners.html" class="button">
+        Explore Planners
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div>
+
+        <div class="footer-logo">
+            YOVIRA
+        </div>
+
+        <div class="copyright">
+            © 2026 YOVIRA. Plan beautifully. Live fully.
+        </div>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <a href="planners.html">Shop</a>
+
+        <a href="wedding-planners.html">Wedding</a>
+
+        <a href="faq.html">FAQ</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
