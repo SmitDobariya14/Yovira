@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shop Digital Planners | YOVIRA</title>
+
+<meta name="description"
+content="Explore YOVIRA's beautifully designed digital planners for weddings, life, finances, productivity, travel and more.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --ivory:#F7F3EC;
+    --cream:#EEE8DE;
+    --gold:#C9B38A;
+    --charcoal:#252525;
+    --taupe:#8A7A62;
+    --sage:#89927F;
+    --border:#D8D1C5;
+    --white:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--ivory);
+    color:var(--charcoal);
+    font-family:'Montserrat',Arial,sans-serif;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(247,243,236,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+}
+
+.nav{
+    max-width:1320px;
+    height:82px;
+    margin:auto;
+    padding:0 35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:36px;
+    font-weight:600;
+    letter-spacing:6px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+
+    font-size:11px;
+    letter-spacing:1.7px;
+    text-transform:uppercase;
+}
+
+.nav-links a:hover{
+    color:var(--taupe);
+}
+
+.shop-btn{
+    border:1px solid var(--charcoal);
+    padding:11px 18px;
+}
+
+/* HERO */
+
+.shop-hero{
+    max-width:1320px;
+    margin:auto;
+    padding:95px 35px 80px;
+    text-align:center;
+}
+
+.eyebrow{
+    color:var(--taupe);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+
+.shop-hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(58px,7vw,92px);
+    line-height:.9;
+    font-weight:500;
+    letter-spacing:-2px;
+}
+
+.shop-hero h1 em{
+    color:var(--taupe);
+    font-weight:400;
+}
+
+.shop-hero p{
+    max-width:620px;
+    margin:25px auto 0;
+    color:#6D665D;
+    font-size:14px;
+}
+
+/* CATEGORY NAV */
+
+.categories{
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    padding:0 20px;
+}
+
+.categories a{
+    padding:18px 24px;
+
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+
+    border-right:1px solid var(--border);
+
+    transition:.25s;
+}
+
+.categories a:first-child{
+    border-left:1px solid var(--border);
+}
+
+.categories a:hover,
+.categories a.active{
+    background:var(--charcoal);
+    color:white;
+}
+
+/* PRODUCT SECTION */
+
+.products{
+    max-width:1320px;
+    margin:auto;
+    padding:100px 35px 120px;
+}
+
+.section-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+
+    margin-bottom:42px;
+}
+
+.section-heading h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:55px;
+    font-weight:500;
+    line-height:1;
+}
+
+.section-heading p{
+    max-width:390px;
+    color:#706960;
+    font-size:12px;
+}
+
+/* FEATURED PRODUCT */
+
+.featured-product{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+
+    background:var(--cream);
+    margin-bottom:65px;
+}
+
+.featured-image{
+    min-height:620px;
+    overflow:hidden;
+}
+
+.featured-image img{
+    height:100%;
+    min-height:620px;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.featured-product:hover .featured-image img{
+    transform:scale(1.025);
+}
+
+.featured-info{
+    padding:65px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.featured-info .tag{
+    color:var(--taupe);
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.featured-info h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:52px;
+    line-height:.95;
+    font-weight:500;
+    margin-bottom:18px;
+}
+
+.featured-info p{
+    color:#6D665D;
+    font-size:13px;
+    line-height:1.8;
+    margin-bottom:23px;
+}
+
+.price{
+    font-family:'Cormorant Garamond',serif;
+    font-size:31px;
+    margin-bottom:25px;
+}
+
+.featured-info .button{
+    align-self:flex-start;
+}
+
+/* BUTTON */
+
+.button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:49px;
+    padding:0 25px;
+
+    background:var(--charcoal);
+    color:white;
+
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+
+    transition:.3s;
+}
+
+.button:hover{
+    background:var(--taupe);
+}
+
+/* PRODUCT GRID */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.product-card{
+    background:var(--cream);
+    overflow:hidden;
+}
+
+.product-card-image{
+    height:430px;
+    overflow:hidden;
+}
+
+.product-card-image img{
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.product-card:hover img{
+    transform:scale(1.04);
+}
+
+.product-info{
+    padding:25px;
+}
+
+.product-tag{
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--taupe);
+    margin-bottom:8px;
+}
+
+.product-info h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    font-weight:500;
+    line-height:1;
+    margin-bottom:10px;
+}
+
+.product-info p{
+    color:#706960;
+    font-size:12px;
+    max-width:450px;
+    margin-bottom:18px;
+}
+
+.product-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.product-price{
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+}
+
+.view-link{
+    font-size:9px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    border-bottom:1px solid var(--charcoal);
+}
+
+/* COMING SOON */
+
+.coming{
+    background:var(--charcoal);
+    color:white;
+
+    padding:100px 35px;
+}
+
+.coming-inner{
+    max-width:1200px;
+    margin:auto;
+}
+
+.coming-heading{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.coming-heading .eyebrow{
+    color:var(--gold);
+}
+
+.coming-heading h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    font-weight:400;
+    line-height:1;
+}
+
+.coming-heading p{
+    color:#C8C2B9;
+    font-size:12px;
+    margin-top:12px;
+}
+
+.coming-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.coming-card{
+    min-height:290px;
+    position:relative;
+    overflow:hidden;
+}
+
+.coming-card img{
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.coming-card:hover img{
+    transform:scale(1.05);
+}
+
+.coming-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.7),
+        transparent 65%
+    );
+}
+
+.coming-content{
+    position:absolute;
+    z-index:2;
+    left:20px;
+    right:20px;
+    bottom:20px;
+}
+
+.coming-content span{
+    color:var(--gold);
+    font-size:8px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.coming-content h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    font-weight:500;
+}
+
+/* PHILOSOPHY */
+
+.philosophy{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+
+    padding:120px 25px;
+}
+
+.philosophy h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    line-height:.95;
+    font-weight:500;
+}
+
+.philosophy p{
+    max-width:600px;
+    margin:25px auto 0;
+    color:#6D665D;
+    font-size:13px;
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--charcoal);
+    color:white;
+    padding:70px 35px 30px;
+}
+
+.footer-inner{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.6fr 1fr 1fr 1fr;
+    gap:50px;
+}
+
+.footer-logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:39px;
+    letter-spacing:5px;
+    margin-bottom:12px;
+}
+
+.footer-brand p{
+    max-width:310px;
+    color:#BEB8B0;
+    font-size:11px;
+}
+
+footer h4{
+    color:var(--gold);
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.footer-links a{
+    color:#D1CCC4;
+    font-size:11px;
+}
+
+.footer-links a:hover{
+    color:var(--gold);
+}
+
+.footer-bottom{
+    max-width:1200px;
+    margin:55px auto 0;
+
+    padding-top:23px;
+    border-top:1px solid #444;
+
+    display:flex;
+    justify-content:space-between;
+
+    color:#918C86;
+    font-size:9px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .nav{
+        height:70px;
+        padding:0 20px;
+    }
+
+    .logo{
+        font-size:30px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .shop-hero{
+        padding:75px 20px 65px;
+    }
+
+    .shop-hero h1{
+        font-size:62px;
+    }
+
+    .categories{
+        justify-content:flex-start;
+        overflow-x:auto;
+        flex-wrap:nowrap;
+    }
+
+    .categories a{
+        white-space:nowrap;
+        padding:16px 19px;
+    }
+
+    .products{
+        padding:75px 18px 90px;
+    }
+
+    .section-heading{
+        display:block;
+    }
+
+    .section-heading h2{
+        font-size:46px;
+        margin-bottom:15px;
+    }
+
+    .featured-product{
+        grid-template-columns:1fr;
+    }
+
+    .featured-image,
+    .featured-image img{
+        min-height:450px;
+    }
+
+    .featured-info{
+        padding:45px 28px;
+    }
+
+    .featured-info h3{
+        font-size:48px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .coming{
+        padding:80px 18px;
+    }
+
+    .coming-heading h2{
+        font-size:48px;
+    }
+
+    .coming-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .philosophy{
+        padding:90px 22px;
+    }
+
+    .philosophy h2{
+        font-size:48px;
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-brand{
+        grid-column:1/-1;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:8px;
+    }
+}
+
+@media(max-width:500px){
+
+    .shop-hero h1{
+        font-size:54px;
+    }
+
+    .coming-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr;
+    }
+
+    .footer-brand{
+        grid-column:auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<nav class="nav">
+
+<a href="index.html" class="logo">
+YOVIRA
+</a>
+
+<div class="nav-links">
+
+<a href="planners.html">
+Planners
+</a>
+
+<a href="wedding-planners.html">
+Wedding
+</a>
+
+<a href="about.html">
+Our Story
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+<a href="planners.html" class="shop-btn">
+Shop
+</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="shop-hero">
+
+<div class="eyebrow">
+The YOVIRA collection
+</div>
+
+<h1>
+Tools for a life<br>
+<em>beautifully planned.</em>
+</h1>
+
+<p>
+Thoughtfully designed digital planners that bring
+clarity, structure and intention to the moments
+that matter most.
+</p>
+
+</section>
+
+
+<!-- CATEGORY NAV -->
+
+<nav class="categories">
+
+<a href="planners.html" class="active">
+All Planners
+</a>
+
+<a href="wedding-planners.html">
+Wedding
+</a>
+
+<a href="#">
+Life
+</a>
+
+<a href="#">
+Budget
+</a>
+
+<a href="#">
+Productivity
+</a>
+
+<a href="#">
+Travel
+</a>
+
+<a href="#">
+Wellness
+</a>
+
+</nav>
+
+
+<!-- PRODUCTS -->
+
+<section class="products">
+
+<div class="section-heading">
+
+<div>
+
+<div class="eyebrow">
+Available now
+</div>
+
+<h2>
+Start your planning journey.
+</h2>
+
+</div>
+
+<p>
+Our first collection is designed for couples
+planning one of life's most meaningful celebrations.
+</p>
+
+</div>
+
+
+<!-- FEATURED -->
+
+<a href="product-ultimate.html"
+class="featured-product">
+
+<div class="featured-image">
+
+<img
+src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1400&q=85"
+alt="Ultimate Wedding Command Center"
+>
+
+</div>
+
+<div class="featured-info">
+
+<div class="tag">
+Best seller · Wedding collection
+</div>
+
+<h3>
+Ultimate Wedding<br>
+Command Center
+</h3>
+
+<p>
+A complete 100-page wedding planning system
+for budgets, guests, vendors, timelines, seating,
+décor, honeymoon planning and all the details
+in between.
+</p>
+
+<div class="price">
+$14.99
+</div>
+
+<span class="button">
+View planner
+</span>
+
+</div>
+
+</a>
+
+
+<!-- PRODUCT GRID -->
+
+<div class="product-grid">
+
+
+<a href="product-essential.html"
+class="product-card">
+
+<div class="product-card-image">
+
+<img
+src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=85"
+alt="Wedding Planning Essentials"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-tag">
+Wedding collection
+</div>
+
+<h3>
+Wedding Planning Essentials
+</h3>
+
+<p>
+A streamlined 50-page planner for couples
+who want the essentials without the overwhelm.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-price">
+$9.99
+</span>
+
+<span class="view-link">
+View planner →
+</span>
+
+</div>
+
+</div>
+
+</a>
+
+
+<!-- FUTURE PRODUCT PLACEHOLDER -->
+
+<div class="product-card">
+
+<div class="product-card-image">
+
+<img
+src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=85"
+alt="Future YOVIRA planner"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-tag">
+Coming soon
+</div>
+
+<h3>
+Your next planner
+</h3>
+
+<p>
+New YOVIRA planning systems are
+currently being created.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-price">
+Soon
+</span>
+
+<span class="view-link">
+Stay tuned
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FUTURE COLLECTION -->
+
+<section class="coming">
+
+<div class="coming-inner">
+
+<div class="coming-heading">
+
+<div class="eyebrow">
+The future of YOVIRA
+</div>
+
+<h2>
+More ways to plan beautifully.
+</h2>
+
+<p>
+One brand. Many chapters of life.
+</p>
+
+</div>
+
+
+<div class="coming-grid">
+
+
+<div class="coming-card">
+
+<img
+src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=800&q=85"
+alt="Productivity planner"
+>
+
+<div class="coming-content">
+
+<span>
+Coming soon
+</span>
+
+<h3>
+Productivity
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="coming-card">
+
+<img
+src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=800&q=85"
+alt="Travel planner"
+>
+
+<div class="coming-content">
+
+<span>
+Coming soon
+</span>
+
+<h3>
+Travel
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="coming-card">
+
+<img
+src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=85"
+alt="Budget planner"
+>
+
+<div class="coming-content">
+
+<span>
+Coming soon
+</span>
+
+<h3>
+Money
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="coming-card">
+
+<img
+src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=85"
+alt="Wellness planner"
+>
+
+<div class="coming-content">
+
+<span>
+Coming soon
+</span>
+
+<h3>
+Wellness
+</h3>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PHILOSOPHY -->
+
+<section class="philosophy">
+
+<div class="eyebrow">
+The YOVIRA promise
+</div>
+
+<h2>
+Less overwhelm.<br>
+More intention.
+</h2>
+
+<p>
+Every YOVIRA planner is created to make planning
+clearer, calmer and more enjoyable — while looking
+beautiful enough to keep coming back to.
+</p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-inner">
+
+
+<div class="footer-brand">
+
+<div class="footer-logo">
+YOVIRA
+</div>
+
+<p>
+Beautiful digital planners for beautifully
+organized lives.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>
+Shop
+</h4>
+
+<div class="footer-links">
+
+<a href="planners.html">
+All Planners
+</a>
+
+<a href="wedding-planners.html">
+Wedding Planners
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h4>
+YOVIRA
+</h4>
+
+<div class="footer-links">
+
+<a href="about.html">
+Our Story
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+<a href="faq.html">
+FAQ
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h4>
+Help
+</h4>
+
+<div class="footer-links">
+
+<a href="refund.html">
+Refund Policy
+</a>
+
+<a href="terms.html">
+Terms
+</a>
+
+<a href="privacy.html">
+Privacy
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+© 2026 YOVIRA. All rights reserved.
+</span>
+
+<span>
+Plan beautifully · Live fully
+</span>
+
+</div>
+
+</footer>
+
+</body>
+</html>
