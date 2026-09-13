@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FAQ | YOVIRA Digital Planners</title>
+
+  <meta name="description"
+        content="Find answers to common questions about YOVIRA digital planners, purchases, downloads, printing, refunds, and support.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --ivory: #F7F3EC;
+      --champagne: #C9B38A;
+      --charcoal: #252525;
+      --taupe: #8A7A62;
+      --sage: #89927F;
+      --beige: #EEE8DE;
+      --border: #D8D1C5;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247, 243, 236, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1250px;
+      margin: auto;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--taupe);
+    }
+
+    .shop-btn {
+      border: 1px solid var(--charcoal);
+      padding: 11px 20px;
+    }
+
+    .shop-btn:hover {
+      background: var(--charcoal);
+      color: var(--white) !important;
+    }
+
+    /* HERO */
+
+    .hero {
+      max-width: 1000px;
+      margin: auto;
+      padding: 105px 30px 85px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(58px, 8vw, 100px);
+      font-weight: 500;
+      line-height: 0.95;
+      margin-bottom: 30px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #5c5c5c;
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    /* FAQ */
+
+    .faq-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 0 30px 110px;
+    }
+
+    .faq-category {
+      margin-bottom: 70px;
+    }
+
+    .category-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 500;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 24px 5px;
+      text-align: left;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--charcoal);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .faq-question span:last-child {
+      font-size: 22px;
+      font-weight: 300;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 45px 25px 5px;
+      color: #666;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-question span:last-child {
+      transform: rotate(45deg);
+    }
+
+    /* CTA */
+
+    .cta {
+      background: var(--beige);
+      padding: 85px 30px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 550px;
+      margin: 0 auto 30px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 15px 30px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: var(--taupe);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #1c1c1c;
+      color: #ddd;
+      padding: 60px 30px 30px;
+    }
+
+    .footer-inner {
+      max-width: 1250px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 50px;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      letter-spacing: 5px;
+      margin-bottom: 15px;
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: #aaa;
+      max-width: 300px;
+    }
+
+    .footer-column h3 {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--champagne);
+      margin-bottom: 18px;
+    }
+
+    .footer-column a {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 10px;
+      color: #bbb;
+    }
+
+    .footer-column a:hover {
+      color: var(--white);
+    }
+
+    .copyright {
+      max-width: 1250px;
+      margin: auto;
+      border-top: 1px solid #383838;
+      padding-top: 25px;
+      color: #777;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav {
+        padding: 17px 20px;
+      }
+
+      .logo {
+        font-size: 28px;
+      }
+
+      .nav-links {
+        gap: 12px;
+        font-size: 9px;
+      }
+
+      .nav-links a:nth-child(2),
+      .nav-links a:nth-child(3) {
+        display: none;
+      }
+
+      .shop-btn {
+        padding: 8px 12px;
+      }
+
+      .hero {
+        padding: 80px 20px 65px;
+      }
+
+      .faq-section {
+        padding: 0 20px 80px;
+      }
+
+      .category-title {
+        font-size: 36px;
+      }
+
+      .faq-question {
+        font-size: 13px;
+        padding: 20px 3px;
+      }
+
+      .faq-answer {
+        padding-right: 20px;
+      }
+
+      .cta {
+        padding: 65px 20px;
+      }
+
+      .cta h2 {
+        font-size: 42px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+      }
+
+      .footer-inner > div:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <nav class="nav">
+
+    <a href="index.html" class="logo">
+      YOVIRA
+    </a>
+
+    <div class="nav-links">
+
+      <a href="planners.html">
+        Planners
+      </a>
+
+      <a href="wedding-planners.html">
+        Wedding
+      </a>
+
+      <a href="about.html">
+        Our Story
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+      <a href="planners.html" class="shop-btn">
+        Shop
+      </a>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="eyebrow">
+      YOVIRA Help
+    </div>
+
+    <h1>
+      Frequently<br>
+      asked questions.
+    </h1>
+
+    <p>
+      Everything you need to know about YOVIRA digital planners,
+      purchases, downloads and using your planner.
+    </p>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="faq-section">
+
+
+    <!-- ABOUT PRODUCTS -->
+
+    <div class="faq-category">
+
+      <h2 class="category-title">
+        About YOVIRA Planners
+      </h2>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            What are YOVIRA planners?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          YOVIRA planners are professionally designed digital
+          planning tools created to help you organize important
+          areas of your life with more clarity and intention.
+
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            Are the planners digital or physical?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          YOVIRA planners are digital products. You receive
+          downloadable PDF files after completing your purchase.
+
+          You can use them digitally on compatible devices or
+          print the pages if you prefer a physical planning experience.
+
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            Are YOVIRA planners dated?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          Our planners are designed to be undated wherever stated
+          on the individual product page. This allows you to begin
+          planning whenever you are ready.
+
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            Can I print my planner?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          Yes. Products described as printable can be printed at home
+          or through a professional printing service.
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PURCHASE -->
+
+    <div class="faq-category">
+
+      <h2 class="category-title">
+        Purchasing
+      </h2>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            Is this a one-time purchase?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          Yes. YOVIRA planners are sold as one-time digital purchases.
+          There is no recurring subscription for the planner itself.
+
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            What happens after I purchase?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          After your payment is successfully completed, you will
+          receive access to your digital planner through the delivery
+          method shown during checkout.
+
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            Can I buy a planner as a gift?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          Digital planners can be purchased as gifts. However,
+          the buyer is responsible for providing the downloaded
+          product to the intended recipient.
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- FILES -->
+
+    <div class="faq-category">
+
+      <h2 class="category-title">
+        Files & Usage
+      </h2>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            What file format will I receive?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          Products are delivered primarily as PDF files.
+          The exact file format and features are listed on
+          each individual product page.
+
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            Can I use my planner on an iPad or tablet?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          Yes, PDF planners can generally be used with compatible
+          PDF annotation and note-taking applications on tablets.
+          Compatibility can vary depending on the application
+          you choose.
+
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            Can I share my planner with friends?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          No. Your purchase is for personal use only.
+          Please do not redistribute, resell, upload or share
+          the digital files.
+
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            Can I resell the planner?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          No. YOVIRA planners are copyrighted digital products
+          intended for personal use. Reselling or redistributing
+          the files is not permitted.
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- REFUNDS -->
+
+    <div class="faq-category">
+
+      <h2 class="category-title">
+        Orders & Support
+      </h2>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            I didn't receive my download. What should I do?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          First, check your email's spam, promotions or junk folders.
+          If you still cannot locate your download, contact YOVIRA
+          support with the email address used during purchase.
+
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            Can I get a refund?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          Because digital products can be downloaded immediately,
+          purchases are generally non-refundable once the digital
+          files have been delivered. Please review our Refund Policy
+          before purchasing.
+
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            What if I accidentally purchase the wrong planner?
+          </span>
+
+          <span>+</span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          Contact us as soon as possible with your order information.
+          We will review the situation and determine whether any
+          assistance is possible under our current policies.
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <h2>
+      Still have a question?
+    </h2>
+
+    <p>
+      We're happy to help. Send us a message and we'll get back
+      to you as soon as possible.
+    </p>
+
+    <a href="contact.html" class="cta-btn">
+      Contact YOVIRA
+    </a>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-logo">
+        YOVIRA
+      </div>
+
+      <p class="footer-tagline">
+        Beautiful planners for beautifully organized lives.
+      </p>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>Explore</h3>
+
+      <a href="planners.html">
+        All Planners
+      </a>
+
+      <a href="wedding-planners.html">
+        Wedding Planners
+      </a>
+
+      <a href="about.html">
+        Our Story
+      </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>Help</h3>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+      <a href="faq.html">
+        FAQ
+      </a>
+
+      <a href="privacy.html">
+        Privacy
+      </a>
+
+      <a href="terms.html">
+        Terms
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="copyright">
+
+    © 2026 YOVIRA. All rights reserved.
+
+  </div>
+
+</footer>
+
+
+<!-- FAQ JAVASCRIPT -->
+
+<script>
+
+  const questions =
+    document.querySelectorAll(".faq-question");
+
+  questions.forEach(function(question) {
+
+    question.addEventListener("click", function() {
+
+      const item =
+        question.parentElement;
+
+      const allItems =
+        document.querySelectorAll(".faq-item");
+
+      allItems.forEach(function(otherItem) {
+
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+        }
+
+      });
+
+      item.classList.toggle("active");
+
+    });
+
+  });
+
+</script>
+
+</body>
+</html>
