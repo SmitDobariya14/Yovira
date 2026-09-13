@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ultimate Wedding Command Center | YOVIRA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#F7F3EC;
+    color:#252525;
+    font-family:'Montserrat',sans-serif;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.header{
+    padding:22px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #D8D1C5;
+    position:sticky;
+    top:0;
+    background:rgba(247,243,236,.96);
+    backdrop-filter:blur(10px);
+    z-index:20;
+}
+
+.logo{
+    font-size:27px;
+    letter-spacing:5px;
+    font-weight:600;
+}
+
+.nav{
+    display:flex;
+    gap:30px;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.nav a:hover{
+    opacity:.55;
+}
+
+.breadcrumb{
+    padding:25px 6%;
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#8A7A62;
+}
+
+/* HERO */
+
+.hero{
+    padding:35px 6% 100px;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:80px;
+    align-items:center;
+}
+
+.visual{
+    min-height:720px;
+    position:relative;
+    overflow:hidden;
+    background:#EEE8DE;
+}
+
+.visual img{
+    width:100%;
+    height:720px;
+    object-fit:cover;
+    display:block;
+}
+
+.best{
+    position:absolute;
+    top:25px;
+    left:25px;
+    background:#252525;
+    color:white;
+    padding:11px 17px;
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.details{
+    max-width:550px;
+}
+
+.eyebrow{
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#8A7A62;
+    margin-bottom:20px;
+}
+
+.details h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(58px,6vw,90px);
+    line-height:.87;
+    font-weight:500;
+}
+
+.subtitle{
+    margin-top:25px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    color:#625D55;
+}
+
+.description{
+    margin-top:25px;
+    color:#70695F;
+    font-size:14px;
+}
+
+.price-row{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-top:30px;
+}
+
+.price{
+    font-family:'Cormorant Garamond',serif;
+    font-size:45px;
+}
+
+.value{
+    color:#8A7A62;
+    font-size:10px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    border-left:1px solid #D8D1C5;
+    padding-left:18px;
+}
+
+.buy{
+    display:block;
+    width:100%;
+    background:#252525;
+    color:white;
+    text-align:center;
+    padding:18px 25px;
+    margin-top:30px;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s;
+}
+
+.buy:hover{
+    background:#8A7A62;
+}
+
+.secure{
+    text-align:center;
+    margin-top:13px;
+    color:#8A7A62;
+    font-size:9px;
+}
+
+/* STATS */
+
+.stats{
+    border-top:1px solid #D8D1C5;
+    border-bottom:1px solid #D8D1C5;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+    padding:30px;
+    text-align:center;
+    border-right:1px solid #D8D1C5;
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat strong{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:35px;
+    font-weight:500;
+}
+
+.stat span{
+    font-size:9px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#8A7A62;
+}
+
+/* INTRO */
+
+.intro{
+    padding:110px 7%;
+    text-align:center;
+}
+
+.intro h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    line-height:.95;
+    font-weight:500;
+}
+
+.intro p{
+    max-width:680px;
+    margin:25px auto 0;
+    color:#70695F;
+    font-size:14px;
+}
+
+/* INCLUDED */
+
+.included{
+    background:#EEE8DE;
+    padding:100px 7%;
+}
+
+.heading{
+    max-width:900px;
+    margin:auto;
+    margin-bottom:60px;
+}
+
+.heading h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    font-weight:500;
+    line-height:.95;
+}
+
+.heading p{
+    margin-top:20px;
+    max-width:600px;
+    color:#70695F;
+}
+
+.categories{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:0;
+}
+
+.category{
+    padding:30px 35px 35px 0;
+    border-top:1px solid #D1C9BC;
+}
+
+.category:nth-child(even){
+    padding-left:35px;
+    border-left:1px solid #D1C9BC;
+}
+
+.category-number{
+    color:#C9B38A;
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+}
+
+.category h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    font-weight:500;
+    margin-top:8px;
+}
+
+.category p{
+    margin-top:8px;
+    font-size:12px;
+    color:#70695F;
+}
+
+/* EXPERIENCE */
+
+.experience{
+    padding:110px 7%;
+}
+
+.experience-inner{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:center;
+}
+
+.experience-image{
+    min-height:600px;
+    overflow:hidden;
+}
+
+.experience-image img{
+    width:100%;
+    height:600px;
+    object-fit:cover;
+}
+
+.experience-text h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    line-height:.95;
+    font-weight:500;
+}
+
+.experience-text p{
+    margin-top:25px;
+    color:#70695F;
+    font-size:13px;
+}
+
+.check-list{
+    margin-top:30px;
+}
+
+.check{
+    border-top:1px solid #D8D1C5;
+    padding:15px 0;
+    font-size:12px;
+}
+
+.check:last-child{
+    border-bottom:1px solid #D8D1C5;
+}
+
+/* COMPARISON */
+
+.compare{
+    padding:100px 7%;
+    background:#252525;
+    color:white;
+}
+
+.compare-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.compare-title .eyebrow{
+    color:#C9B38A;
+}
+
+.compare-title h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    font-weight:500;
+}
+
+.table{
+    max-width:900px;
+    margin:auto;
+    border-top:1px solid #666;
+}
+
+.row{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    border-bottom:1px solid #555;
+}
+
+.row div{
+    padding:18px 15px;
+    font-size:11px;
+}
+
+.row div:not(:first-child){
+    text-align:center;
+}
+
+.row.head{
+    color:#C9B38A;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.row strong{
+    font-weight:500;
+}
+
+/* FAQ */
+
+.faq{
+    padding:100px 7%;
+}
+
+.faq h2{
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    font-weight:500;
+    margin-bottom:50px;
+}
+
+.faq-list{
+    max-width:800px;
+    margin:auto;
+}
+
+details{
+    border-top:1px solid #D8D1C5;
+    padding:22px 0;
+}
+
+details:last-child{
+    border-bottom:1px solid #D8D1C5;
+}
+
+summary{
+    cursor:pointer;
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+}
+
+details p{
+    padding-top:15px;
+    color:#70695F;
+    font-size:12px;
+}
+
+/* CTA */
+
+.cta{
+    background:#EEE8DE;
+    padding:110px 7%;
+    text-align:center;
+}
+
+.cta h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:65px;
+    line-height:.95;
+    font-weight:500;
+}
+
+.cta p{
+    max-width:600px;
+    margin:20px auto;
+    color:#70695F;
+}
+
+.cta .buy{
+    max-width:400px;
+    margin:30px auto 0;
+}
+
+.back{
+    display:inline-block;
+    margin-top:25px;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    border-bottom:1px solid #252525;
+    padding-bottom:5px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:50px 6%;
+    border-top:1px solid #D8D1C5;
+    display:flex;
+    justify-content:space-between;
+}
+
+.footer-logo{
+    font-size:22px;
+    letter-spacing:4px;
+}
+
+.footer-links{
+    display:flex;
+    gap:25px;
+    font-size:10px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.copyright{
+    margin-top:12px;
+    font-size:9px;
+    color:#8A7A62;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .nav{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        gap:45px;
+        padding:20px 6% 70px;
+    }
+
+    .visual{
+        min-height:500px;
+    }
+
+    .visual img{
+        height:500px;
+    }
+
+    .details h1{
+        font-size:62px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat{
+        border-bottom:1px solid #D8D1C5;
+    }
+
+    .stat:nth-child(2){
+        border-right:none;
+    }
+
+    .intro{
+        padding:80px 7%;
+    }
+
+    .intro h2,
+    .heading h2,
+    .experience-text h2,
+    .compare-title h2,
+    .faq h2,
+    .cta h2{
+        font-size:46px;
+    }
+
+    .included{
+        padding:80px 7%;
+    }
+
+    .categories{
+        grid-template-columns:1fr;
+    }
+
+    .category:nth-child(even){
+        padding-left:0;
+        border-left:none;
+    }
+
+    .category{
+        padding:25px 0 30px;
+    }
+
+    .experience{
+        padding:80px 7%;
+    }
+
+    .experience-inner{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .experience-image{
+        min-height:450px;
+    }
+
+    .experience-image img{
+        height:450px;
+    }
+
+    .compare{
+        padding:80px 5%;
+        overflow:hidden;
+    }
+
+    .row{
+        grid-template-columns:1.4fr .8fr .8fr;
+    }
+
+    .row div{
+        padding:15px 7px;
+        font-size:9px;
+    }
+
+    .faq{
+        padding:80px 7%;
+    }
+
+    .cta{
+        padding:80px 7%;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header class="header">
+
+    <a href="index.html" class="logo">YOVIRA</a>
+
+    <nav class="nav">
+        <a href="planners.html">Planners</a>
+        <a href="wedding-planners.html">Wedding</a>
+        <a href="about.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<div class="breadcrumb">
+
+    <a href="planners.html">Planners</a>
+    &nbsp; / &nbsp;
+    <a href="wedding-planners.html">Wedding</a>
+    &nbsp; / &nbsp;
+    Ultimate
+
+</div>
+
+
+<!-- PRODUCT HERO -->
+
+<section class="hero">
+
+
+    <div class="visual">
+
+        <div class="best">
+            Best Value
+        </div>
+
+        <img
+        src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1500&q=90"
+        alt="Ultimate Wedding Command Center">
+
+    </div>
+
+
+    <div class="details">
+
+        <div class="eyebrow">
+            YOVIRA WEDDING COLLECTION
+        </div>
+
+        <h1>
+            Ultimate Wedding Command Center
+        </h1>
+
+        <div class="subtitle">
+            The complete system for planning your wedding.
+        </div>
+
+        <p class="description">
+
+            A comprehensive 100-page digital wedding planner
+            designed to bring your wedding budget, guests,
+            vendors, timeline, attire, décor and final details
+            into one organized command center.
+
+        </p>
+
+
+        <div class="price-row">
+
+            <div class="price">
+                $14.99
+            </div>
+
+            <div class="value">
+                100 Pages<br>
+                Best Value
+            </div>
+
+        </div>
+
+
+        <!-- PAYMENT WILL BE CONNECTED LATER -->
+
+        <a href="checkout.html" class="buy">
+            Get The Ultimate Planner — $14.99
+        </a>
+
+        <div class="secure">
+            Secure checkout • Digital product • No physical item shipped
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUICK FACTS -->
+
+<section class="stats">
+
+    <div class="stat">
+        <strong>100</strong>
+        <span>Pages</span>
+    </div>
+
+    <div class="stat">
+        <strong>$14.99</strong>
+        <span>One-Time Price</span>
+    </div>
+
+    <div class="stat">
+        <strong>PDF</strong>
+        <span>Digital Format</span>
+    </div>
+
+    <div class="stat">
+        <strong>∞</strong>
+        <span>Undated Use</span>
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <div class="eyebrow">
+        THE COMPLETE PLANNING SYSTEM
+    </div>
+
+    <h2>
+        Less scattered notes.<br>
+        More organized decisions.
+    </h2>
+
+    <p>
+        Wedding planning involves hundreds of small decisions.
+        YOVIRA brings them together in one structured planner
+        so you can spend less time searching for information
+        and more time enjoying the experience.
+    </p>
+
+</section>
+
+
+<!-- WHAT'S INCLUDED -->
+
+<section class="included">
+
+    <div class="heading">
+
+        <div class="eyebrow">
+            WHAT'S INCLUDED
+        </div>
+
+        <h2>
+            100 pages designed<br>
+            around the journey.
+        </h2>
+
+        <p>
+            From your first ideas to the final wedding-day
+            checklist, the Command Center gives you dedicated
+            space to organize the details that matter.
+        </p>
+
+    </div>
+
+
+    <div class="categories">
+
+
+        <div class="category">
+
+            <div class="category-number">01</div>
+
+            <h3>Vision & Inspiration</h3>
+
+            <p>
+                Define your wedding vision, gather inspiration,
+                explore ideas and keep your overall direction clear.
+            </p>
+
+        </div>
+
+
+        <div class="category">
+
+            <div class="category-number">02</div>
+
+            <h3>Budget & Finances</h3>
+
+            <p>
+                Organize your wedding budget, expenses,
+                payments and financial planning.
+            </p>
+
+        </div>
+
+
+        <div class="category">
+
+            <div class="category-number">03</div>
+
+            <h3>Guest Management</h3>
+
+            <p>
+                Keep guest details, RSVP information,
+                follow-ups and special requirements organized.
+            </p>
+
+        </div>
+
+
+        <div class="category">
+
+            <div class="category-number">04</div>
+
+            <h3>Wedding Party</h3>
+
+            <p>
+                Plan responsibilities, contacts and important
+                details for the people helping you celebrate.
+            </p>
+
+        </div>
+
+
+        <div class="category">
+
+            <div class="category-number">05</div>
+
+            <h3>Vendors & Contracts</h3>
+
+            <p>
+                Keep vendor information, questions, contracts,
+                orders and important follow-ups together.
+            </p>
+
+        </div>
+
+
+        <div class="category">
+
+            <div class="category-number">06</div>
+
+            <h3>Attire & Beauty</h3>
+
+            <p>
+                Organize wedding dress decisions, groom and
+                wedding-party attire and beauty planning.
+            </p>
+
+        </div>
+
+
+        <div class="category">
+
+            <div class="category-number">07</div>
+
+            <h3>Décor & Reception</h3>
+
+            <p>
+                Plan your ceremony and reception details,
+                layout, décor and table-setting ideas.
+            </p>
+
+        </div>
+
+
+        <div class="category">
+
+            <div class="category-number">08</div>
+
+            <h3>Photography & Video</h3>
+
+            <p>
+                Prepare questions, ideas and important
+                photography and videography details.
+            </p>
+
+        </div>
+
+
+        <div class="category">
+
+            <div class="category-number">09</div>
+
+            <h3>Timeline & Final Details</h3>
+
+            <p>
+                Organize deadlines, deliveries, final tasks
+                and your master wedding checklist.
+            </p>
+
+        </div>
+
+
+        <div class="category">
+
+            <div class="category-number">10</div>
+
+            <h3>Memories & Notes</h3>
+
+            <p>
+                Keep space for final notes, ideas and memories
+                from your wedding planning journey.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="experience">
+
+    <div class="experience-inner">
+
+
+        <div class="experience-image">
+
+            <img
+            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=85"
+            alt="Wedding celebration">
+
+        </div>
+
+
+        <div class="experience-text">
+
+            <div class="eyebrow">
+                BUILT FOR THE WHOLE JOURNEY
+            </div>
+
+            <h2>
+                One place for all the little things.
+            </h2>
+
+            <p>
+                The value of a complete planner isn't just the
+                number of pages. It's having the right place for
+                each decision when you need it.
+            </p>
+
+
+            <div class="check-list">
+
+                <div class="check">
+                    ✓ Track your wedding vision
+                </div>
+
+                <div class="check">
+                    ✓ Organize your guest list
+                </div>
+
+                <div class="check">
+                    ✓ Monitor your wedding budget
+                </div>
+
+                <div class="check">
+                    ✓ Manage vendor information
+                </div>
+
+                <div class="check">
+                    ✓ Track RSVP follow-ups
+                </div>
+
+                <div class="check">
+                    ✓ Plan attire and beauty
+                </div>
+
+                <div class="check">
+                    ✓ Organize décor and reception
+                </div>
+
+                <div class="check">
+                    ✓ Prepare final wedding details
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COMPARISON -->
+
+<section class="compare">
+
+    <div class="compare-title">
+
+        <div class="eyebrow">
+            WHICH PLANNER?
+        </div>
+
+        <h2>
+            Choose your level of planning.
+        </h2>
+
+    </div>
+
+
+    <div class="table">
+
+
+        <div class="row head">
+
+            <div>Feature</div>
+            <div>Essentials</div>
+            <div>Ultimate</div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div><strong>Pages</strong></div>
+            <div>50</div>
+            <div>100</div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div><strong>Wedding Vision</strong></div>
+            <div>✓</div>
+            <div>✓</div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div><strong>Budget Planning</strong></div>
+            <div>✓</div>
+            <div>✓</div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div><strong>Guest Planning</strong></div>
+            <div>✓</div>
+            <div>✓</div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div><strong>Vendor Planning</strong></div>
+            <div>✓</div>
+            <div>✓</div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div><strong>Detailed Trackers</strong></div>
+            <div>Basic</div>
+            <div>Expanded</div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div><strong>Final Master Checklist</strong></div>
+            <div>✓</div>
+            <div>✓</div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div><strong>Best For</strong></div>
+            <div>Simple Planning</div>
+            <div>Complete Planning</div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div><strong>Price</strong></div>
+            <div>$9.99</div>
+            <div>$14.99</div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+    <h2>
+        Questions, answered.
+    </h2>
+
+
+    <div class="faq-list">
+
+
+        <details>
+
+            <summary>
+                What do I receive?
+            </summary>
+
+            <p>
+                You receive the digital Ultimate Wedding
+                Command Center planner. It contains 100 pages
+                designed for comprehensive wedding planning.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Is this a physical product?
+            </summary>
+
+            <p>
+                No. This is a digital product. Nothing will be
+                physically shipped to you.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Can I print it?
+            </summary>
+
+            <p>
+                Yes. The planner is designed for digital use
+                and printing.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Is it dated?
+            </summary>
+
+            <p>
+                No. The planner is undated, allowing you to
+                use it whenever you begin planning your wedding.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Can I share or resell the planner?
+            </summary>
+
+            <p>
+                No. Your purchase is for personal use.
+                Redistribution, sharing and resale of the
+                finished planner are not permitted.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Will the download be available immediately?
+            </summary>
+
+            <p>
+                After successful payment, your digital delivery
+                will provide access to your purchased planner.
+            </p>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="eyebrow">
+        BEST VALUE
+    </div>
+
+    <h2>
+        Plan the details.<br>
+        Enjoy the moment.
+    </h2>
+
+    <p>
+        Give your wedding plans one beautiful home with the
+        complete YOVIRA Wedding Command Center.
+    </p>
+
+
+    <!-- PAYMENT WILL BE CONNECTED LATER -->
+
+    <a href="checkout.html" class="buy">
+        Get The Ultimate Planner — $14.99
+    </a>
+
+
+    <a href="wedding-planners.html" class="back">
+        ← Back to Wedding Planners
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div>
+
+        <div class="footer-logo">
+            YOVIRA
+        </div>
+
+        <div class="copyright">
+            © 2026 YOVIRA. Plan beautifully. Live fully.
+        </div>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <a href="planners.html">Shop</a>
+
+        <a href="about.html">Our Story</a>
+
+        <a href="faq.html">FAQ</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
