@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Planners | YOVIRA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#F7F3EC;
+    color:#252525;
+    font-family:'Montserrat',sans-serif;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.header{
+    padding:22px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #D8D1C5;
+    position:sticky;
+    top:0;
+    background:rgba(247,243,236,.96);
+    backdrop-filter:blur(10px);
+    z-index:20;
+}
+
+.logo{
+    font-size:27px;
+    letter-spacing:5px;
+    font-weight:600;
+}
+
+.nav{
+    display:flex;
+    gap:30px;
+    font-size:12px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.nav a:hover{
+    opacity:.55;
+}
+
+.hero{
+    min-height:68vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.hero-text{
+    padding:90px 9%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.eyebrow{
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#8A7A62;
+    margin-bottom:22px;
+}
+
+h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(58px,7vw,100px);
+    line-height:.88;
+    font-weight:500;
+    max-width:600px;
+}
+
+.hero-text p{
+    margin-top:30px;
+    max-width:500px;
+    color:#625D55;
+    font-size:15px;
+}
+
+.hero-image{
+    min-height:68vh;
+    background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=85');
+    background-size:cover;
+    background-position:center;
+}
+
+.intro{
+    text-align:center;
+    padding:110px 7%;
+    border-top:1px solid #D8D1C5;
+}
+
+.intro h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:55px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.intro p{
+    max-width:650px;
+    margin:auto;
+    color:#625D55;
+}
+
+.products{
+    padding:40px 6% 110px;
+}
+
+.section-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:40px;
+    border-bottom:1px solid #D8D1C5;
+    padding-bottom:18px;
+}
+
+.section-heading h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:48px;
+    font-weight:500;
+}
+
+.section-heading span{
+    font-size:11px;
+    letter-spacing:2px;
+    color:#8A7A62;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+}
+
+.product{
+    background:#EEE8DE;
+}
+
+.product-image{
+    height:520px;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .6s ease;
+}
+
+.product:hover img{
+    transform:scale(1.04);
+}
+
+.product-info{
+    padding:28px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.product-info h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    font-weight:500;
+}
+
+.product-info p{
+    margin-top:7px;
+    font-size:12px;
+    color:#70695F;
+}
+
+.price{
+    font-size:14px;
+    white-space:nowrap;
+    color:#8A7A62;
+}
+
+.button{
+    display:inline-block;
+    margin-top:20px;
+    padding:13px 22px;
+    border:1px solid #252525;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#252525;
+    color:#fff;
+}
+
+.feature{
+    margin:30px 0 110px;
+    background:#252525;
+    color:#fff;
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+}
+
+.feature-image{
+    min-height:600px;
+    background-image:url('https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1400&q=85');
+    background-size:cover;
+    background-position:center;
+}
+
+.feature-content{
+    padding:70px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.feature-content .eyebrow{
+    color:#C9B38A;
+}
+
+.feature-content h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:64px;
+    line-height:.95;
+    font-weight:500;
+}
+
+.feature-content p{
+    color:#D7D2C9;
+    margin-top:25px;
+    max-width:480px;
+}
+
+.feature .button{
+    color:#fff;
+    border-color:#fff;
+    width:max-content;
+}
+
+.why{
+    padding:100px 7%;
+    border-top:1px solid #D8D1C5;
+}
+
+.why-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.why-title h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:55px;
+    font-weight:500;
+}
+
+.values{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:50px;
+}
+
+.value{
+    border-top:1px solid #D8D1C5;
+    padding-top:20px;
+}
+
+.number{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    color:#C9B38A;
+}
+
+.value h3{
+    margin-top:15px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;
+    font-weight:500;
+}
+
+.value p{
+    margin-top:10px;
+    color:#70695F;
+    font-size:13px;
+}
+
+.cta{
+    margin:20px 6% 100px;
+    background:#EEE8DE;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.cta h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:58px;
+    font-weight:500;
+}
+
+.cta p{
+    margin:15px auto 0;
+    max-width:550px;
+    color:#70695F;
+}
+
+footer{
+    border-top:1px solid #D8D1C5;
+    padding:50px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:start;
+}
+
+.footer-logo{
+    font-size:22px;
+    letter-spacing:4px;
+}
+
+.footer-links{
+    display:flex;
+    gap:25px;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.copyright{
+    font-size:10px;
+    color:#8A7A62;
+    margin-top:15px;
+}
+
+@media(max-width:800px){
+
+    .nav{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero-text{
+        padding:80px 7%;
+        min-height:55vh;
+    }
+
+    .hero-image{
+        min-height:55vh;
+    }
+
+    .intro{
+        padding:80px 7%;
+    }
+
+    .intro h2{
+        font-size:45px;
+    }
+
+    .section-heading h2{
+        font-size:40px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-image{
+        height:430px;
+    }
+
+    .feature{
+        grid-template-columns:1fr;
+    }
+
+    .feature-image{
+        min-height:420px;
+    }
+
+    .feature-content{
+        padding:55px 30px;
+    }
+
+    .feature-content h2{
+        font-size:50px;
+    }
+
+    .values{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .cta h2{
+        font-size:45px;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">YOVIRA</a>
+
+    <nav class="nav">
+        <a href="planners.html">Planners</a>
+        <a href="wedding-planners.html">Wedding</a>
+        <a href="about.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <div class="eyebrow">YOVIRA Wedding Collection</div>
+
+        <h1>
+            Your wedding,
+            beautifully organized.
+        </h1>
+
+        <p>
+            Thoughtfully designed digital planners that bring your
+            wedding ideas, decisions, budgets and details into one
+            beautiful system.
+        </p>
+
+    </div>
+
+    <div class="hero-image"></div>
+
+</section>
+
+
+<section class="intro">
+
+    <div class="eyebrow">THE COLLECTION</div>
+
+    <h2>Plan the details.<br>Enjoy the moment.</h2>
+
+    <p>
+        From the first inspiration to the final checklist,
+        YOVIRA helps you turn wedding planning into a clear,
+        organized and enjoyable experience.
+    </p>
+
+</section>
+
+
+<section class="products">
+
+    <div class="section-heading">
+
+        <h2>Wedding Planners</h2>
+
+        <span>SHOP THE COLLECTION</span>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85"
+                alt="Wedding planning">
+
+            </div>
+
+            <div class="product-info">
+
+                <div>
+
+                    <h3>Wedding Planning Essentials</h3>
+
+                    <p>
+                        A streamlined planner for couples who
+                        want the essentials without the overwhelm.
+                    </p>
+
+                    <a href="product-essential.html" class="button">
+                        View Planner
+                    </a>
+
+                </div>
+
+                <div class="price">$9.99</div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=85"
+                alt="Luxury wedding planner">
+
+            </div>
+
+            <div class="product-info">
+
+                <div>
+
+                    <h3>Ultimate Wedding Command Center</h3>
+
+                    <p>
+                        The complete 100-page system for planning
+                        every important wedding detail.
+                    </p>
+
+                    <a href="product-ultimate.html" class="button">
+                        View Planner
+                    </a>
+
+                </div>
+
+                <div class="price">$14.99</div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="feature">
+
+    <div class="feature-image"></div>
+
+    <div class="feature-content">
+
+        <div class="eyebrow">BEST VALUE</div>
+
+        <h2>
+            The Ultimate
+            Wedding
+            Command Center
+        </h2>
+
+        <p>
+            One beautiful place for your budget, guest list,
+            vendors, timeline, ceremony, reception, attire,
+            décor, photography and final wedding checklist.
+        </p>
+
+        <a href="product-ultimate.html" class="button">
+            Explore The Planner
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="why">
+
+    <div class="why-title">
+
+        <div class="eyebrow">WHY YOVIRA</div>
+
+        <h2>Planning should feel less overwhelming.</h2>
+
+    </div>
+
+
+    <div class="values">
+
+        <div class="value">
+
+            <div class="number">01</div>
+
+            <h3>Thoughtful</h3>
+
+            <p>
+                Every section is designed around real
+                wedding-planning decisions and details.
+            </p>
+
+        </div>
+
+
+        <div class="value">
+
+            <div class="number">02</div>
+
+            <h3>Beautiful</h3>
+
+            <p>
+                Elegant layouts make planning something
+                you actually enjoy opening every day.
+            </p>
+
+        </div>
+
+
+        <div class="value">
+
+            <div class="number">03</div>
+
+            <h3>Practical</h3>
+
+            <p>
+                Checklists, trackers and worksheets help
+                turn scattered ideas into clear action.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="cta">
+
+    <div class="eyebrow">START PLANNING</div>
+
+    <h2>Your beautiful beginning starts here.</h2>
+
+    <p>
+        Choose the planner that fits your planning style
+        and take the next step with confidence.
+    </p>
+
+    <a href="planners.html" class="button">
+        View All Planners
+    </a>
+
+</section>
+
+
+<footer>
+
+    <div>
+
+        <div class="footer-logo">YOVIRA</div>
+
+        <div class="copyright">
+            © 2026 YOVIRA. Plan beautifully. Live fully.
+        </div>
+
+    </div>
+
+    <div class="footer-links">
+
+        <a href="planners.html">Shop</a>
+        <a href="about.html">Our Story</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
