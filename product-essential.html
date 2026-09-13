@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Planning Essentials | YOVIRA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#F7F3EC;
+    color:#252525;
+    font-family:'Montserrat',sans-serif;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* HEADER */
+
+.header{
+    padding:22px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #D8D1C5;
+    position:sticky;
+    top:0;
+    background:rgba(247,243,236,.96);
+    backdrop-filter:blur(10px);
+    z-index:10;
+}
+
+.logo{
+    font-size:27px;
+    letter-spacing:5px;
+    font-weight:600;
+}
+
+.nav{
+    display:flex;
+    gap:30px;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.nav a:hover{
+    opacity:.55;
+}
+
+/* BREADCRUMB */
+
+.breadcrumb{
+    padding:25px 6%;
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#8A7A62;
+}
+
+.breadcrumb a:hover{
+    color:#252525;
+}
+
+/* PRODUCT HERO */
+
+.product-hero{
+    padding:35px 6% 100px;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:80px;
+    align-items:center;
+}
+
+.product-visual{
+    background:#EEE8DE;
+    min-height:680px;
+    position:relative;
+    overflow:hidden;
+}
+
+.product-visual img{
+    width:100%;
+    height:680px;
+    object-fit:cover;
+    display:block;
+}
+
+.badge{
+    position:absolute;
+    top:25px;
+    left:25px;
+    background:#252525;
+    color:white;
+    padding:10px 15px;
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.product-details{
+    max-width:540px;
+}
+
+.eyebrow{
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#8A7A62;
+    margin-bottom:20px;
+}
+
+.product-details h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(55px,6vw,85px);
+    line-height:.9;
+    font-weight:500;
+}
+
+.subtitle{
+    margin-top:25px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:25px;
+    color:#625D55;
+}
+
+.description{
+    margin-top:25px;
+    color:#70695F;
+    font-size:14px;
+    max-width:490px;
+}
+
+.price-row{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-top:30px;
+}
+
+.price{
+    font-family:'Cormorant Garamond',serif;
+    font-size:42px;
+}
+
+.format{
+    border-left:1px solid #D8D1C5;
+    padding-left:18px;
+    font-size:10px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#8A7A62;
+}
+
+.buy-button{
+    display:block;
+    width:100%;
+    text-align:center;
+    background:#252525;
+    color:white;
+    padding:18px 25px;
+    margin-top:30px;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s;
+}
+
+.buy-button:hover{
+    background:#8A7A62;
+}
+
+.note{
+    text-align:center;
+    margin-top:13px;
+    font-size:10px;
+    color:#8A7A62;
+}
+
+/* DETAILS */
+
+.details{
+    background:#EEE8DE;
+    padding:100px 8%;
+}
+
+.details-inner{
+    max-width:1100px;
+    margin:auto;
+}
+
+.details h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:55px;
+    font-weight:500;
+    margin-bottom:50px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:0;
+}
+
+.feature{
+    border-top:1px solid #D1C9BC;
+    padding:25px 30px 35px 0;
+}
+
+.feature:nth-child(even){
+    padding-left:30px;
+    border-left:1px solid #D1C9BC;
+}
+
+.feature-number{
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    color:#C9B38A;
+}
+
+.feature h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;
+    font-weight:500;
+    margin-top:10px;
+}
+
+.feature p{
+    margin-top:8px;
+    color:#70695F;
+    font-size:12px;
+}
+
+/* WHAT'S INSIDE */
+
+.inside{
+    padding:110px 7%;
+}
+
+.inside-heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.inside-heading h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:58px;
+    font-weight:500;
+}
+
+.inside-heading p{
+    max-width:600px;
+    margin:15px auto 0;
+    color:#70695F;
+}
+
+.inside-list{
+    max-width:850px;
+    margin:auto;
+}
+
+.inside-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 0;
+    border-top:1px solid #D8D1C5;
+}
+
+.inside-item:last-child{
+    border-bottom:1px solid #D8D1C5;
+}
+
+.inside-item span:first-child{
+    font-family:'Cormorant Garamond',serif;
+    font-size:25px;
+}
+
+.inside-item span:last-child{
+    font-size:10px;
+    letter-spacing:1px;
+    color:#8A7A62;
+}
+
+/* PERFECT FOR */
+
+.perfect{
+    padding:100px 7%;
+    background:#252525;
+    color:#fff;
+    text-align:center;
+}
+
+.perfect h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:58px;
+    font-weight:500;
+}
+
+.perfect p{
+    max-width:600px;
+    margin:20px auto;
+    color:#D8D1C5;
+    font-size:13px;
+}
+
+.audience{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:35px;
+}
+
+.audience span{
+    border:1px solid #777;
+    padding:12px 18px;
+    font-size:10px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+/* FAQ */
+
+.faq{
+    padding:100px 7%;
+}
+
+.faq h2{
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:58px;
+    font-weight:500;
+    margin-bottom:50px;
+}
+
+.faq-list{
+    max-width:800px;
+    margin:auto;
+}
+
+details{
+    border-top:1px solid #D8D1C5;
+    padding:22px 0;
+}
+
+details:last-child{
+    border-bottom:1px solid #D8D1C5;
+}
+
+summary{
+    cursor:pointer;
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+}
+
+details p{
+    padding-top:15px;
+    color:#70695F;
+    font-size:12px;
+    max-width:700px;
+}
+
+/* FINAL CTA */
+
+.final-cta{
+    text-align:center;
+    padding:100px 7%;
+    background:#EEE8DE;
+}
+
+.final-cta h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    font-weight:500;
+}
+
+.final-cta p{
+    margin:15px auto;
+    max-width:550px;
+    color:#70695F;
+}
+
+.back{
+    display:inline-block;
+    margin-top:25px;
+    border-bottom:1px solid #252525;
+    padding-bottom:5px;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* FOOTER */
+
+footer{
+    padding:50px 6%;
+    border-top:1px solid #D8D1C5;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.footer-logo{
+    font-size:22px;
+    letter-spacing:4px;
+}
+
+.footer-links{
+    display:flex;
+    gap:25px;
+    font-size:10px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.copyright{
+    margin-top:12px;
+    font-size:9px;
+    color:#8A7A62;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .nav{
+        display:none;
+    }
+
+    .breadcrumb{
+        padding:20px 6%;
+    }
+
+    .product-hero{
+        grid-template-columns:1fr;
+        gap:45px;
+        padding:20px 6% 70px;
+    }
+
+    .product-visual{
+        min-height:500px;
+    }
+
+    .product-visual img{
+        height:500px;
+    }
+
+    .product-details h1{
+        font-size:60px;
+    }
+
+    .details{
+        padding:75px 7%;
+    }
+
+    .details h2,
+    .inside-heading h2,
+    .perfect h2,
+    .faq h2,
+    .final-cta h2{
+        font-size:45px;
+    }
+
+    .feature-grid{
+        grid-template-columns:1fr;
+    }
+
+    .feature:nth-child(even){
+        padding-left:0;
+        border-left:none;
+    }
+
+    .feature{
+        padding:25px 0 30px;
+    }
+
+    .inside{
+        padding:75px 7%;
+    }
+
+    .perfect{
+        padding:75px 7%;
+    }
+
+    .faq{
+        padding:75px 7%;
+    }
+
+    .final-cta{
+        padding:75px 7%;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <a href="index.html" class="logo">YOVIRA</a>
+
+    <nav class="nav">
+        <a href="planners.html">Planners</a>
+        <a href="wedding-planners.html">Wedding</a>
+        <a href="about.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<div class="breadcrumb">
+
+    <a href="planners.html">Planners</a>
+    &nbsp; / &nbsp;
+    <a href="wedding-planners.html">Wedding</a>
+    &nbsp; / &nbsp;
+    Essentials
+
+</div>
+
+
+<section class="product-hero">
+
+
+    <div class="product-visual">
+
+        <div class="badge">
+            Digital Planner
+        </div>
+
+        <img
+        src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=85"
+        alt="YOVIRA Wedding Planning Essentials">
+
+    </div>
+
+
+    <div class="product-details">
+
+        <div class="eyebrow">
+            YOVIRA WEDDING COLLECTION
+        </div>
+
+        <h1>
+            Wedding Planning Essentials
+        </h1>
+
+        <div class="subtitle">
+            Everything important. Nothing overwhelming.
+        </div>
+
+        <p class="description">
+
+            A beautifully organized 50-page digital wedding
+            planner designed to help you keep your most important
+            wedding decisions, tasks and details in one place.
+
+        </p>
+
+
+        <div class="price-row">
+
+            <div class="price">
+                $9.99
+            </div>
+
+            <div class="format">
+                Instant Digital<br>
+                Download
+            </div>
+
+        </div>
+
+
+        <!-- PAYMENT LINK WILL BE ADDED LATER -->
+
+        <a href="checkout.html" class="buy-button">
+            Get The Planner — $9.99
+        </a>
+
+        <div class="note">
+            Secure checkout • Digital product • No physical item shipped
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="details">
+
+    <div class="details-inner">
+
+        <div class="eyebrow">
+            DESIGNED FOR REAL PLANNING
+        </div>
+
+        <h2>
+            The essentials,<br>
+            beautifully organized.
+        </h2>
+
+
+        <div class="feature-grid">
+
+
+            <div class="feature">
+
+                <div class="feature-number">01</div>
+
+                <h3>Clear Planning</h3>
+
+                <p>
+                    Keep your priorities, decisions and wedding
+                    tasks organized instead of scattered across
+                    notebooks and apps.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">02</div>
+
+                <h3>Guest Organization</h3>
+
+                <p>
+                    Keep important guest information and RSVP
+                    details together in one easy-to-manage system.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">03</div>
+
+                <h3>Budget Awareness</h3>
+
+                <p>
+                    Track your wedding spending and keep your
+                    financial decisions visible throughout planning.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">04</div>
+
+                <h3>Vendor Details</h3>
+
+                <p>
+                    Keep essential vendor information and
+                    planning notes easy to find when you need them.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">05</div>
+
+                <h3>Timeline Support</h3>
+
+                <p>
+                    Organize important dates, deadlines and
+                    wedding-day tasks in a structured way.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">06</div>
+
+                <h3>Beautifully Simple</h3>
+
+                <p>
+                    A clean layout designed to make planning
+                    feel calmer, clearer and more enjoyable.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="inside">
+
+    <div class="inside-heading">
+
+        <div class="eyebrow">
+            WHAT'S INSIDE
+        </div>
+
+        <h2>
+            Your planning essentials.
+        </h2>
+
+        <p>
+            The planner is built around the areas couples
+            commonly need to keep organized while preparing
+            for their wedding.
+        </p>
+
+    </div>
+
+
+    <div class="inside-list">
+
+
+        <div class="inside-item">
+            <span>Wedding Vision & Inspiration</span>
+            <span>PLAN</span>
+        </div>
+
+
+        <div class="inside-item">
+            <span>Wedding Budget Planning</span>
+            <span>BUDGET</span>
+        </div>
+
+
+        <div class="inside-item">
+            <span>Guest List & RSVP Tracking</span>
+            <span>GUESTS</span>
+        </div>
+
+
+        <div class="inside-item">
+            <span>Wedding Party Organization</span>
+            <span>PEOPLE</span>
+        </div>
+
+
+        <div class="inside-item">
+            <span>Vendor Planning</span>
+            <span>VENDORS</span>
+        </div>
+
+
+        <div class="inside-item">
+            <span>Wedding Timeline</span>
+            <span>TIMELINE</span>
+        </div>
+
+
+        <div class="inside-item">
+            <span>Attire & Beauty Planning</span>
+            <span>STYLE</span>
+        </div>
+
+
+        <div class="inside-item">
+            <span>Final Wedding Checklist</span>
+            <span>FINAL DETAILS</span>
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<section class="perfect">
+
+    <div class="eyebrow">
+        IS IT FOR YOU?
+    </div>
+
+    <h2>
+        Made for couples<br>
+        who want clarity.
+    </h2>
+
+    <p>
+        Whether you're just getting started or already deep
+        into planning, this planner gives you a simple place
+        to bring your wedding details together.
+    </p>
+
+
+    <div class="audience">
+
+        <span>Recently Engaged</span>
+
+        <span>DIY Couples</span>
+
+        <span>Organized Planners</span>
+
+        <span>Busy Couples</span>
+
+        <span>First-Time Planners</span>
+
+    </div>
+
+</section>
+
+
+
+<section class="faq">
+
+    <h2>
+        Questions, answered.
+    </h2>
+
+
+    <div class="faq-list">
+
+
+        <details>
+
+            <summary>
+                Is this a physical planner?
+            </summary>
+
+            <p>
+                No. This is a digital product. No physical
+                item will be shipped to you.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                How will I receive my planner?
+            </summary>
+
+            <p>
+                After your purchase, you'll receive access
+                to your digital planner download.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Can I print the planner?
+            </summary>
+
+            <p>
+                Yes. The planner is designed to be suitable
+                for digital use and printing.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Is this planner dated?
+            </summary>
+
+            <p>
+                No. YOVIRA planners are designed without a
+                specific year so you can use them whenever
+                you begin planning.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Can I share the planner with someone else?
+            </summary>
+
+            <p>
+                Your purchase is for personal use. Please do
+                not redistribute, resell or share the digital
+                files.
+            </p>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+
+<section class="final-cta">
+
+    <div class="eyebrow">
+        READY TO BEGIN?
+    </div>
+
+    <h2>
+        Make planning feel simpler.
+    </h2>
+
+    <p>
+        Bring your wedding plans together and enjoy the
+        process along the way.
+    </p>
+
+
+    <a href="checkout.html" class="buy-button" style="max-width:360px;margin:30px auto 0;">
+        Get The Planner — $9.99
+    </a>
+
+
+    <a href="wedding-planners.html" class="back">
+        ← Back to Wedding Planners
+    </a>
+
+</section>
+
+
+
+<footer>
+
+    <div>
+
+        <div class="footer-logo">
+            YOVIRA
+        </div>
+
+        <div class="copyright">
+            © 2026 YOVIRA. Plan beautifully. Live fully.
+        </div>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <a href="planners.html">Shop</a>
+
+        <a href="about.html">Our Story</a>
+
+        <a href="faq.html">FAQ</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
