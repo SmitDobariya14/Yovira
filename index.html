@@ -5,30 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>YOVIRA | Plan Beautifully. Live Fully.</title>
-  <meta name="description" content="YOVIRA creates beautifully designed digital planners for weddings, life, money, productivity, travel and more.">
+  <meta name="description" content="YOVIRA creates beautifully designed digital planners for a more organized, intentional life.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
 
     :root {
-      --ivory: #F7F3EC;
-      --cream: #EEE8DE;
-      --champagne: #C9B38A;
-      --charcoal: #252525;
-      --taupe: #8A7A62;
-      --sage: #89927F;
-      --white: #FFFFFF;
-      --border: rgba(37,37,37,0.16);
+      --espresso: #211B18;
+      --espresso-soft: #302621;
+      --ivory: #F7F1E8;
+      --cream: #FFFDF9;
+      --terracotta: #A9624D;
+      --sage: #707762;
+      --gold: #C6A56B;
+      --rose: #C7A39A;
+      --taupe: #88786A;
+      --line: #D8CDBE;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -37,8 +39,9 @@
 
     body {
       background: var(--ivory);
-      color: var(--charcoal);
+      color: var(--espresso);
       font-family: "Montserrat", sans-serif;
+      font-weight: 400;
       overflow-x: hidden;
     }
 
@@ -63,20 +66,22 @@
       width: 100%;
       z-index: 20;
       color: white;
+      padding: 22px 5%;
     }
 
     .nav {
-      height: 82px;
-      padding: 0 5vw;
+      max-width: 1400px;
+      margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .logo {
-      font-size: 23px;
-      font-weight: 500;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 30px;
       letter-spacing: 8px;
+      font-weight: 600;
     }
 
     .nav-links {
@@ -89,17 +94,22 @@
     }
 
     .nav-links a {
-      opacity: 0.9;
-      transition: 0.3s;
+      opacity: .9;
+      transition: .3s;
     }
 
     .nav-links a:hover {
-      opacity: 0.6;
+      color: var(--gold);
     }
 
-    .nav-shop {
-      border: 1px solid rgba(255,255,255,0.7);
-      padding: 12px 19px;
+    .shop-btn {
+      border: 1px solid rgba(255,255,255,.65);
+      padding: 11px 20px;
+    }
+
+    .shop-btn:hover {
+      background: white;
+      color: var(--espresso);
     }
 
     /* =========================
@@ -107,114 +117,113 @@
     ========================= */
 
     .hero {
-      min-height: 760px;
-      height: 100vh;
+      min-height: 780px;
       position: relative;
       display: flex;
       align-items: flex-end;
       overflow: hidden;
+      background: var(--espresso);
     }
 
     .hero-image {
       position: absolute;
       inset: 0;
-      background-image:
+      background:
         linear-gradient(
           90deg,
-          rgba(15,15,15,0.68) 0%,
-          rgba(15,15,15,0.25) 48%,
-          rgba(15,15,15,0.05) 100%
+          rgba(20,15,13,.93) 0%,
+          rgba(20,15,13,.68) 38%,
+          rgba(20,15,13,.12) 75%
         ),
-        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=85");
-      background-size: cover;
-      background-position: center;
-      transform: scale(1.02);
+        url("https://images.unsplash.com/photo-1513159446162-54eb8bdaa79b?auto=format&fit=crop&w=1800&q=90")
+        center / cover;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
       color: white;
-      width: min(1180px, 90%);
-      margin: 0 auto;
-      padding-bottom: 85px;
+      width: 100%;
+      max-width: 1400px;
+      margin: auto;
+      padding: 0 5% 100px;
     }
 
     .eyebrow {
+      color: var(--gold);
       font-size: 10px;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 20px;
-      opacity: 0.85;
+      margin-bottom: 22px;
+      font-weight: 500;
     }
 
     .hero h1 {
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(58px, 8vw, 112px);
       font-weight: 400;
-      line-height: 0.82;
-      max-width: 760px;
-      margin-bottom: 28px;
+      font-size: clamp(64px, 8vw, 118px);
+      line-height: .82;
+      max-width: 750px;
+      letter-spacing: -2px;
     }
 
     .hero h1 em {
-      font-weight: 400;
+      color: var(--rose);
+      font-style: italic;
     }
 
-    .hero-description {
-      font-size: 13px;
-      line-height: 1.8;
+    .hero-text {
+      margin-top: 30px;
       max-width: 440px;
-      margin-bottom: 32px;
-      opacity: 0.9;
+      font-size: 13px;
+      line-height: 1.9;
+      color: rgba(255,255,255,.78);
     }
 
-    .hero-buttons {
+    .hero-actions {
       display: flex;
       gap: 12px;
+      margin-top: 32px;
       flex-wrap: wrap;
     }
 
-    .button {
+    .btn {
       display: inline-block;
-      padding: 16px 28px;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      transition: 0.3s ease;
-    }
-
-    .button-light {
-      background: white;
-      color: var(--charcoal);
-    }
-
-    .button-light:hover {
-      background: var(--champagne);
-    }
-
-    .button-outline {
-      border: 1px solid rgba(255,255,255,0.75);
-      color: white;
-    }
-
-    .button-outline:hover {
-      background: white;
-      color: var(--charcoal);
-    }
-
-    .hero-scroll {
-      position: absolute;
-      right: 5vw;
-      bottom: 38px;
-      z-index: 2;
-      color: white;
+      padding: 16px 27px;
       font-size: 9px;
-      letter-spacing: 3px;
       text-transform: uppercase;
-      writing-mode: vertical-rl;
-      opacity: 0.75;
+      letter-spacing: 2px;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: var(--terracotta);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold);
+      color: var(--espresso);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.65);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--espresso);
+    }
+
+    .hero-number {
+      position: absolute;
+      right: 5%;
+      bottom: 70px;
+      color: rgba(255,255,255,.15);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 170px;
+      line-height: .7;
     }
 
     /* =========================
@@ -222,141 +231,130 @@
     ========================= */
 
     .intro {
-      padding: 120px 6vw;
+      padding: 115px 7%;
       text-align: center;
+      background: var(--cream);
     }
 
-    .intro-label {
+    .intro-small {
+      color: var(--terracotta);
       font-size: 9px;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      color: var(--taupe);
       margin-bottom: 22px;
     }
 
     .intro h2 {
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(42px, 6vw, 76px);
+      font-size: clamp(42px, 5vw, 70px);
+      line-height: .95;
       font-weight: 400;
-      line-height: 0.95;
       max-width: 850px;
       margin: auto;
     }
 
+    .intro h2 em {
+      color: var(--sage);
+      font-style: italic;
+    }
+
     .intro p {
-      max-width: 590px;
+      max-width: 580px;
       margin: 30px auto 0;
       color: var(--taupe);
-      font-size: 13px;
+      font-size: 12px;
       line-height: 2;
     }
 
     /* =========================
-       FEATURED PRODUCT
+       FEATURED
     ========================= */
 
     .featured {
-      background: var(--cream);
-      padding: 90px 5vw;
+      padding: 110px 5%;
+      background: var(--ivory);
     }
 
     .section-heading {
+      max-width: 1400px;
+      margin: 0 auto 55px;
       display: flex;
-      justify-content: space-between;
       align-items: flex-end;
-      gap: 30px;
-      margin-bottom: 45px;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .section-label {
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--taupe);
+    .section-heading .eyebrow {
       margin-bottom: 12px;
     }
 
     .section-heading h2 {
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(42px, 5vw, 68px);
+      font-size: 58px;
       font-weight: 400;
-      line-height: 0.9;
+      line-height: .9;
     }
 
-    .view-all {
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      border-bottom: 1px solid var(--charcoal);
-      padding-bottom: 6px;
+    .section-heading p {
+      max-width: 320px;
+      color: var(--taupe);
+      font-size: 11px;
+      line-height: 1.8;
     }
 
-    .featured-grid {
+    .featured-card {
+      max-width: 1400px;
+      margin: auto;
+      background: var(--espresso);
+      color: white;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      min-height: 650px;
+      grid-template-columns: 1.1fr .9fr;
+      min-height: 570px;
     }
 
     .featured-image {
-      background-image:
-        url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=85");
-      background-size: cover;
-      background-position: center;
-      min-height: 600px;
+      min-height: 500px;
+      background:
+        linear-gradient(rgba(30,20,15,.05),rgba(30,20,15,.18)),
+        url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=90")
+        center / cover;
     }
 
     .featured-content {
-      background: var(--ivory);
-      padding: 65px;
+      padding: 70px;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-    .product-number {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 18px;
-      color: var(--champagne);
+    .featured-content .tag {
+      color: var(--gold);
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
       margin-bottom: 25px;
     }
 
     .featured-content h3 {
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(40px, 4vw, 62px);
+      font-size: 60px;
       font-weight: 400;
-      line-height: 0.92;
-      margin-bottom: 25px;
+      line-height: .9;
     }
 
     .featured-content p {
-      color: var(--taupe);
+      color: rgba(255,255,255,.68);
       font-size: 12px;
       line-height: 1.9;
-      max-width: 420px;
-      margin-bottom: 28px;
+      margin: 25px 0;
+      max-width: 390px;
     }
 
     .price {
       font-family: "Cormorant Garamond", serif;
-      font-size: 30px;
-      margin-bottom: 30px;
-    }
-
-    .dark-button {
-      display: inline-block;
-      background: var(--charcoal);
-      color: white;
-      padding: 16px 27px;
-      width: fit-content;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      transition: 0.3s;
-    }
-
-    .dark-button:hover {
-      background: var(--taupe);
+      color: var(--gold);
+      font-size: 38px;
+      margin-bottom: 25px;
     }
 
     /* =========================
@@ -364,157 +362,241 @@
     ========================= */
 
     .collections {
-      padding: 120px 5vw;
+      background: var(--cream);
+      padding: 110px 5%;
     }
 
     .collection-grid {
+      max-width: 1400px;
+      margin: auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 18px;
     }
 
-    .collection-card {
+    .collection {
+      min-height: 390px;
       position: relative;
-      min-height: 530px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 30px;
+      color: white;
+      background: var(--espresso);
+    }
+
+    .collection-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform .7s;
+    }
+
+    .collection:hover .collection-bg {
+      transform: scale(1.06);
+    }
+
+    .collection:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 30%,rgba(20,15,12,.82));
+    }
+
+    .collection-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .collection-number {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 18px;
+      color: var(--gold);
+    }
+
+    .collection h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 42px;
+      font-weight: 400;
+      margin: 6px 0;
+    }
+
+    .collection p {
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: .75;
+    }
+
+    .wedding {
+      background-image:url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .life {
+      background-image:url("https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .money {
+      background-image:url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .productivity {
+      background-image:url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .wellness {
+      background-image:url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .travel {
+      background-image:url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85");
+    }
+
+    /* =========================
+       DARK STATEMENT
+    ========================= */
+
+    .statement {
+      background: var(--espresso);
+      color: white;
+      padding: 145px 7%;
+      text-align: center;
+      position: relative;
       overflow: hidden;
     }
 
-    .collection-card img {
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.7s ease;
-    }
-
-    .collection-card:hover img {
-      transform: scale(1.04);
-    }
-
-    .collection-overlay {
+    .statement:before {
+      content: "Y";
       position: absolute;
-      inset: 0;
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      color: white;
-      background: linear-gradient(
-        transparent 35%,
-        rgba(0,0,0,0.68)
-      );
-    }
-
-    .collection-status {
-      font-size: 8px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 9px;
-      opacity: 0.8;
-    }
-
-    .collection-overlay h3 {
       font-family: "Cormorant Garamond", serif;
-      font-size: 43px;
-      font-weight: 400;
-      margin-bottom: 8px;
+      font-size: 520px;
+      color: rgba(255,255,255,.025);
+      right: -80px;
+      top: -180px;
     }
 
-    .collection-overlay p {
-      font-size: 10px;
-      line-height: 1.6;
-      max-width: 280px;
-      opacity: 0.85;
+    .statement h2 {
+      position: relative;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(54px,7vw,100px);
+      line-height: .82;
+      font-weight: 400;
+    }
+
+    .statement h2 span {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .statement p {
+      position: relative;
+      max-width: 500px;
+      margin: 35px auto 0;
+      font-size: 12px;
+      line-height: 1.9;
+      color: rgba(255,255,255,.6);
     }
 
     /* =========================
-       PHILOSOPHY
+       VALUES
     ========================= */
 
-    .philosophy {
-      background: var(--charcoal);
-      color: white;
-      padding: 130px 6vw;
+    .values {
+      padding: 110px 5%;
+      background: var(--ivory);
+    }
+
+    .values-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .value {
+      background: var(--ivory);
+      padding: 55px 35px;
       text-align: center;
     }
 
-    .philosophy-label {
-      color: var(--champagne);
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 25px;
-    }
-
-    .philosophy h2 {
+    .value-icon {
+      width: 45px;
+      height: 45px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      margin: 0 auto 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--terracotta);
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(48px, 7vw, 88px);
-      font-weight: 400;
-      line-height: 0.9;
-      max-width: 850px;
-      margin: auto;
+      font-size: 21px;
     }
 
-    .philosophy p {
-      max-width: 560px;
-      margin: 30px auto 0;
-      color: rgba(255,255,255,0.65);
-      font-size: 12px;
-      line-height: 2;
+    .value h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .value p {
+      font-size: 10px;
+      color: var(--taupe);
+      line-height: 1.8;
     }
 
     /* =========================
-       FUTURE
+       ABOUT CTA
     ========================= */
 
-    .future {
-      padding: 120px 5vw;
+    .about {
+      padding: 110px 5%;
+      background: var(--cream);
     }
 
-    .future-layout {
+    .about-grid {
+      max-width: 1400px;
+      margin: auto;
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
+      grid-template-columns: .9fr 1.1fr;
       gap: 80px;
       align-items: center;
     }
 
-    .future-text h2 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(48px, 6vw, 76px);
-      font-weight: 400;
-      line-height: 0.9;
-      margin-bottom: 25px;
+    .about-image {
+      height: 580px;
+      background:
+        url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1100&q=90")
+        center / cover;
     }
 
-    .future-text p {
+    .about-content .eyebrow {
+      color: var(--terracotta);
+    }
+
+    .about-content h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 65px;
+      font-weight: 400;
+      line-height: .88;
+      margin-bottom: 28px;
+    }
+
+    .about-content h2 em {
+      color: var(--sage);
+    }
+
+    .about-content p {
+      max-width: 490px;
       color: var(--taupe);
       font-size: 12px;
       line-height: 2;
-      margin-bottom: 30px;
-      max-width: 420px;
-    }
-
-    .future-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-top: 1px solid var(--border);
-    }
-
-    .future-item {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 25px;
-    }
-
-    .future-item:nth-child(odd) {
-      margin-right: 20px;
-    }
-
-    .future-image {
-      height: 620px;
-      background-image:
-        url("https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1600&q=85");
-      background-size: cover;
-      background-position: center;
+      margin-bottom: 28px;
     }
 
     /* =========================
@@ -522,49 +604,49 @@
     ========================= */
 
     .newsletter {
-      background: var(--cream);
-      padding: 90px 6vw;
+      background: var(--terracotta);
+      color: white;
+      padding: 90px 7%;
       text-align: center;
     }
 
     .newsletter h2 {
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(44px, 6vw, 70px);
+      font-size: 58px;
       font-weight: 400;
-      margin-bottom: 15px;
     }
 
     .newsletter p {
-      color: var(--taupe);
-      font-size: 12px;
-      margin-bottom: 28px;
+      max-width: 450px;
+      margin: 18px auto 30px;
+      font-size: 11px;
+      line-height: 1.8;
+      opacity: .8;
     }
 
     .newsletter-form {
-      display: flex;
       max-width: 480px;
       margin: auto;
+      display: flex;
     }
 
     .newsletter-form input {
       flex: 1;
-      border: 1px solid var(--border);
-      background: var(--ivory);
+      border: none;
       padding: 16px;
-      outline: none;
       font-family: "Montserrat", sans-serif;
       font-size: 11px;
+      outline: none;
     }
 
     .newsletter-form button {
-      border: 0;
-      background: var(--charcoal);
+      border: none;
+      background: var(--espresso);
       color: white;
-      padding: 0 23px;
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 2px;
+      padding: 0 25px;
       text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 8px;
       cursor: pointer;
     }
 
@@ -573,51 +655,65 @@
     ========================= */
 
     footer {
-      background: var(--ivory);
-      padding: 65px 5vw 30px;
+      background: var(--espresso);
+      color: white;
+      padding: 70px 5% 30px;
     }
 
-    .footer-top {
+    .footer-grid {
+      max-width: 1400px;
+      margin: auto;
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr 1fr;
       gap: 50px;
       padding-bottom: 60px;
     }
 
-    .footer-brand {
-      font-size: 22px;
-      letter-spacing: 7px;
-      margin-bottom: 20px;
+    .footer-logo {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 38px;
+      letter-spacing: 8px;
     }
 
-    .footer-description {
-      color: var(--taupe);
-      font-size: 11px;
+    .footer-brand p {
+      margin-top: 18px;
+      max-width: 270px;
+      color: rgba(255,255,255,.55);
+      font-size: 10px;
       line-height: 1.8;
-      max-width: 280px;
     }
 
-    .footer-column h4 {
-      font-size: 9px;
-      letter-spacing: 2px;
+    footer h4 {
+      color: var(--gold);
+      font-size: 8px;
+      letter-spacing: 3px;
       text-transform: uppercase;
       margin-bottom: 20px;
     }
 
-    .footer-column a {
-      display: block;
-      color: var(--taupe);
-      font-size: 11px;
-      margin-bottom: 12px;
+    footer ul {
+      list-style: none;
     }
 
-    .footer-bottom {
-      border-top: 1px solid var(--border);
+    footer li {
+      margin-bottom: 12px;
+      font-size: 10px;
+      color: rgba(255,255,255,.65);
+    }
+
+    footer li a:hover {
+      color: white;
+    }
+
+    .copyright {
+      max-width: 1400px;
+      margin: auto;
       padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.1);
       display: flex;
       justify-content: space-between;
-      color: var(--taupe);
-      font-size: 9px;
+      color: rgba(255,255,255,.4);
+      font-size: 8px;
       letter-spacing: 1px;
     }
 
@@ -628,82 +724,59 @@
     @media (max-width: 800px) {
 
       header {
-        position: absolute;
-      }
-
-      .nav {
-        height: 70px;
-        padding: 0 20px;
+        padding: 18px 20px;
       }
 
       .logo {
-        font-size: 18px;
+        font-size: 25px;
         letter-spacing: 6px;
       }
 
       .nav-links {
-        gap: 14px;
-        font-size: 8px;
+        gap: 12px;
+        font-size: 7px;
       }
 
-      .nav-links a:nth-child(1),
-      .nav-links a:nth-child(2),
-      .nav-links a:nth-child(3) {
+      .nav-links a:nth-child(3),
+      .nav-links a:nth-child(4) {
         display: none;
       }
 
-      .nav-shop {
-        padding: 9px 13px;
+      .shop-btn {
+        padding: 8px 11px;
       }
 
       .hero {
-        min-height: 700px;
-        height: 90vh;
-        align-items: flex-end;
+        min-height: 720px;
       }
 
       .hero-image {
-        background-position: 62% center;
-        background-image:
+        background:
           linear-gradient(
             0deg,
-            rgba(15,15,15,0.78) 0%,
-            rgba(15,15,15,0.30) 55%,
-            rgba(15,15,15,0.08) 100%
+            rgba(20,15,13,.96) 0%,
+            rgba(20,15,13,.55) 48%,
+            rgba(20,15,13,.12) 100%
           ),
-          url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85");
+          url("https://images.unsplash.com/photo-1513159446162-54eb8bdaa79b?auto=format&fit=crop&w=1000&q=85")
+          center / cover;
       }
 
       .hero-content {
-        width: calc(100% - 40px);
-        padding-bottom: 55px;
-      }
-
-      .eyebrow {
-        font-size: 8px;
-        letter-spacing: 2.5px;
-        margin-bottom: 14px;
+        padding: 0 22px 70px;
       }
 
       .hero h1 {
-        font-size: 64px;
-        line-height: 0.84;
-        margin-bottom: 22px;
+        font-size: 65px;
+        letter-spacing: -1px;
       }
 
-      .hero-description {
+      .hero-text {
         font-size: 11px;
-        line-height: 1.7;
         max-width: 330px;
-        margin-bottom: 23px;
       }
 
-      .button {
-        padding: 14px 20px;
-        font-size: 8px;
-      }
-
-      .hero-scroll {
+      .hero-number {
         display: none;
       }
 
@@ -712,134 +785,105 @@
       }
 
       .intro h2 {
-        font-size: 48px;
+        font-size: 45px;
       }
 
-      .intro p {
-        font-size: 11px;
-        line-height: 1.9;
-      }
-
-      .featured {
-        padding: 70px 20px;
+      .featured,
+      .collections,
+      .values,
+      .about {
+        padding: 75px 20px;
       }
 
       .section-heading {
         display: block;
-        margin-bottom: 30px;
+        margin-bottom: 35px;
       }
 
       .section-heading h2 {
-        font-size: 50px;
+        font-size: 48px;
         margin-bottom: 20px;
       }
 
-      .featured-grid {
-        display: block;
+      .featured-card {
+        grid-template-columns: 1fr;
       }
 
       .featured-image {
-        min-height: 430px;
+        min-height: 350px;
       }
 
       .featured-content {
-        padding: 40px 27px 45px;
+        padding: 45px 28px;
       }
 
       .featured-content h3 {
-        font-size: 48px;
-      }
-
-      .collections {
-        padding: 80px 20px;
+        font-size: 50px;
       }
 
       .collection-grid {
         grid-template-columns: 1fr;
-        gap: 14px;
       }
 
-      .collection-card {
-        min-height: 430px;
+      .collection {
+        min-height: 360px;
       }
 
-      .collection-overlay h3 {
-        font-size: 40px;
+      .statement {
+        padding: 100px 25px;
       }
 
-      .philosophy {
-        padding: 90px 25px;
+      .statement h2 {
+        font-size: 65px;
       }
 
-      .philosophy h2 {
-        font-size: 54px;
+      .values-grid {
+        grid-template-columns: 1fr;
       }
 
-      .future {
-        padding: 80px 20px;
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
       }
 
-      .future-layout {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
+      .about-image {
+        height: 420px;
       }
 
-      .future-text h2 {
-        font-size: 54px;
-      }
-
-      .future-image {
-        height: 450px;
-        width: 100%;
-        order: -1;
-      }
-
-      .future-item {
-        font-size: 21px;
+      .about-content h2 {
+        font-size: 53px;
       }
 
       .newsletter {
-        padding: 75px 20px;
+        padding: 75px 22px;
       }
 
       .newsletter h2 {
-        font-size: 50px;
+        font-size: 47px;
       }
 
       .newsletter-form {
-        display: flex;
-        width: 100%;
+        display: block;
       }
 
-      .newsletter-form input {
-        min-width: 0;
-      }
-
+      .newsletter-form input,
       .newsletter-form button {
-        padding: 0 16px;
+        width: 100%;
+        height: 50px;
       }
 
-      footer {
-        padding: 55px 20px 25px;
-      }
-
-      .footer-top {
+      .footer-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 40px 25px;
+        gap: 40px 20px;
       }
 
-      .footer-brand-column {
+      .footer-brand {
         grid-column: 1 / -1;
       }
 
-      .footer-bottom {
+      .copyright {
         display: block;
-        line-height: 1.8;
-      }
-
-      .footer-bottom span {
-        display: block;
+        line-height: 2;
       }
     }
 
@@ -848,491 +892,517 @@
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+  <!-- HEADER -->
 
-<header>
+  <header>
+    <nav class="nav">
 
-  <nav class="nav">
+      <a href="index.html" class="logo">
+        YOVIRA
+      </a>
 
-    <a href="index.html" class="logo">YOVIRA</a>
+      <div class="nav-links">
+        <a href="planners.html">Planners</a>
+        <a href="wedding-planners.html">Wedding</a>
+        <a href="about.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+        <a href="planners.html" class="shop-btn">Shop</a>
+      </div>
 
-    <div class="nav-links">
-      <a href="planners.html">Planners</a>
-      <a href="wedding-planners.html">Wedding</a>
-      <a href="about.html">Our Story</a>
-      <a href="contact.html">Contact</a>
-      <a href="planners.html" class="nav-shop">Shop</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-image"></div>
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Thoughtfully designed digital planners
+      </div>
+
+      <h1>
+        Plan<br>
+        <em>beautifully.</em><br>
+        Live fully.
+      </h1>
+
+      <p class="hero-text">
+        Beautiful planning tools created to bring clarity,
+        intention and organization to the moments that
+        matter — from life's biggest milestones to everyday goals.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="planners.html" class="btn btn-primary">
+          Explore Planners
+        </a>
+
+        <a href="about.html" class="btn btn-outline">
+          Discover YOVIRA
+        </a>
+
+      </div>
+
     </div>
 
-  </nav>
-
-</header>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero">
-
-  <div class="hero-image"></div>
-
-  <div class="hero-content">
-
-    <div class="eyebrow">
-      Thoughtfully designed digital planners
+    <div class="hero-number">
+      01
     </div>
 
-    <h1>
-      Plan<br>
-      beautifully.<br>
-      <em>Live fully.</em>
-    </h1>
+  </section>
 
-    <p class="hero-description">
-      Beautiful planning tools for the moments that matter —
-      from life's biggest milestones to everyday goals.
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div class="intro-small">
+      The YOVIRA philosophy
+    </div>
+
+    <h2>
+      Organization should feel
+      <em>beautiful</em> — not like a chore.
+    </h2>
+
+    <p>
+      We create thoughtful digital planners that help you
+      turn overwhelming ideas into clear next steps,
+      meaningful routines and beautifully organized days.
     </p>
 
-    <div class="hero-buttons">
-
-      <a href="planners.html" class="button button-light">
-        Explore Planners
-      </a>
-
-      <a href="about.html" class="button button-outline">
-        Discover YOVIRA
-      </a>
-
-    </div>
-
-  </div>
-
-  <div class="hero-scroll">
-    Scroll to explore
-  </div>
-
-</section>
+  </section>
 
 
-<!-- =========================
-     INTRO
-========================= -->
+  <!-- FEATURED -->
 
-<section class="intro">
+  <section class="featured">
 
-  <div class="intro-label">
-    The YOVIRA philosophy
-  </div>
+    <div class="section-heading">
 
-  <h2>
-    Organization should feel
-    as beautiful as the life
-    you're creating.
-  </h2>
+      <div>
+        <div class="eyebrow">
+          Featured planner
+        </div>
 
-  <p>
-    YOVIRA creates thoughtfully designed digital planners
-    that turn overwhelming lists, ideas and ambitions into
-    clear, intentional plans.
-  </p>
-
-</section>
-
-
-<!-- =========================
-     FEATURED PRODUCT
-========================= -->
-
-<section class="featured">
-
-  <div class="section-heading">
-
-    <div>
-      <div class="section-label">
-        Featured collection
+        <h2>
+          Start with<br>
+          something beautiful.
+        </h2>
       </div>
-
-      <h2>
-        Start with<br>
-        something meaningful.
-      </h2>
-    </div>
-
-    <a href="wedding-planners.html" class="view-all">
-      View Wedding Collection
-    </a>
-
-  </div>
-
-
-  <div class="featured-grid">
-
-    <div class="featured-image"></div>
-
-    <div class="featured-content">
-
-      <div class="product-number">
-        Y / 01
-      </div>
-
-      <h3>
-        Ultimate Wedding<br>
-        Command Center
-      </h3>
 
       <p>
-        A complete 100-page planning system designed to
-        bring every important wedding detail into one
-        beautifully organized place.
+        Designed to help you organize your priorities,
+        routines, goals and the life you're building.
       </p>
 
-      <div class="price">
-        $14.99
-      </div>
-
-      <a href="product-ultimate.html" class="dark-button">
-        Explore the Planner
-      </a>
-
     </div>
 
-  </div>
 
-</section>
+    <div class="featured-card">
 
+      <div class="featured-image"></div>
 
-<!-- =========================
-     COLLECTIONS
-========================= -->
+      <div class="featured-content">
 
-<section class="collections">
-
-  <div class="section-heading">
-
-    <div>
-      <div class="section-label">
-        Explore YOVIRA
-      </div>
-
-      <h2>
-        Planners for<br>
-        every chapter.
-      </h2>
-    </div>
-
-    <a href="planners.html" class="view-all">
-      Shop All
-    </a>
-
-  </div>
-
-
-  <div class="collection-grid">
-
-    <a href="wedding-planners.html" class="collection-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=85"
-        alt="Elegant wedding celebration"
-      >
-
-      <div class="collection-overlay">
-
-        <div class="collection-status">
-          Available now
+        <div class="tag">
+          YOVIRA · Life Collection
         </div>
 
-        <h3>Wedding</h3>
+        <h3>
+          The Life<br>
+          Planner
+        </h3>
 
         <p>
-          Plan the celebration you've always imagined.
+          A beautifully structured planning system for
+          your goals, habits, wellness, money, career,
+          relationships, travel and everyday life.
         </p>
 
-      </div>
-
-    </a>
-
-
-    <div class="collection-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=85"
-        alt="Lifestyle planning workspace"
-      >
-
-      <div class="collection-overlay">
-
-        <div class="collection-status">
-          Coming soon
+        <div class="price">
+          Coming Soon
         </div>
 
-        <h3>Life</h3>
-
-        <p>
-          Create clarity around the life you want to build.
-        </p>
+        <a href="planners.html" class="btn btn-primary">
+          View Collection
+        </a>
 
       </div>
 
     </div>
 
+  </section>
 
-    <div class="collection-card">
 
-      <img
-        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=85"
-        alt="Financial planning workspace"
-      >
+  <!-- COLLECTIONS -->
 
-      <div class="collection-overlay">
+  <section class="collections">
 
-        <div class="collection-status">
-          Coming soon
+    <div class="section-heading">
+
+      <div>
+        <div class="eyebrow">
+          Explore YOVIRA
         </div>
 
-        <h3>Money</h3>
-
-        <p>
-          Make your finances feel simpler and more intentional.
-        </p>
-
+        <h2>
+          Planners for<br>
+          every chapter.
+        </h2>
       </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     PHILOSOPHY
-========================= -->
-
-<section class="philosophy">
-
-  <div class="philosophy-label">
-    Why YOVIRA
-  </div>
-
-  <h2>
-    Less chaos.<br>
-    More clarity.<br>
-    More life.
-  </h2>
-
-  <p>
-    We believe a planner should do more than hold your
-    checklist. It should help you see what matters,
-    make decisions with confidence and enjoy the process.
-  </p>
-
-</section>
-
-
-<!-- =========================
-     FUTURE COLLECTIONS
-========================= -->
-
-<section class="future">
-
-  <div class="future-layout">
-
-    <div class="future-text">
-
-      <div class="section-label">
-        What's coming
-      </div>
-
-      <h2>
-        Your life has more
-        than one chapter.
-      </h2>
 
       <p>
-        Wedding planning is only the beginning.
-        YOVIRA is growing into a complete collection
-        of planning tools for the way you actually live.
+        One brand. Many ways to create a more intentional life.
       </p>
 
-      <a href="planners.html" class="dark-button">
-        Explore YOVIRA
+    </div>
+
+
+    <div class="collection-grid">
+
+      <a href="wedding-planners.html" class="collection">
+        <div class="collection-bg wedding"></div>
+        <div class="collection-content">
+          <div class="collection-number">01</div>
+          <h3>Wedding</h3>
+          <p>Plan your beautiful beginning</p>
+        </div>
+      </a>
+
+
+      <a href="planners.html" class="collection">
+        <div class="collection-bg life"></div>
+        <div class="collection-content">
+          <div class="collection-number">02</div>
+          <h3>Life</h3>
+          <p>Plan the life you want</p>
+        </div>
+      </a>
+
+
+      <a href="planners.html" class="collection">
+        <div class="collection-bg money"></div>
+        <div class="collection-content">
+          <div class="collection-number">03</div>
+          <h3>Money</h3>
+          <p>Build financial clarity</p>
+        </div>
+      </a>
+
+
+      <a href="planners.html" class="collection">
+        <div class="collection-bg productivity"></div>
+        <div class="collection-content">
+          <div class="collection-number">04</div>
+          <h3>Productivity</h3>
+          <p>Make room for what matters</p>
+        </div>
+      </a>
+
+
+      <a href="planners.html" class="collection">
+        <div class="collection-bg wellness"></div>
+        <div class="collection-content">
+          <div class="collection-number">05</div>
+          <h3>Wellness</h3>
+          <p>Care for yourself intentionally</p>
+        </div>
+      </a>
+
+
+      <a href="planners.html" class="collection">
+        <div class="collection-bg travel"></div>
+        <div class="collection-content">
+          <div class="collection-number">06</div>
+          <h3>Travel</h3>
+          <p>Plan experiences worth remembering</p>
+        </div>
       </a>
 
     </div>
 
-
-    <div class="future-image"></div>
-
-  </div>
+  </section>
 
 
-  <div class="future-list">
+  <!-- STATEMENT -->
 
-    <div class="future-item">
-      Life Planning
+  <section class="statement">
+
+    <h2>
+      Less chaos.<br>
+      More <span>clarity.</span><br>
+      More life.
+    </h2>
+
+    <p>
+      YOVIRA exists for the moments when you want to
+      stop reacting and start designing your days with
+      more intention.
+    </p>
+
+  </section>
+
+
+  <!-- VALUES -->
+
+  <section class="values">
+
+    <div class="section-heading">
+
+      <div>
+        <div class="eyebrow">
+          Why YOVIRA
+        </div>
+
+        <h2>
+          Designed<br>
+          differently.
+        </h2>
+      </div>
+
     </div>
 
-    <div class="future-item">
-      Budget & Money
+
+    <div class="values-grid">
+
+      <div class="value">
+
+        <div class="value-icon">
+          01
+        </div>
+
+        <h3>
+          Thoughtful
+        </h3>
+
+        <p>
+          Every page exists for a reason —
+          designed to reduce mental clutter
+          and make planning feel natural.
+        </p>
+
+      </div>
+
+
+      <div class="value">
+
+        <div class="value-icon">
+          02
+        </div>
+
+        <h3>
+          Beautiful
+        </h3>
+
+        <p>
+          Planning should be something you
+          enjoy opening, using and returning
+          to every day.
+        </p>
+
+      </div>
+
+
+      <div class="value">
+
+        <div class="value-icon">
+          03
+        </div>
+
+        <h3>
+          Intentional
+        </h3>
+
+        <p>
+          Less busywork. More focus on the
+          goals, people and experiences
+          that actually matter.
+        </p>
+
+      </div>
+
     </div>
 
-    <div class="future-item">
-      Productivity
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about">
+
+    <div class="about-grid">
+
+      <div class="about-image"></div>
+
+      <div class="about-content">
+
+        <div class="eyebrow">
+          Our story
+        </div>
+
+        <h2>
+          Your life has
+          <em>more than
+          one chapter.</em>
+        </h2>
+
+        <p>
+          YOVIRA began with a simple idea:
+          planning tools should feel as considered
+          as the life they help you build.
+        </p>
+
+        <p>
+          From weddings and personal goals to money,
+          wellness, travel and everything between,
+          YOVIRA is building a collection of digital
+          planners for real life.
+        </p>
+
+        <a href="about.html" class="btn btn-primary">
+          Our Story
+        </a>
+
+      </div>
+
     </div>
 
-    <div class="future-item">
-      Travel
-    </div>
-
-    <div class="future-item">
-      Wellness
-    </div>
-
-    <div class="future-item">
-      Goals & Growth
-    </div>
-
-  </div>
-
-</section>
+  </section>
 
 
-<!-- =========================
-     NEWSLETTER
-========================= -->
+  <!-- NEWSLETTER -->
 
-<section class="newsletter">
+  <section class="newsletter">
 
-  <div class="section-label">
-    The YOVIRA list
-  </div>
+    <h2>
+      Beautifully planned.
+      Delivered occasionally.
+    </h2>
 
-  <h2>
-    Beautifully planned,
-    delivered occasionally.
-  </h2>
+    <p>
+      Join the YOVIRA list for new planner launches,
+      thoughtful planning ideas and occasional inspiration.
+    </p>
 
-  <p>
-    New planners, useful ideas and quiet inspiration.
-  </p>
+    <form class="newsletter-form">
 
-  <form class="newsletter-form">
+      <input
+        type="email"
+        placeholder="Your email address"
+        required
+      >
 
-    <input
-      type="email"
-      placeholder="Your email address"
-      required
-    >
+      <button type="submit">
+        Join
+      </button>
 
-    <button type="submit">
-      Join
-    </button>
+    </form>
 
-  </form>
-
-</section>
+  </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+  <!-- FOOTER -->
 
-<footer>
+  <footer>
 
-  <div class="footer-top">
-
-    <div class="footer-brand-column">
+    <div class="footer-grid">
 
       <div class="footer-brand">
-        YOVIRA
+
+        <div class="footer-logo">
+          YOVIRA
+        </div>
+
+        <p>
+          Beautiful digital planners for
+          beautifully organized lives.
+        </p>
+
       </div>
 
-      <p class="footer-description">
-        Beautiful digital planners for beautifully
-        organized lives.
-      </p>
+
+      <div>
+
+        <h4>Explore</h4>
+
+        <ul>
+          <li><a href="planners.html">All Planners</a></li>
+          <li><a href="wedding-planners.html">Wedding</a></li>
+          <li><a href="planners.html">Life</a></li>
+          <li><a href="planners.html">Coming Soon</a></li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h4>YOVIRA</h4>
+
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h4>Legal</h4>
+
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+        </ul>
+
+      </div>
 
     </div>
 
 
-    <div class="footer-column">
+    <div class="copyright">
 
-      <h4>Shop</h4>
+      <span>
+        © 2026 YOVIRA. All rights reserved.
+      </span>
 
-      <a href="planners.html">All Planners</a>
-      <a href="wedding-planners.html">Wedding</a>
-      <a href="product-essential.html">Essentials</a>
-      <a href="product-ultimate.html">Ultimate</a>
-
-    </div>
-
-
-    <div class="footer-column">
-
-      <h4>YOVIRA</h4>
-
-      <a href="about.html">Our Story</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
+      <span>
+        PLAN BEAUTIFULLY · LIVE FULLY
+      </span>
 
     </div>
 
-
-    <div class="footer-column">
-
-      <h4>Information</h4>
-
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="refund.html">Refund Policy</a>
-
-    </div>
-
-  </div>
+  </footer>
 
 
-  <div class="footer-bottom">
+  <script>
 
-    <span>
-      © 2026 YOVIRA. All rights reserved.
-    </span>
+    document
+      .querySelector(".newsletter-form")
+      .addEventListener("submit", function(e) {
 
-    <span>
-      Plan beautifully. Live fully.
-    </span>
+        e.preventDefault();
 
-  </div>
+        const button = this.querySelector("button");
 
-</footer>
+        button.innerText = "Thank You";
 
+        button.style.background = "#C6A56B";
+        button.style.color = "#211B18";
 
-<script>
+      });
 
-  const newsletterForm =
-    document.querySelector(".newsletter-form");
-
-  if (newsletterForm) {
-
-    newsletterForm.addEventListener("submit", function(event) {
-
-      event.preventDefault();
-
-      const button =
-        newsletterForm.querySelector("button");
-
-      button.textContent = "Thank You";
-
-      button.disabled = true;
-
-    });
-
-  }
-
-</script>
+  </script>
 
 </body>
 </html>
