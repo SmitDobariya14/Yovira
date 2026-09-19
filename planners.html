@@ -375,10 +375,31 @@ font-style:italic;
 color:var(--soft);
 }
 
+/* UPDATED PRICE */
+
 .price{
 font-family:var(--serif);
 font-size:30px;
 white-space:nowrap;
+display:flex;
+align-items:center;
+gap:9px;
+}
+
+.old-price{
+font-family:var(--sans);
+font-size:13px;
+font-weight:500;
+color:#9a8f85;
+text-decoration:line-through;
+text-decoration-thickness:1px;
+}
+
+.new-price{
+font-family:var(--serif);
+font-size:30px;
+font-weight:600;
+color:var(--ink);
 }
 
 .features{
@@ -1005,6 +1026,14 @@ font-size:37px;
 font-size:26px;
 }
 
+.new-price{
+font-size:26px;
+}
+
+.old-price{
+font-size:11px;
+}
+
 .features{
 grid-template-columns:1fr;
 }
@@ -1237,7 +1266,8 @@ The essentials, beautifully organized.
 </div>
 
 <div class="price">
-$9.99
+<span class="old-price">$19.99</span>
+<span class="new-price">$9.99</span>
 </div>
 
 </div>
@@ -1263,7 +1293,7 @@ Focused planning · 50 pages
 href="products-essential.html"
 class="btn btn-dark"
 >
-View planner
+Buy Now
 </a>
 
 </div>
@@ -1308,7 +1338,8 @@ Your complete wedding command center.
 </div>
 
 <div class="price">
-$14.99
+<span class="old-price">$24.99</span>
+<span class="new-price">$14.99</span>
 </div>
 
 </div>
@@ -1336,7 +1367,7 @@ $14.99
 href="products-ultimate.html"
 class="btn btn-dark"
 >
-View planner
+Buy Now
 </a>
 
 </div>
@@ -1385,9 +1416,6 @@ beautiful enough to enjoy along the way.
 
 <div class="inside-grid">
 
-
-<!-- WEDDING INSPIRATION -->
-
 <div class="inside-card">
 
 <img
@@ -1402,8 +1430,6 @@ Wedding inspiration
 
 </div>
 
-
-<!-- MONTHLY PLANNER -->
 
 <div class="inside-card">
 
@@ -1420,8 +1446,6 @@ Planning calendar
 </div>
 
 
-<!-- PLANNING TOOLS -->
-
 <div class="inside-card">
 
 <img
@@ -1436,8 +1460,6 @@ Planning tools
 
 </div>
 
-
-<!-- WEDDING CHECKLIST -->
 
 <div class="inside-card">
 
@@ -1454,8 +1476,6 @@ Wedding checklist
 </div>
 
 
-<!-- ULTIMATE PLANNER -->
-
 <div class="inside-card">
 
 <img
@@ -1469,7 +1489,6 @@ Ultimate planner
 </div>
 
 </div>
-
 
 </div>
 
@@ -1766,9 +1785,6 @@ Plan Your Way
 
 <div class="format-grid">
 
-
-<!-- PRINTABLE -->
-
 <article class="format-card">
 
 <div class="eyebrow">
@@ -1798,8 +1814,6 @@ loading="lazy"
 </article>
 
 
-<!-- FILLABLE + PRINTABLE -->
-
 <article class="format-card dark">
 
 <div class="eyebrow">
@@ -1828,7 +1842,6 @@ loading="lazy"
 >
 
 </article>
-
 
 </div>
 
@@ -1909,7 +1922,6 @@ Before you<br>
 
 
 <div class="faq-list">
-
 
 <details open>
 
@@ -2014,7 +2026,6 @@ for future YOVIRA releases.
 
 </details>
 
-
 </div>
 
 </div>
@@ -2029,7 +2040,6 @@ for future YOVIRA releases.
 <div class="container">
 
 <div class="footer-top">
-
 
 <div class="footer-brand">
 
