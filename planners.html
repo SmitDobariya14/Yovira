@@ -6,7 +6,7 @@
 
 <title>YOVIRA | Wedding & Honeymoon Planners</title>
 
-<meta name="description" content="YOVIRA digital wedding and honeymoon planners — elegant, practical planning systems designed to keep your celebration organized from the first checklist to the honeymoon that follows.">
+<meta name="description" content="YOVIRA digital wedding and honeymoon planners for beautifully organized celebrations and unforgettable journeys.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,6 @@
   --soft:#665a50;
   --cream:#f7f2ea;
   --cream2:#eee4d8;
-  --cream3:#e2d4c5;
   --white:#fffdfa;
   --gold:#a68a61;
   --gold2:#806846;
@@ -60,13 +59,6 @@ a{
   text-decoration:none;
 }
 
-button,
-input,
-textarea,
-select{
-  font:inherit;
-}
-
 .container{
   width:min(calc(100% - 48px),var(--max));
   margin:auto;
@@ -81,9 +73,9 @@ select{
 }
 
 
-/* =========================================================
+/* =====================================================
    HEADER
-========================================================= */
+===================================================== */
 
 header{
   position:sticky;
@@ -108,7 +100,6 @@ header{
   font-size:31px;
   letter-spacing:.23em;
   font-weight:500;
-  white-space:nowrap;
 }
 
 .nav-links{
@@ -130,9 +121,9 @@ header{
 }
 
 
-/* =========================================================
+/* =====================================================
    HERO
-========================================================= */
+===================================================== */
 
 .hero{
   position:relative;
@@ -156,8 +147,6 @@ header{
   ),
   url("assets/images/ultimate planner.png")
   center/cover no-repeat;
-
-  transform:scale(1.02);
 }
 
 .hero-content{
@@ -260,9 +249,9 @@ header{
 }
 
 
-/* =========================================================
+/* =====================================================
    INTRO
-========================================================= */
+===================================================== */
 
 .intro{
   padding:115px 0 85px;
@@ -276,7 +265,6 @@ header{
   font-size:clamp(48px,5vw,75px);
   font-weight:500;
   line-height:.95;
-  letter-spacing:-.03em;
 }
 
 .intro p{
@@ -295,9 +283,9 @@ header{
 }
 
 
-/* =========================================================
-   PRODUCTS
-========================================================= */
+/* =====================================================
+   PRODUCT SECTION
+===================================================== */
 
 .products{
   padding:15px 0 125px;
@@ -322,27 +310,51 @@ header{
   box-shadow:0 25px 65px rgba(48,35,25,.11);
 }
 
+
+/* MAIN PRODUCT IMAGE */
+
 .product-image{
   min-height:520px;
   padding:45px;
   background:#eee5da;
   display:flex;
-  align-items:flex-end;
+  align-items:center;
   justify-content:center;
-  position:relative;
 }
 
 .product-image img{
-  width:min(80%,450px);
+  width:min(82%,450px);
   max-height:510px;
   object-fit:contain;
   box-shadow:0 28px 50px rgba(35,25,18,.2);
-  transition:.4s;
 }
 
-.product:hover .product-image img{
-  transform:translateY(-8px);
+
+/* PRODUCT PREVIEW GALLERY */
+
+.preview-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  padding:12px;
+  background:#e5d9cc;
 }
+
+.preview-gallery img{
+  width:100%;
+  height:135px;
+  object-fit:cover;
+  background:#fff;
+  border:1px solid rgba(33,27,23,.08);
+  transition:.25s;
+}
+
+.preview-gallery img:hover{
+  transform:scale(1.025);
+}
+
+
+/* PRODUCT INFO */
 
 .product-info{
   padding:38px 40px 42px;
@@ -374,7 +386,7 @@ header{
 .price{
   display:flex;
   align-items:center;
-  gap:9px;
+  gap:10px;
   margin-top:20px;
 }
 
@@ -386,14 +398,14 @@ header{
 
 .new-price{
   font-family:var(--serif);
-  font-size:32px;
+  font-size:34px;
   font-weight:600;
 }
 
 .saving{
   display:inline-block;
   margin-top:8px;
-  padding:5px 9px;
+  padding:6px 10px;
   background:#eee4d8;
   color:var(--gold2);
   font-size:9px;
@@ -422,23 +434,18 @@ header{
 }
 
 .product-bottom{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
   padding-top:23px;
   border-top:1px solid var(--line);
 }
 
-.product-bottom small{
-  font-size:10px;
-  color:#887b70;
+.product-bottom .btn{
+  width:100%;
 }
 
 
-/* =========================================================
+/* =====================================================
    HONEYMOON
-========================================================= */
+===================================================== */
 
 .honeymoon-section{
   padding:120px 0;
@@ -524,10 +531,14 @@ header{
   text-transform:uppercase;
 }
 
+.honeymoon-info .btn{
+  width:100%;
+}
 
-/* =========================================================
+
+/* =====================================================
    BUNDLES
-========================================================= */
+===================================================== */
 
 .bundles{
   padding:125px 0;
@@ -620,6 +631,9 @@ header{
   line-height:1.8;
 }
 
+
+/* BUNDLE PRICE */
+
 .bundle-price{
   display:flex;
   align-items:center;
@@ -628,22 +642,43 @@ header{
 }
 
 .bundle-price .old{
-  font-size:13px;
+  font-size:14px;
   color:#9a8f85;
   text-decoration:line-through;
 }
 
 .bundle-price .current{
   font-family:var(--serif);
-  font-size:32px;
+  font-size:34px;
   font-weight:600;
 }
 
 .bundle-saving{
-  margin-top:6px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+  margin-top:8px;
+}
+
+.save-money{
+  padding:6px 10px;
+  background:#e8dccd;
+  color:#735a3c;
   font-size:10px;
-  color:var(--gold2);
   font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.save-percent{
+  padding:6px 10px;
+  background:#211c18;
+  color:#fff;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
 }
 
 .bundle-features{
@@ -661,6 +696,10 @@ header{
   content:"✓";
   color:var(--gold2);
   margin-right:8px;
+}
+
+.bundle .btn{
+  width:100%;
 }
 
 .best-seller{
@@ -690,9 +729,9 @@ header{
 }
 
 
-/* =========================================================
+/* =====================================================
    COMPARISON
-========================================================= */
+===================================================== */
 
 .compare{
   padding:120px 0;
@@ -744,7 +783,7 @@ td:first-child{
 
 th{
   font-family:var(--serif);
-  font-size:21px;
+  font-size:20px;
   font-weight:500;
   background:#eee4d8;
 }
@@ -759,9 +798,9 @@ th{
 }
 
 
-/* =========================================================
-   WHY YOVIRA
-========================================================= */
+/* =====================================================
+   VALUE
+===================================================== */
 
 .value{
   padding:120px 0;
@@ -828,9 +867,9 @@ th{
 }
 
 
-/* =========================================================
+/* =====================================================
    CTA
-========================================================= */
+===================================================== */
 
 .cta{
   padding:125px 0;
@@ -861,9 +900,9 @@ th{
 }
 
 
-/* =========================================================
+/* =====================================================
    FOOTER
-========================================================= */
+===================================================== */
 
 footer{
   background:#181411;
@@ -898,9 +937,9 @@ footer{
 }
 
 
-/* =========================================================
+/* =====================================================
    MOBILE
-========================================================= */
+===================================================== */
 
 @media(max-width:900px){
 
@@ -985,6 +1024,10 @@ footer{
     padding:30px;
   }
 
+  .preview-gallery img{
+    height:95px;
+  }
+
   .product-info{
     padding:30px 25px 35px;
   }
@@ -1024,9 +1067,9 @@ footer{
 <body>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HEADER
-========================================================= -->
+===================================================== -->
 
 <header>
 
@@ -1038,17 +1081,9 @@ footer{
 
     <nav class="nav-links">
 
-      <a href="#products">
-        Wedding
-      </a>
-
-      <a href="#honeymoon">
-        Honeymoon
-      </a>
-
-      <a href="#bundles">
-        Bundles
-      </a>
+      <a href="#products">Wedding</a>
+      <a href="#honeymoon">Honeymoon</a>
+      <a href="#bundles">Bundles</a>
 
     </nav>
 
@@ -1057,9 +1092,9 @@ footer{
 </header>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
 
 <section class="hero">
 
@@ -1115,9 +1150,9 @@ footer{
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      INTRO
-========================================================= -->
+===================================================== -->
 
 <section class="intro">
 
@@ -1136,9 +1171,7 @@ footer{
 
     <p>
       Choose a focused wedding planner, a dedicated honeymoon planner,
-      or combine them into one complete planning system. Every product
-      is designed to make important details easier to organize without
-      making the process feel overwhelming.
+      or combine them into one complete planning system.
     </p>
 
   </div>
@@ -1146,9 +1179,9 @@ footer{
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      WEDDING PRODUCTS
-========================================================= -->
+===================================================== -->
 
 <section class="products" id="products">
 
@@ -1169,6 +1202,28 @@ footer{
           >
 
         </div>
+
+        <!-- Replace/add your actual preview asset filenames here -->
+
+        <div class="preview-gallery">
+
+          <img
+            src="assets/images/essential-preview-1.jpg"
+            alt="Essential Wedding Planner preview"
+          >
+
+          <img
+            src="assets/images/essential-preview-2.jpg"
+            alt="Essential Wedding Planner preview"
+          >
+
+          <img
+            src="assets/images/essential-preview-3.jpg"
+            alt="Essential Wedding Planner preview"
+          >
+
+        </div>
+
 
         <div class="product-info">
 
@@ -1197,7 +1252,7 @@ footer{
           </div>
 
           <div class="saving">
-            Save $10
+            Save $10 · 50% OFF
           </div>
 
           <ul class="features">
@@ -1213,15 +1268,11 @@ footer{
 
           <div class="product-bottom">
 
-            <small>
-              One-time digital purchase
-            </small>
-
             <a
-              href="product-essential.html"
+              href="LEMON_SQUEEZY_ESSENTIAL_CHECKOUT_URL"
               class="btn btn-dark"
             >
-              View Planner
+              Get Your Planner
             </a>
 
           </div>
@@ -1243,6 +1294,26 @@ footer{
           >
 
         </div>
+
+        <div class="preview-gallery">
+
+          <img
+            src="assets/images/ultimate-preview-1.jpg"
+            alt="Ultimate Wedding Planner preview"
+          >
+
+          <img
+            src="assets/images/ultimate-preview-2.jpg"
+            alt="Ultimate Wedding Planner preview"
+          >
+
+          <img
+            src="assets/images/ultimate-preview-3.jpg"
+            alt="Ultimate Wedding Planner preview"
+          >
+
+        </div>
+
 
         <div class="product-info">
 
@@ -1271,7 +1342,7 @@ footer{
           </div>
 
           <div class="saving">
-            Save $15
+            Save $15 · 50% OFF
           </div>
 
           <ul class="features">
@@ -1287,15 +1358,11 @@ footer{
 
           <div class="product-bottom">
 
-            <small>
-              One-time digital purchase
-            </small>
-
             <a
-              href="product-ultimate.html"
+              href="LEMON_SQUEEZY_ULTIMATE_CHECKOUT_URL"
               class="btn btn-dark"
             >
-              View Planner
+              Get Your Planner
             </a>
 
           </div>
@@ -1311,9 +1378,9 @@ footer{
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HONEYMOON
-========================================================= -->
+===================================================== -->
 
 <section class="honeymoon-section" id="honeymoon">
 
@@ -1336,9 +1403,9 @@ footer{
 
       <p>
         Your wedding may be the main event, but the journey afterwards
-        deserves just as much thought. The YOVIRA Honeymoon Planner
-        helps organize destinations, budgets, travel details,
-        accommodation, activities and memories in one elegant place.
+        deserves just as much thought. Organize destinations, budgets,
+        travel details, accommodation, activities and memories in one
+        elegant place.
       </p>
 
     </div>
@@ -1346,14 +1413,38 @@ footer{
 
     <div class="honeymoon-card">
 
-      <div class="honeymoon-image">
+      <div>
 
-        <img
-          src="assets/images/1790519634656.png"
-          alt="YOVIRA Honeymoon Planner"
-        >
+        <div class="honeymoon-image">
+
+          <img
+            src="assets/images/1790519634656.png"
+            alt="YOVIRA Honeymoon Planner"
+          >
+
+        </div>
+
+        <div class="preview-gallery">
+
+          <img
+            src="assets/images/honeymoon-preview-1.jpg"
+            alt="Honeymoon Planner preview"
+          >
+
+          <img
+            src="assets/images/honeymoon-preview-2.jpg"
+            alt="Honeymoon Planner preview"
+          >
+
+          <img
+            src="assets/images/honeymoon-preview-3.jpg"
+            alt="Honeymoon Planner preview"
+          >
+
+        </div>
 
       </div>
+
 
       <div class="honeymoon-info">
 
@@ -1387,7 +1478,7 @@ footer{
         </div>
 
         <div class="saving">
-          Save $7
+          Save $7 · 47% OFF
         </div>
 
         <ul class="features">
@@ -1402,10 +1493,10 @@ footer{
         </ul>
 
         <a
-          href="Checkout.html?product=honeymoon"
+          href="LEMON_SQUEEZY_HONEYMOON_CHECKOUT_URL"
           class="btn btn-dark"
         >
-          Get Honeymoon Planner
+          Get Your Planner
         </a>
 
       </div>
@@ -1417,9 +1508,9 @@ footer{
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      BUNDLES
-========================================================= -->
+===================================================== -->
 
 <section class="bundles" id="bundles">
 
@@ -1438,8 +1529,8 @@ footer{
 
       <p>
         Combine your wedding and honeymoon planning into one
-        convenient digital collection and save compared with
-        purchasing the planners separately.
+        convenient digital collection and save significantly
+        compared with the original individual prices.
       </p>
 
     </div>
@@ -1465,6 +1556,26 @@ footer{
 
         </div>
 
+        <div class="preview-gallery">
+
+          <img
+            src="assets/images/bundle-essential-preview-1.jpg"
+            alt="Essential and Honeymoon Bundle preview"
+          >
+
+          <img
+            src="assets/images/bundle-essential-preview-2.jpg"
+            alt="Essential and Honeymoon Bundle preview"
+          >
+
+          <img
+            src="assets/images/bundle-essential-preview-3.jpg"
+            alt="Essential and Honeymoon Bundle preview"
+          >
+
+        </div>
+
+
         <div class="bundle-info">
 
           <div class="bundle-label">
@@ -1476,15 +1587,14 @@ footer{
           </h3>
 
           <p>
-            A practical combination for couples who want the
-            essential wedding planning system plus a dedicated
-            honeymoon planner.
+            The essential wedding planning system combined with
+            the dedicated YOVIRA Honeymoon Planner.
           </p>
 
           <div class="bundle-price">
 
             <span class="old">
-              $29.99
+              $34.98
             </span>
 
             <span class="current">
@@ -1494,7 +1604,15 @@ footer{
           </div>
 
           <div class="bundle-saving">
-            Normally $17.98 · Save $2.99
+
+            <span class="save-money">
+              Save $19.99
+            </span>
+
+            <span class="save-percent">
+              57% OFF
+            </span>
+
           </div>
 
           <ul class="bundle-features">
@@ -1508,10 +1626,10 @@ footer{
           </ul>
 
           <a
-            href="Checkout.html?bundle=essential-honeymoon"
+            href="LEMON_SQUEEZY_ESSENTIAL_HONEYMOON_BUNDLE_URL"
             class="btn btn-dark"
           >
-            Get The Bundle
+            Get Your Bundle
           </a>
 
         </div>
@@ -1536,6 +1654,26 @@ footer{
 
         </div>
 
+        <div class="preview-gallery">
+
+          <img
+            src="assets/images/bundle-ultimate-preview-1.jpg"
+            alt="Ultimate and Honeymoon Bundle preview"
+          >
+
+          <img
+            src="assets/images/bundle-ultimate-preview-2.jpg"
+            alt="Ultimate and Honeymoon Bundle preview"
+          >
+
+          <img
+            src="assets/images/bundle-ultimate-preview-3.jpg"
+            alt="Ultimate and Honeymoon Bundle preview"
+          >
+
+        </div>
+
+
         <div class="bundle-info">
 
           <div class="bundle-label">
@@ -1555,7 +1693,7 @@ footer{
           <div class="bundle-price">
 
             <span class="old">
-              $39.99
+              $44.98
             </span>
 
             <span class="current">
@@ -1565,7 +1703,15 @@ footer{
           </div>
 
           <div class="bundle-saving">
-            Normally $22.98 · Save $2.99
+
+            <span class="save-money">
+              Save $24.99
+            </span>
+
+            <span class="save-percent">
+              56% OFF
+            </span>
+
           </div>
 
           <ul class="bundle-features">
@@ -1580,10 +1726,10 @@ footer{
           </ul>
 
           <a
-            href="Checkout.html?bundle=ultimate-honeymoon"
+            href="LEMON_SQUEEZY_ULTIMATE_HONEYMOON_BUNDLE_URL"
             class="btn btn-dark"
           >
-            Get Best Seller
+            Get Your Bundle
           </a>
 
         </div>
@@ -1597,9 +1743,9 @@ footer{
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      COMPARISON
-========================================================= -->
+===================================================== -->
 
 <section class="compare">
 
@@ -1630,35 +1776,33 @@ footer{
 
           <tr>
 
+            <th>Included</th>
+
             <th>
-              Included
+              Essential<br>
+              $9.99
             </th>
 
             <th>
-              Essential
-              <br>$9.99
+              Ultimate<br>
+              $14.99
             </th>
 
             <th>
-              Ultimate
-              <br>$14.99
+              Honeymoon<br>
+              $7.99
             </th>
 
             <th>
-              Honeymoon
-              <br>$7.99
+              Essential +<br>
+              Honeymoon<br>
+              $14.99
             </th>
 
             <th>
-              Essential +
-              <br>Honeymoon
-              <br>$14.99
-            </th>
-
-            <th>
-              Ultimate +
-              <br>Honeymoon
-              <br>$19.99
+              Ultimate +<br>
+              Honeymoon<br>
+              $19.99
             </th>
 
           </tr>
@@ -1708,8 +1852,8 @@ footer{
             <td class="no">—</td>
             <td class="no">—</td>
             <td class="no">—</td>
-            <td class="yes">$2.99</td>
-            <td class="yes">$2.99</td>
+            <td class="yes">Save $19.99</td>
+            <td class="yes">Save $24.99</td>
           </tr>
 
         </tbody>
@@ -1723,9 +1867,9 @@ footer{
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      WHY YOVIRA
-========================================================= -->
+===================================================== -->
 
 <section class="value">
 
@@ -1757,107 +1901,75 @@ footer{
 
         <div class="value-row">
 
-          <div class="value-number">
-            01
-          </div>
+          <div class="value-number">01</div>
 
           <div>
-
-            <h3>
-              Everything in one place.
-            </h3>
+            <h3>Everything in one place.</h3>
 
             <p>
               Keep important planning details, decisions and
               trackers organized instead of scattered across
               notes and apps.
             </p>
-
           </div>
 
-          <div class="value-arrow">
-            ↗
-          </div>
+          <div class="value-arrow">↗</div>
 
         </div>
 
 
         <div class="value-row">
 
-          <div class="value-number">
-            02
-          </div>
+          <div class="value-number">02</div>
 
           <div>
-
-            <h3>
-              Built for real planning.
-            </h3>
+            <h3>Built for real planning.</h3>
 
             <p>
               Checklists, trackers, budgets, inspiration and
               planning pages are designed around the actual
               decisions couples need to make.
             </p>
-
           </div>
 
-          <div class="value-arrow">
-            ↗
-          </div>
+          <div class="value-arrow">↗</div>
 
         </div>
 
 
         <div class="value-row">
 
-          <div class="value-number">
-            03
-          </div>
+          <div class="value-number">03</div>
 
           <div>
-
-            <h3>
-              Wedding to honeymoon.
-            </h3>
+            <h3>Wedding to honeymoon.</h3>
 
             <p>
-              The bundle collection lets you continue the
-              planning journey beyond the wedding day.
+              Continue the planning journey beyond the wedding
+              day with dedicated honeymoon organization.
             </p>
-
           </div>
 
-          <div class="value-arrow">
-            ↗
-          </div>
+          <div class="value-arrow">↗</div>
 
         </div>
 
 
         <div class="value-row">
 
-          <div class="value-number">
-            04
-          </div>
+          <div class="value-number">04</div>
 
           <div>
-
-            <h3>
-              Digital & convenient.
-            </h3>
+            <h3>Digital & convenient.</h3>
 
             <p>
               No physical shipping. Your digital planning
               products are designed for convenient access
               and use.
             </p>
-
           </div>
 
-          <div class="value-arrow">
-            ↗
-          </div>
+          <div class="value-arrow">↗</div>
 
         </div>
 
@@ -1870,9 +1982,9 @@ footer{
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      CTA
-========================================================= -->
+===================================================== -->
 
 <section class="cta">
 
@@ -1904,9 +2016,9 @@ footer{
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer>
 
@@ -1926,25 +2038,11 @@ footer{
 
     <div class="footer-links">
 
-      <a href="about.html">
-        About
-      </a>
-
-      <a href="contact.html">
-        Contact
-      </a>
-
-      <a href="faq.html">
-        FAQ
-      </a>
-
-      <a href="privacy.html">
-        Privacy
-      </a>
-
-      <a href="refund.html">
-        Refund Policy
-      </a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund.html">Refund Policy</a>
 
     </div>
 
