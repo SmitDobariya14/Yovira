@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Wedding Planners | YOVIRA</title>
+<title>YOVIRA | Wedding & Honeymoon Planners</title>
 
-<meta name="description"
-content="Discover YOVIRA's Essential and Ultimate Wedding Planners — beautifully designed digital planning systems for a calmer, more organized wedding.">
+<meta name="description" content="YOVIRA digital wedding and honeymoon planners — elegant, practical planning systems designed to keep your celebration organized from the first checklist to the honeymoon that follows.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,2147 +16,1942 @@ content="Discover YOVIRA's Essential and Ultimate Wedding Planners — beautiful
 <style>
 
 :root{
---ink:#211b17;
---soft:#665a50;
---cream:#f7f2ea;
---cream2:#eee4d8;
---cream3:#e2d4c5;
---white:#fffdfa;
---gold:#a68a61;
---gold2:#806846;
---line:rgba(33,27,23,.15);
+  --ink:#211b17;
+  --soft:#665a50;
+  --cream:#f7f2ea;
+  --cream2:#eee4d8;
+  --cream3:#e2d4c5;
+  --white:#fffdfa;
+  --gold:#a68a61;
+  --gold2:#806846;
+  --line:rgba(33,27,23,.15);
 
---serif:"Cormorant Garamond",Georgia,serif;
---sans:"Manrope",Arial,sans-serif;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Manrope",Arial,sans-serif;
 
---max:1240px;
+  --max:1240px;
 }
 
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-background:var(--cream);
-color:var(--ink);
-font-family:var(--sans);
-line-height:1.6;
--webkit-font-smoothing:antialiased;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
 }
 
 img{
-display:block;
-max-width:100%;
+  display:block;
+  max-width:100%;
 }
 
 a{
-color:inherit;
-text-decoration:none;
+  color:inherit;
+  text-decoration:none;
 }
 
-button{
-font:inherit;
+button,
+input,
+textarea,
+select{
+  font:inherit;
 }
 
 .container{
-width:min(calc(100% - 48px),var(--max));
-margin:auto;
+  width:min(calc(100% - 48px),var(--max));
+  margin:auto;
 }
 
 .eyebrow{
-font-size:10px;
-font-weight:700;
-letter-spacing:.28em;
-text-transform:uppercase;
-color:var(--gold2);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold2);
 }
 
-.serif{
-font-family:var(--serif);
-}
 
-/* ================= HEADER ================= */
+/* =========================================================
+   HEADER
+========================================================= */
 
 header{
-position:sticky;
-top:0;
-z-index:100;
-background:rgba(31,26,22,.97);
-color:#f8f0e6;
-border-bottom:1px solid rgba(255,255,255,.1);
-backdrop-filter:blur(15px);
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(31,26,22,.97);
+  color:#f8f0e6;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(15px);
 }
 
 .nav{
-height:76px;
-display:flex;
-align-items:center;
-justify-content:space-between;
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
 }
 
 .logo{
-font-family:var(--serif);
-font-size:31px;
-letter-spacing:.23em;
-font-weight:500;
+  font-family:var(--serif);
+  font-size:31px;
+  letter-spacing:.23em;
+  font-weight:500;
+  white-space:nowrap;
 }
 
 .nav-links{
-display:flex;
-gap:34px;
-align-items:center;
-font-size:10px;
-letter-spacing:.16em;
-text-transform:uppercase;
+  display:flex;
+  gap:30px;
+  align-items:center;
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
 }
 
 .nav-links a{
-opacity:.82;
-transition:.25s;
+  opacity:.82;
+  transition:.25s;
 }
 
 .nav-links a:hover{
-opacity:1;
+  opacity:1;
 }
 
-.menu{
-display:none;
-background:none;
-border:0;
-color:white;
-font-size:25px;
-}
 
-/* ================= HERO ================= */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
-position:relative;
-min-height:720px;
-display:flex;
-align-items:flex-end;
-overflow:hidden;
-background:#2b251f;
+  position:relative;
+  min-height:690px;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  background:#2b251f;
 }
 
 .hero-image{
-position:absolute;
-inset:0;
+  position:absolute;
+  inset:0;
 
-background:
-linear-gradient(
-90deg,
-rgba(24,20,17,.82),
-rgba(24,20,17,.45) 48%,
-rgba(24,20,17,.12)
-),
-url("assets/images/ultimate planner.png")
-center/cover no-repeat;
+  background:
+  linear-gradient(
+    90deg,
+    rgba(24,20,17,.86),
+    rgba(24,20,17,.48) 50%,
+    rgba(24,20,17,.15)
+  ),
+  url("assets/images/ultimate planner.png")
+  center/cover no-repeat;
 
-transform:scale(1.02);
+  transform:scale(1.02);
 }
 
 .hero-content{
-position:relative;
-z-index:2;
-width:100%;
-padding:110px 0 90px;
-color:#fff9f1;
+  position:relative;
+  z-index:2;
+  width:100%;
+  padding:105px 0 85px;
+  color:#fff9f1;
 }
 
 .hero-copy{
-max-width:680px;
+  max-width:720px;
 }
 
 .hero-copy .eyebrow{
-color:#d6c09e;
-margin-bottom:22px;
+  color:#d6c09e;
+  margin-bottom:20px;
 }
 
 .hero h1{
-font-family:var(--serif);
-font-size:clamp(64px,8vw,112px);
-font-weight:500;
-line-height:.82;
-letter-spacing:-.04em;
+  font-family:var(--serif);
+  font-size:clamp(60px,8vw,108px);
+  font-weight:500;
+  line-height:.84;
+  letter-spacing:-.04em;
 }
 
 .hero h1 em{
-font-weight:400;
+  font-weight:400;
 }
 
 .hero-description{
-max-width:540px;
-margin-top:30px;
-font-size:15px;
-line-height:1.9;
-color:rgba(255,249,241,.82);
+  max-width:600px;
+  margin-top:30px;
+  font-size:15px;
+  line-height:1.9;
+  color:rgba(255,249,241,.82);
 }
 
 .hero-buttons{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-margin-top:35px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:35px;
 }
 
 .btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-min-height:48px;
-padding:0 25px;
-border:1px solid var(--ink);
-font-size:10px;
-font-weight:700;
-letter-spacing:.18em;
-text-transform:uppercase;
-transition:.25s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 25px;
+  border:1px solid var(--ink);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  transition:.25s;
+  cursor:pointer;
 }
 
 .btn-dark{
-background:var(--ink);
-color:#fff;
+  background:var(--ink);
+  color:#fff;
 }
 
 .btn-dark:hover{
-background:#40342b;
-transform:translateY(-2px);
+  background:#40342b;
+  transform:translateY(-2px);
 }
 
-.btn-outline{
-border-color:rgba(255,255,255,.55);
-background:rgba(255,255,255,.06);
-color:white;
-backdrop-filter:blur(5px);
+.btn-light{
+  background:#fff;
+  color:var(--ink);
 }
 
-.btn-outline:hover{
-background:rgba(255,255,255,.14);
+.btn-light:hover{
+  transform:translateY(-2px);
 }
 
 .hero-note{
-margin-top:50px;
-max-width:390px;
-border-top:1px solid rgba(255,255,255,.35);
-padding-top:22px;
+  margin-top:45px;
+  max-width:460px;
+  border-top:1px solid rgba(255,255,255,.35);
+  padding-top:20px;
 }
 
 .hero-note strong{
-display:block;
-font-family:var(--serif);
-font-size:28px;
-font-weight:500;
-line-height:1.05;
+  display:block;
+  font-family:var(--serif);
+  font-size:27px;
+  font-weight:500;
 }
 
 .hero-note span{
-display:block;
-margin-top:10px;
-font-size:11px;
-color:rgba(255,255,255,.65);
+  display:block;
+  margin-top:8px;
+  font-size:11px;
+  color:rgba(255,255,255,.65);
 }
 
-/* ================= INTRO ================= */
+
+/* =========================================================
+   INTRO
+========================================================= */
 
 .intro{
-padding:120px 0 105px;
-text-align:center;
+  padding:115px 0 85px;
+  text-align:center;
 }
 
 .intro h2{
-max-width:850px;
-margin:15px auto 22px;
-font-family:var(--serif);
-font-size:clamp(48px,5vw,75px);
-font-weight:500;
-line-height:.95;
-letter-spacing:-.03em;
+  max-width:900px;
+  margin:15px auto 22px;
+  font-family:var(--serif);
+  font-size:clamp(48px,5vw,75px);
+  font-weight:500;
+  line-height:.95;
+  letter-spacing:-.03em;
 }
 
 .intro p{
-max-width:680px;
-margin:auto;
-font-size:14px;
-line-height:1.9;
-color:var(--soft);
+  max-width:700px;
+  margin:auto;
+  font-size:14px;
+  line-height:1.9;
+  color:var(--soft);
 }
 
 .rule{
-width:70px;
-height:1px;
-background:var(--gold);
-margin:34px auto;
+  width:70px;
+  height:1px;
+  background:var(--gold);
+  margin:32px auto;
 }
 
-/* ================= PRODUCTS ================= */
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
 
 .products{
-padding:10px 0 125px;
+  padding:15px 0 125px;
 }
 
 .product-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:28px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
 }
 
 .product{
-background:var(--white);
-border:1px solid var(--line);
-overflow:hidden;
-transition:.3s;
+  position:relative;
+  background:var(--white);
+  border:1px solid var(--line);
+  overflow:hidden;
+  transition:.3s;
 }
 
 .product:hover{
-transform:translateY(-6px);
-box-shadow:0 25px 65px rgba(48,35,25,.11);
+  transform:translateY(-5px);
+  box-shadow:0 25px 65px rgba(48,35,25,.11);
 }
 
 .product-image{
-padding:48px 45px 0;
-min-height:570px;
-background:#eee5da;
-display:flex;
-align-items:flex-end;
-justify-content:center;
+  min-height:520px;
+  padding:45px;
+  background:#eee5da;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  position:relative;
 }
 
 .product-image img{
-width:min(75%,430px);
-box-shadow:0 30px 55px rgba(35,25,18,.22);
-transition:.4s;
+  width:min(80%,450px);
+  max-height:510px;
+  object-fit:contain;
+  box-shadow:0 28px 50px rgba(35,25,18,.2);
+  transition:.4s;
 }
 
 .product:hover .product-image img{
-transform:translateY(-8px);
-}
-
-.ultimate .product-image{
-background:#e5e1d8;
+  transform:translateY(-8px);
 }
 
 .product-info{
-padding:40px 42px 45px;
-}
-
-.product-top{
-display:flex;
-justify-content:space-between;
-gap:20px;
+  padding:38px 40px 42px;
 }
 
 .product-number{
-font-size:9px;
-font-weight:700;
-letter-spacing:.2em;
-text-transform:uppercase;
-color:var(--gold2);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold2);
 }
 
 .product h3{
-font-family:var(--serif);
-font-size:43px;
-font-weight:500;
-line-height:1;
-margin:10px 0;
+  font-family:var(--serif);
+  font-size:39px;
+  font-weight:500;
+  line-height:1;
+  margin:9px 0;
 }
 
 .tagline{
-font-family:var(--serif);
-font-size:19px;
-font-style:italic;
-color:var(--soft);
+  font-family:var(--serif);
+  font-size:18px;
+  font-style:italic;
+  color:var(--soft);
 }
 
-/* UPDATED PRICE */
-
 .price{
-font-family:var(--serif);
-font-size:30px;
-white-space:nowrap;
-display:flex;
-align-items:center;
-gap:9px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin-top:20px;
 }
 
 .old-price{
-font-family:var(--sans);
-font-size:13px;
-font-weight:500;
-color:#9a8f85;
-text-decoration:line-through;
-text-decoration-thickness:1px;
+  font-size:13px;
+  color:#9a8f85;
+  text-decoration:line-through;
 }
 
 .new-price{
-font-family:var(--serif);
-font-size:30px;
-font-weight:600;
-color:var(--ink);
+  font-family:var(--serif);
+  font-size:32px;
+  font-weight:600;
+}
+
+.saving{
+  display:inline-block;
+  margin-top:8px;
+  padding:5px 9px;
+  background:#eee4d8;
+  color:var(--gold2);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
 }
 
 .features{
-list-style:none;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:11px 20px;
-margin:27px 0 30px;
+  list-style:none;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px 18px;
+  margin:25px 0 30px;
 }
 
 .features li{
-font-size:11px;
-color:var(--soft);
+  font-size:11px;
+  color:var(--soft);
 }
 
 .features li::before{
-content:"—";
-color:var(--gold2);
-margin-right:8px;
+  content:"—";
+  color:var(--gold2);
+  margin-right:7px;
 }
 
 .product-bottom{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
-padding-top:24px;
-border-top:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding-top:23px;
+  border-top:1px solid var(--line);
 }
 
 .product-bottom small{
-font-size:10px;
-color:#887b70;
+  font-size:10px;
+  color:#887b70;
 }
 
-/* ================= INSIDE ================= */
 
-.inside{
-padding:120px 0;
-background:var(--cream2);
+/* =========================================================
+   HONEYMOON
+========================================================= */
+
+.honeymoon-section{
+  padding:120px 0;
+  background:var(--cream2);
 }
 
-.inside-header{
-display:grid;
-grid-template-columns:.85fr 1.15fr;
-gap:70px;
-align-items:end;
-margin-bottom:55px;
+.honeymoon-intro{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:75px;
+  align-items:end;
+  margin-bottom:55px;
 }
 
-.inside h2{
-font-family:var(--serif);
-font-size:clamp(50px,5vw,75px);
-font-weight:500;
-line-height:.9;
+.honeymoon-intro h2{
+  font-family:var(--serif);
+  font-size:clamp(52px,5vw,78px);
+  font-weight:500;
+  line-height:.9;
 }
 
-.inside-description{
-font-size:13px;
-color:var(--soft);
-line-height:1.9;
-max-width:580px;
+.honeymoon-intro p{
+  max-width:600px;
+  font-size:13px;
+  line-height:1.9;
+  color:var(--soft);
 }
 
-.inside-grid{
-display:grid;
-grid-template-columns:1.25fr .75fr .75fr;
-grid-template-rows:330px 330px;
-gap:15px;
+.honeymoon-card{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  background:var(--white);
+  border:1px solid var(--line);
 }
 
-.inside-card{
-position:relative;
-overflow:hidden;
-border:1px solid rgba(33,27,23,.12);
-background:#ddd1c3;
+.honeymoon-image{
+  min-height:570px;
+  padding:45px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#e8ddd1;
 }
 
-.inside-card:first-child{
-grid-row:span 2;
+.honeymoon-image img{
+  width:min(82%,470px);
+  max-height:520px;
+  object-fit:contain;
+  box-shadow:0 30px 55px rgba(35,25,18,.2);
 }
 
-.inside-card img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:.6s;
+.honeymoon-info{
+  padding:60px 55px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
-.inside-card:hover img{
-transform:scale(1.035);
+.honeymoon-info h3{
+  font-family:var(--serif);
+  font-size:48px;
+  line-height:.95;
+  font-weight:500;
+  margin:12px 0 15px;
 }
 
-.inside-label{
-position:absolute;
-left:18px;
-bottom:18px;
-background:rgba(255,253,249,.94);
-padding:9px 14px;
-font-family:var(--serif);
-font-size:18px;
+.honeymoon-info p{
+  font-size:13px;
+  color:var(--soft);
+  line-height:1.9;
 }
 
-/* ================= VALUE ================= */
-
-.value{
-padding:130px 0;
+.fillable{
+  display:inline-block;
+  width:max-content;
+  margin:20px 0;
+  padding:8px 12px;
+  border:1px solid rgba(128,104,70,.35);
+  color:var(--gold2);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.15em;
+  text-transform:uppercase;
 }
 
-.value-grid{
-display:grid;
-grid-template-columns:.85fr 1.15fr;
-gap:100px;
+
+/* =========================================================
+   BUNDLES
+========================================================= */
+
+.bundles{
+  padding:125px 0;
+  background:#211c18;
+  color:#f8efe5;
 }
 
-.value-title{
-position:sticky;
-top:120px;
+.bundle-heading{
+  text-align:center;
+  margin-bottom:60px;
 }
 
-.value-title h2{
-font-family:var(--serif);
-font-size:clamp(50px,5vw,76px);
-font-weight:500;
-line-height:.9;
-margin:15px 0 25px;
+.bundle-heading .eyebrow{
+  color:#c5a77d;
 }
 
-.value-title p{
-max-width:420px;
-font-size:13px;
-color:var(--soft);
-line-height:1.9;
+.bundle-heading h2{
+  font-family:var(--serif);
+  font-size:clamp(52px,5vw,78px);
+  font-weight:500;
+  line-height:.9;
+  margin:15px 0;
 }
 
-.value-list{
-border-top:1px solid var(--line);
+.bundle-heading p{
+  max-width:620px;
+  margin:auto;
+  font-size:13px;
+  color:rgba(255,248,238,.65);
 }
 
-.value-row{
-display:grid;
-grid-template-columns:60px 1fr 40px;
-gap:20px;
-padding:30px 0;
-border-bottom:1px solid var(--line);
+.bundle-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
 }
 
-.value-number{
-font-size:10px;
-letter-spacing:.18em;
-color:var(--gold2);
-padding-top:7px;
+.bundle{
+  position:relative;
+  background:#fdfaf5;
+  color:var(--ink);
+  border:1px solid rgba(255,255,255,.12);
+  overflow:hidden;
+  transition:.3s;
 }
 
-.value-row h3{
-font-family:var(--serif);
-font-size:31px;
-font-weight:500;
-margin-bottom:5px;
+.bundle:hover{
+  transform:translateY(-6px);
 }
 
-.value-row p{
-font-size:12px;
-color:var(--soft);
-line-height:1.75;
+.bundle-image{
+  min-height:410px;
+  padding:35px;
+  background:#e7ddd1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.value-arrow{
-font-family:var(--serif);
-font-size:27px;
-color:var(--gold2);
-text-align:right;
+.bundle-image img{
+  width:90%;
+  max-height:390px;
+  object-fit:contain;
+  box-shadow:0 25px 45px rgba(0,0,0,.18);
 }
 
-/* ================= COMPARISON ================= */
+.bundle-info{
+  padding:35px 38px 40px;
+}
+
+.bundle-label{
+  font-size:9px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold2);
+  font-weight:700;
+}
+
+.bundle h3{
+  font-family:var(--serif);
+  font-size:39px;
+  line-height:.95;
+  font-weight:500;
+  margin:10px 0;
+}
+
+.bundle p{
+  font-size:12px;
+  color:var(--soft);
+  line-height:1.8;
+}
+
+.bundle-price{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:20px;
+}
+
+.bundle-price .old{
+  font-size:13px;
+  color:#9a8f85;
+  text-decoration:line-through;
+}
+
+.bundle-price .current{
+  font-family:var(--serif);
+  font-size:32px;
+  font-weight:600;
+}
+
+.bundle-saving{
+  margin-top:6px;
+  font-size:10px;
+  color:var(--gold2);
+  font-weight:700;
+}
+
+.bundle-features{
+  list-style:none;
+  margin:22px 0 27px;
+}
+
+.bundle-features li{
+  font-size:11px;
+  color:var(--soft);
+  margin-bottom:8px;
+}
+
+.bundle-features li::before{
+  content:"✓";
+  color:var(--gold2);
+  margin-right:8px;
+}
+
+.best-seller{
+  border:2px solid #a68a61;
+}
+
+.badge{
+  position:absolute;
+  top:18px;
+  left:18px;
+  z-index:5;
+  padding:8px 13px;
+  background:var(--ink);
+  color:white;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+
+.badge.best{
+  background:#9a7657;
+}
+
+.badge.value{
+  background:#806846;
+}
+
+
+/* =========================================================
+   COMPARISON
+========================================================= */
 
 .compare{
-padding:120px 0;
-background:#211c18;
-color:#f8efe5;
+  padding:120px 0;
+  background:var(--cream);
 }
 
 .compare-head{
-text-align:center;
-margin-bottom:55px;
+  text-align:center;
+  margin-bottom:50px;
 }
 
-.compare-head .eyebrow{
-color:#c5a77d;
-}
-
-.compare h2{
-font-family:var(--serif);
-font-size:clamp(50px,5vw,74px);
-font-weight:500;
-line-height:.95;
-margin:15px 0;
+.compare-head h2{
+  font-family:var(--serif);
+  font-size:clamp(48px,5vw,72px);
+  font-weight:500;
+  line-height:.95;
+  margin:15px 0;
 }
 
 .compare-head p{
-font-size:13px;
-color:rgba(255,248,238,.62);
+  color:var(--soft);
+  font-size:13px;
 }
 
-.table{
-overflow:auto;
-border:1px solid rgba(255,255,255,.14);
+.table-wrap{
+  overflow:auto;
+  border:1px solid var(--line);
 }
 
 table{
-width:100%;
-min-width:720px;
-border-collapse:collapse;
+  width:100%;
+  min-width:850px;
+  border-collapse:collapse;
+  background:var(--white);
 }
 
-th,td{
-padding:17px 20px;
-border-bottom:1px solid rgba(255,255,255,.1);
-font-size:11px;
-text-align:left;
+th,
+td{
+  padding:17px 18px;
+  border-bottom:1px solid var(--line);
+  font-size:11px;
+  text-align:center;
+}
+
+th:first-child,
+td:first-child{
+  text-align:left;
 }
 
 th{
-font-family:var(--serif);
-font-size:23px;
-font-weight:500;
-background:rgba(255,255,255,.035);
-}
-
-th:not(:first-child),
-td:not(:first-child){
-text-align:center;
+  font-family:var(--serif);
+  font-size:21px;
+  font-weight:500;
+  background:#eee4d8;
 }
 
 .yes{
-color:#d6bd96;
-font-size:17px;
+  color:var(--gold2);
+  font-size:16px;
 }
 
 .no{
-color:rgba(255,255,255,.23);
+  color:#aaa098;
 }
 
-.compare-note{
-text-align:center;
-margin-top:25px;
-font-size:10px;
-letter-spacing:.06em;
-color:rgba(255,255,255,.45);
+
+/* =========================================================
+   WHY YOVIRA
+========================================================= */
+
+.value{
+  padding:120px 0;
+  background:var(--cream2);
 }
 
-/* ================= FORMAT ================= */
-
-.format{
-padding:120px 0;
+.value-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:90px;
 }
 
-.format-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px;
-margin-top:22px;
+.value-title h2{
+  font-family:var(--serif);
+  font-size:clamp(52px,5vw,75px);
+  font-weight:500;
+  line-height:.9;
+  margin:14px 0 22px;
 }
 
-.format-card{
-position:relative;
-min-height:450px;
-overflow:hidden;
-background:var(--cream2);
-border:1px solid var(--line);
-padding:45px;
+.value-title p{
+  max-width:420px;
+  font-size:13px;
+  color:var(--soft);
+  line-height:1.9;
 }
 
-.format-card.dark{
-background:#2b241f;
-color:#fff8ee;
+.value-list{
+  border-top:1px solid var(--line);
 }
 
-.format-card h3{
-font-family:var(--serif);
-font-size:46px;
-font-weight:500;
-line-height:.95;
-margin:12px 0;
+.value-row{
+  display:grid;
+  grid-template-columns:55px 1fr 30px;
+  gap:18px;
+  padding:28px 0;
+  border-bottom:1px solid var(--line);
 }
 
-.format-card p{
-max-width:350px;
-font-size:12px;
-line-height:1.9;
-color:var(--soft);
+.value-number{
+  font-size:10px;
+  letter-spacing:.15em;
+  color:var(--gold2);
+  padding-top:6px;
 }
 
-.format-card.dark p{
-color:rgba(255,248,238,.62);
+.value-row h3{
+  font-family:var(--serif);
+  font-size:29px;
+  font-weight:500;
+  margin-bottom:5px;
 }
 
-.format-card img{
-position:absolute;
-right:30px;
-bottom:-55px;
-width:48%;
-max-height:360px;
-object-fit:contain;
-box-shadow:0 25px 45px rgba(0,0,0,.2);
-transform:rotate(4deg);
+.value-row p{
+  font-size:12px;
+  color:var(--soft);
+  line-height:1.75;
 }
 
-.format-card.dark img{
-transform:rotate(-4deg);
+.value-arrow{
+  font-family:var(--serif);
+  font-size:25px;
+  color:var(--gold2);
 }
 
-.format-badge{
-display:inline-block;
-margin-top:20px;
-padding:8px 12px;
-border:1px solid rgba(128,104,70,.35);
-font-size:9px;
-font-weight:700;
-letter-spacing:.16em;
-text-transform:uppercase;
-color:var(--gold2);
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+  padding:125px 0;
+  background:#211c18;
+  color:white;
+  text-align:center;
 }
 
-.format-card.dark .format-badge{
-border-color:rgba(214,192,158,.35);
-color:#d6c09e;
+.cta h2{
+  max-width:800px;
+  margin:15px auto 20px;
+  font-family:var(--serif);
+  font-size:clamp(55px,6vw,85px);
+  font-weight:400;
+  line-height:.9;
 }
 
-/* ================= COMING ================= */
-
-.coming{
-padding:120px 0;
-background:#e5dbcf;
-text-align:center;
+.cta p{
+  max-width:580px;
+  margin:auto;
+  color:rgba(255,255,255,.65);
+  font-size:13px;
+  line-height:1.8;
 }
 
-.coming h2{
-font-family:var(--serif);
-font-size:clamp(50px,6vw,82px);
-font-weight:500;
-line-height:.9;
-margin:16px auto 20px;
+.cta .btn{
+  margin-top:30px;
 }
 
-.coming p{
-max-width:590px;
-margin:auto;
-font-size:13px;
-line-height:1.9;
-color:var(--soft);
-}
 
-.coming-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px;
-margin-top:55px;
-}
-
-.coming-card{
-min-height:190px;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-background:rgba(255,253,249,.7);
-border:1px solid rgba(33,27,23,.13);
-transition:.25s;
-}
-
-.coming-card:hover{
-transform:translateY(-4px);
-background:#fffdfa;
-}
-
-.coming-card h3{
-font-family:var(--serif);
-font-size:30px;
-font-weight:500;
-}
-
-.coming-card span{
-font-size:9px;
-letter-spacing:.25em;
-text-transform:uppercase;
-color:var(--gold2);
-margin-top:5px;
-}
-
-/* ================= FAQ ================= */
-
-.faq{
-padding:120px 0;
-}
-
-.faq-grid{
-display:grid;
-grid-template-columns:.7fr 1.3fr;
-gap:100px;
-}
-
-.faq h2{
-font-family:var(--serif);
-font-size:clamp(50px,5vw,72px);
-font-weight:500;
-line-height:.9;
-margin-top:15px;
-}
-
-.faq-list{
-border-top:1px solid var(--line);
-}
-
-details{
-border-bottom:1px solid var(--line);
-padding:23px 0;
-}
-
-summary{
-cursor:pointer;
-list-style:none;
-font-family:var(--serif);
-font-size:25px;
-display:flex;
-justify-content:space-between;
-gap:20px;
-}
-
-summary::-webkit-details-marker{
-display:none;
-}
-
-summary::after{
-content:"+";
-font-family:var(--sans);
-font-size:18px;
-color:var(--gold2);
-}
-
-details[open] summary::after{
-content:"−";
-}
-
-details p{
-max-width:650px;
-margin-top:13px;
-font-size:12px;
-line-height:1.85;
-color:var(--soft);
-}
-
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
-background:#1e1916;
-color:#f7eee3;
-padding:70px 0 28px;
+  background:#181411;
+  color:rgba(255,255,255,.55);
+  padding:45px 0;
 }
 
-.footer-top{
-display:flex;
-justify-content:space-between;
-gap:50px;
-padding-bottom:55px;
-border-bottom:1px solid rgba(255,255,255,.11);
+.footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
 }
 
-.footer-brand p{
-max-width:280px;
-margin-top:15px;
-font-size:11px;
-color:rgba(255,248,238,.52);
+.footer-logo{
+  font-family:var(--serif);
+  font-size:25px;
+  letter-spacing:.2em;
+  color:#fff;
 }
 
 .footer-links{
-display:flex;
-gap:80px;
+  display:flex;
+  gap:25px;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
 }
 
-.footer-column{
-display:grid;
-gap:10px;
-align-content:start;
+.footer-copy{
+  font-size:9px;
 }
 
-.footer-column strong{
-font-size:9px;
-letter-spacing:.2em;
-text-transform:uppercase;
-color:#b99a70;
-margin-bottom:5px;
-}
 
-.footer-column a{
-font-size:11px;
-color:rgba(255,248,238,.68);
-}
-
-.footer-bottom{
-display:flex;
-justify-content:space-between;
-gap:20px;
-padding-top:22px;
-font-size:9px;
-color:rgba(255,248,238,.35);
-}
-
-/* ================= MOBILE ================= */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media(max-width:900px){
 
-.nav-links{
-display:none;
-}
+  .container{
+    width:min(calc(100% - 32px),var(--max));
+  }
 
-.menu{
-display:block;
-}
+  .nav{
+    min-height:68px;
+  }
 
-.hero{
-min-height:700px;
-}
+  .nav-links{
+    display:none;
+  }
 
-.product-grid,
-.format-grid{
-grid-template-columns:1fr;
-}
+  .logo{
+    font-size:25px;
+  }
 
-.inside-header,
-.value-grid,
-.faq-grid{
-grid-template-columns:1fr;
-gap:40px;
-}
+  .hero{
+    min-height:650px;
+  }
 
-.value-title{
-position:static;
-}
+  .hero-content{
+    padding:90px 0 65px;
+  }
 
-.inside-grid{
-grid-template-columns:1fr 1fr;
-grid-template-rows:420px 260px 260px;
-}
+  .hero h1{
+    font-size:clamp(56px,15vw,85px);
+  }
 
-.inside-card:first-child{
-grid-column:span 2;
-grid-row:auto;
-}
+  .product-grid,
+  .bundle-grid{
+    grid-template-columns:1fr;
+  }
 
-.coming-grid{
-grid-template-columns:1fr 1fr;
-}
+  .honeymoon-intro,
+  .honeymoon-card,
+  .value-grid{
+    grid-template-columns:1fr;
+  }
 
-.footer-top{
-flex-direction:column;
-}
+  .honeymoon-image{
+    min-height:430px;
+  }
 
-.footer-links{
-gap:50px;
-}
+  .honeymoon-info{
+    padding:40px 30px;
+  }
+
+  .bundle-image{
+    min-height:350px;
+  }
+
+  .value-title{
+    margin-bottom:40px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    text-align:center;
+  }
 
 }
 
 @media(max-width:600px){
 
-.container{
-width:calc(100% - 28px);
-}
+  .container{
+    width:calc(100% - 28px);
+  }
 
-.nav{
-height:68px;
-}
+  .hero{
+    min-height:620px;
+  }
 
-.logo{
-font-size:27px;
-}
+  .hero-description{
+    font-size:13px;
+  }
 
-.hero{
-min-height:680px;
-}
+  .product-image{
+    min-height:420px;
+    padding:30px;
+  }
 
-.hero-content{
-padding:80px 0 55px;
-}
+  .product-info{
+    padding:30px 25px 35px;
+  }
 
-.hero h1{
-font-size:64px;
-}
+  .product h3,
+  .bundle h3{
+    font-size:34px;
+  }
 
-.hero-description{
-font-size:13px;
-}
+  .features{
+    grid-template-columns:1fr;
+  }
 
-.intro,
-.products,
-.inside,
-.value,
-.compare,
-.format,
-.coming,
-.faq{
-padding:80px 0;
-}
+  .honeymoon-image{
+    min-height:350px;
+  }
 
-.product-image{
-min-height:430px;
-padding:35px 25px 0;
-}
+  .honeymoon-info h3{
+    font-size:40px;
+  }
 
-.product-image img{
-width:78%;
-}
+  .bundle-info{
+    padding:30px 25px 35px;
+  }
 
-.product-info{
-padding:30px 24px;
-}
-
-.product h3{
-font-size:37px;
-}
-
-.price{
-font-size:26px;
-}
-
-.new-price{
-font-size:26px;
-}
-
-.old-price{
-font-size:11px;
-}
-
-.features{
-grid-template-columns:1fr;
-}
-
-.product-bottom{
-flex-direction:column;
-align-items:flex-start;
-}
-
-.inside-grid{
-grid-template-columns:1fr;
-grid-template-rows:repeat(4,300px);
-}
-
-.inside-card:first-child{
-grid-column:auto;
-}
-
-.value-row{
-grid-template-columns:40px 1fr 30px;
-gap:10px;
-}
-
-.value-row h3{
-font-size:27px;
-}
-
-.format-card{
-min-height:500px;
-padding:30px;
-}
-
-.format-card h3{
-font-size:39px;
-}
-
-.format-card img{
-width:52%;
-right:18px;
-bottom:-30px;
-}
-
-.coming-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.coming-card{
-min-height:145px;
-}
-
-.coming-card h3{
-font-size:24px;
-}
-
-.footer-links{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-}
-
-.footer-bottom{
-flex-direction:column;
-}
+  .footer-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
 
 }
 
 </style>
 </head>
 
+
 <body>
 
-<!-- ================= HEADER ================= -->
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header>
 
-<div class="container nav">
+  <div class="container nav">
 
-<a href="index.html" class="logo">
-YOVIRA
-</a>
+    <a href="index.html" class="logo">
+      YOVIRA
+    </a>
 
-<nav class="nav-links">
+    <nav class="nav-links">
 
-<a href="index.html">Home</a>
-<a href="planner.html">Planners</a>
-<a href="#inside">Inside</a>
-<a href="#faq">FAQ</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+      <a href="#products">
+        Wedding
+      </a>
 
-</nav>
+      <a href="#honeymoon">
+        Honeymoon
+      </a>
 
-<button class="menu" aria-label="Menu">
-☰
-</button>
+      <a href="#bundles">
+        Bundles
+      </a>
 
-</div>
+    </nav>
+
+  </div>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="hero">
 
-<div class="hero-image"></div>
+  <div class="hero-image"></div>
 
-<div class="container hero-content">
+  <div class="container hero-content">
 
-<div class="hero-copy">
+    <div class="hero-copy">
 
-<div class="eyebrow">
-The YOVIRA Wedding Collection
-</div>
+      <div class="eyebrow">
+        YOVIRA · Digital Planning Collection
+      </div>
 
-<h1>
-Plan the celebration.<br>
-<em>Keep the meaning.</em>
-</h1>
+      <h1>
+        Plan the day.<br>
+        <em>Enjoy the journey.</em>
+      </h1>
 
-<p class="hero-description">
-Thoughtfully designed digital wedding planners that bring
-budgets, guests, vendors, schedules and the little details
-into one beautifully organized place.
-</p>
+      <p class="hero-description">
+        Thoughtfully designed digital planners for the moments
+        that matter most — from wedding planning to the honeymoon
+        that follows.
+      </p>
 
-<div class="hero-buttons">
+      <div class="hero-buttons">
 
-<a href="#collection" class="btn btn-outline">
-Explore planners
-</a>
+        <a href="#products" class="btn btn-light">
+          Explore Planners
+        </a>
 
-<a href="#inside" class="btn btn-outline">
-See inside
-</a>
+        <a href="#bundles" class="btn btn-light">
+          View Best Seller
+        </a>
 
-</div>
+      </div>
 
-<div class="hero-note">
+      <div class="hero-note">
 
-<strong>
-Two ways to plan.<br>
-One calmer experience.
-</strong>
+        <strong>
+          One beautiful system for your biggest moments.
+        </strong>
 
-<span>
-Choose the focused essentials or the complete wedding command center.
-</span>
+        <span>
+          Digital products · Instant access · Designed for modern planning
+        </span>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= INTRO ================= -->
+<!-- =========================================================
+     INTRO
+========================================================= -->
 
 <section class="intro">
 
-<div class="container">
+  <div class="container">
 
-<div class="eyebrow">
-The YOVIRA Approach
-</div>
+    <div class="eyebrow">
+      The YOVIRA Collection
+    </div>
 
-<h2>
-Less scattered planning.<br>
-<em>More intentional moments.</em>
-</h2>
+    <h2>
+      Everything you need to move from
+      planning to celebrating.
+    </h2>
 
-<div class="rule"></div>
+    <div class="rule"></div>
 
-<p>
-Wedding planning can quickly become dozens of spreadsheets,
-notes, screenshots and forgotten details. YOVIRA brings the
-important pieces together into one considered planning system
-so you can spend less time organizing the chaos and more time
-enjoying the journey.
-</p>
+    <p>
+      Choose a focused wedding planner, a dedicated honeymoon planner,
+      or combine them into one complete planning system. Every product
+      is designed to make important details easier to organize without
+      making the process feel overwhelming.
+    </p>
 
-</div>
-
-</section>
-
-
-<!-- ================= PRODUCTS ================= -->
-
-<section class="products" id="collection">
-
-<div class="container">
-
-<div class="product-grid">
-
-
-<!-- ESSENTIAL -->
-
-<article class="product">
-
-<div class="product-image">
-
-<img
-src="assets/images/essential planner.jpg"
-alt="YOVIRA Essential Wedding Planner"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-top">
-
-<div>
-
-<div class="product-number">
-01 · The Essential
-</div>
-
-<h3>
-Essential Wedding Planner
-</h3>
-
-<div class="tagline">
-The essentials, beautifully organized.
-</div>
-
-</div>
-
-<div class="price">
-<span class="old-price">$19.99</span>
-<span class="new-price">$9.99</span>
-</div>
-
-</div>
-
-<ul class="features">
-
-<li>Budget planning</li>
-<li>Guest management</li>
-<li>Vendor tracking</li>
-<li>Venue organization</li>
-<li>Wedding timeline</li>
-<li>Final checklists</li>
-
-</ul>
-
-<div class="product-bottom">
-
-<small>
-Focused planning · 50 pages
-</small>
-
-<a
-href="products-essential.html"
-class="btn btn-dark"
->
-Buy Now
-</a>
-
-</div>
-
-</div>
-
-</article>
-
-
-<!-- ULTIMATE -->
-
-<article class="product ultimate">
-
-<div class="product-image">
-
-<img
-src="assets/images/ultimate planner.png"
-alt="YOVIRA Ultimate Wedding Planner — fillable and printable"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-top">
-
-<div>
-
-<div class="product-number">
-02 · The Ultimate
-</div>
-
-<h3>
-Ultimate Wedding Planner
-</h3>
-
-<div class="tagline">
-Your complete wedding command center.
-</div>
-
-</div>
-
-<div class="price">
-<span class="old-price">$24.99</span>
-<span class="new-price">$14.99</span>
-</div>
-
-</div>
-
-<ul class="features">
-
-<li>Everything in Essential</li>
-<li>Expanded worksheets</li>
-<li>Vision & inspiration</li>
-<li>Dress comparison</li>
-<li>RSVP follow-up</li>
-<li>Wedding-day organization</li>
-<li>Fillable PDF</li>
-<li>Printable PDF</li>
-
-</ul>
-
-<div class="product-bottom">
-
-<small>
-100 pages · Fillable + Printable
-</small>
-
-<a
-href="products-ultimate.html"
-class="btn btn-dark"
->
-Buy Now
-</a>
-
-</div>
-
-</div>
-
-</article>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= INSIDE ================= -->
+<!-- =========================================================
+     WEDDING PRODUCTS
+========================================================= -->
 
-<section class="inside" id="inside">
+<section class="products" id="products">
 
-<div class="container">
+  <div class="container">
 
-<div class="inside-header">
-
-<div>
-
-<div class="eyebrow">
-A Look Inside
-</div>
-
-<h2>
-Designed to be<br>
-<em>used, not admired.</em>
-</h2>
-
-</div>
-
-<p class="inside-description">
-Every page has a purpose. From first ideas to final
-checklists, YOVIRA is built around the actual decisions
-couples need to make — while keeping the experience
-beautiful enough to enjoy along the way.
-</p>
-
-</div>
+    <div class="product-grid">
 
 
-<div class="inside-grid">
+      <!-- ESSENTIAL -->
 
-<div class="inside-card">
+      <article class="product">
 
-<img
-src="assets/images/wedding inspiration.png"
-alt="YOVIRA wedding inspiration page"
-loading="lazy"
->
+        <div class="product-image">
 
-<div class="inside-label">
-Wedding inspiration
-</div>
+          <img
+            src="assets/images/essential planner.jpg"
+            alt="YOVIRA Essential Wedding Planner"
+          >
 
-</div>
+        </div>
+
+        <div class="product-info">
+
+          <div class="product-number">
+            01 · Wedding Planning
+          </div>
+
+          <h3>
+            Essential Wedding Planner
+          </h3>
+
+          <div class="tagline">
+            The focused foundation for your wedding.
+          </div>
+
+          <div class="price">
+
+            <span class="old-price">
+              $19.99
+            </span>
+
+            <span class="new-price">
+              $9.99
+            </span>
+
+          </div>
+
+          <div class="saving">
+            Save $10
+          </div>
+
+          <ul class="features">
+
+            <li>Wedding planning essentials</li>
+            <li>Checklists & trackers</li>
+            <li>Budget organization</li>
+            <li>Vendor planning</li>
+            <li>Guest organization</li>
+            <li>Digital format</li>
+
+          </ul>
+
+          <div class="product-bottom">
+
+            <small>
+              One-time digital purchase
+            </small>
+
+            <a
+              href="product-essential.html"
+              class="btn btn-dark"
+            >
+              View Planner
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
 
 
-<div class="inside-card">
+      <!-- ULTIMATE -->
 
-<img
-src="assets/images/monthly planner.png"
-alt="YOVIRA monthly and yearly planning"
-loading="lazy"
->
+      <article class="product">
 
-<div class="inside-label">
-Planning calendar
-</div>
+        <div class="product-image">
 
-</div>
+          <img
+            src="assets/images/ultimate planner.png"
+            alt="YOVIRA Ultimate Wedding Command Center"
+          >
 
+        </div>
 
-<div class="inside-card">
+        <div class="product-info">
 
-<img
-src="assets/images/planning tools.png"
-alt="YOVIRA wedding planning tools"
-loading="lazy"
->
+          <div class="product-number">
+            02 · Wedding Planning
+          </div>
 
-<div class="inside-label">
-Planning tools
-</div>
+          <h3>
+            Ultimate Wedding Command Center
+          </h3>
 
-</div>
+          <div class="tagline">
+            A complete system for the details behind the day.
+          </div>
 
+          <div class="price">
 
-<div class="inside-card">
+            <span class="old-price">
+              $29.99
+            </span>
 
-<img
-src="assets/images/wedding checklist.png"
-alt="YOVIRA wedding checklist"
-loading="lazy"
->
+            <span class="new-price">
+              $14.99
+            </span>
 
-<div class="inside-label">
-Wedding checklist
-</div>
+          </div>
 
-</div>
+          <div class="saving">
+            Save $15
+          </div>
 
+          <ul class="features">
 
-<div class="inside-card">
+            <li>100-page planning system</li>
+            <li>Detailed trackers</li>
+            <li>Budget & vendor planning</li>
+            <li>Guest & RSVP organization</li>
+            <li>Wedding inspiration pages</li>
+            <li>Premium planning experience</li>
 
-<img
-src="assets/images/ultimate planner.png"
-alt="YOVIRA Ultimate Wedding Planner"
-loading="lazy"
->
+          </ul>
 
-<div class="inside-label">
-Ultimate planner
-</div>
+          <div class="product-bottom">
 
-</div>
+            <small>
+              One-time digital purchase
+            </small>
 
-</div>
+            <a
+              href="product-ultimate.html"
+              class="btn btn-dark"
+            >
+              View Planner
+            </a>
 
-</div>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- ================= VALUE ================= -->
+<!-- =========================================================
+     HONEYMOON
+========================================================= -->
 
-<section class="value">
+<section class="honeymoon-section" id="honeymoon">
 
-<div class="container value-grid">
+  <div class="container">
 
-<div class="value-title">
+    <div class="honeymoon-intro">
 
-<div class="eyebrow">
-What You're Actually Buying
-</div>
+      <div>
 
-<h2>
-A system for the<br>
-<em>whole celebration.</em>
-</h2>
+        <div class="eyebrow">
+          03 · Honeymoon Planning
+        </div>
 
-<p>
-Not another decorative PDF. YOVIRA is designed around
-the real work behind a wedding — the decisions, payments,
-people, schedules and details that need to stay under control.
-</p>
+        <h2>
+          The honeymoon
+          deserves a plan too.
+        </h2>
 
-</div>
+      </div>
 
+      <p>
+        Your wedding may be the main event, but the journey afterwards
+        deserves just as much thought. The YOVIRA Honeymoon Planner
+        helps organize destinations, budgets, travel details,
+        accommodation, activities and memories in one elegant place.
+      </p>
 
-<div class="value-list">
-
-<div class="value-row">
-
-<div class="value-number">
-01
-</div>
-
-<div>
-
-<h3>
-See the big picture
-</h3>
-
-<p>
-Use timelines, calendars and checklists to understand
-what needs to happen and when.
-</p>
-
-</div>
-
-<div class="value-arrow">
-↗
-</div>
-
-</div>
+    </div>
 
 
-<div class="value-row">
+    <div class="honeymoon-card">
 
-<div class="value-number">
-02
-</div>
+      <div class="honeymoon-image">
 
-<div>
+        <img
+          src="assets/images/1790519634656.png"
+          alt="YOVIRA Honeymoon Planner"
+        >
 
-<h3>
-Control the budget
-</h3>
+      </div>
 
-<p>
-Track planned costs, actual spending, deposits and
-outstanding payments in one place.
-</p>
+      <div class="honeymoon-info">
 
-</div>
+        <div class="eyebrow">
+          Honeymoon Planner
+        </div>
 
-<div class="value-arrow">
-↗
-</div>
+        <h3>
+          Plan the escape.
+        </h3>
 
-</div>
+        <p>
+          A dedicated digital honeymoon planning system for turning
+          travel ideas into a clear, organized and memorable trip.
+        </p>
 
+        <span class="fillable">
+          Fillable PDF
+        </span>
 
-<div class="value-row">
+        <div class="price">
 
-<div class="value-number">
-03
-</div>
+          <span class="old-price">
+            $14.99
+          </span>
 
-<div>
+          <span class="new-price">
+            $7.99
+          </span>
 
-<h3>
-Compare before committing
-</h3>
+        </div>
 
-<p>
-Keep venue, dress and vendor information together
-before making expensive decisions.
-</p>
+        <div class="saving">
+          Save $7
+        </div>
 
-</div>
+        <ul class="features">
 
-<div class="value-arrow">
-↗
-</div>
+          <li>Destination planning</li>
+          <li>Travel organization</li>
+          <li>Budget planning</li>
+          <li>Accommodation details</li>
+          <li>Activities & itinerary</li>
+          <li>Memory planning</li>
 
-</div>
+        </ul>
 
+        <a
+          href="Checkout.html?product=honeymoon"
+          class="btn btn-dark"
+        >
+          Get Honeymoon Planner
+        </a>
 
-<div class="value-row">
+      </div>
 
-<div class="value-number">
-04
-</div>
+    </div>
 
-<div>
-
-<h3>
-Keep every detail moving
-</h3>
-
-<p>
-Guest lists, appointments, schedules and final checks
-stay visible as the wedding approaches.
-</p>
-
-</div>
-
-<div class="value-arrow">
-↗
-</div>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= COMPARISON ================= -->
+<!-- =========================================================
+     BUNDLES
+========================================================= -->
+
+<section class="bundles" id="bundles">
+
+  <div class="container">
+
+    <div class="bundle-heading">
+
+      <div class="eyebrow">
+        Best Value · Complete Planning
+      </div>
+
+      <h2>
+        Plan the wedding.<br>
+        Plan the honeymoon.
+      </h2>
+
+      <p>
+        Combine your wedding and honeymoon planning into one
+        convenient digital collection and save compared with
+        purchasing the planners separately.
+      </p>
+
+    </div>
+
+
+    <div class="bundle-grid">
+
+
+      <!-- ESSENTIAL + HONEYMOON -->
+
+      <article class="bundle">
+
+        <div class="badge value">
+          BEST VALUE
+        </div>
+
+        <div class="bundle-image">
+
+          <img
+            src="assets/images/essential+honeymoon.png"
+            alt="YOVIRA Essential Wedding Planner and Honeymoon Planner Bundle"
+          >
+
+        </div>
+
+        <div class="bundle-info">
+
+          <div class="bundle-label">
+            Wedding + Honeymoon
+          </div>
+
+          <h3>
+            Essential + Honeymoon
+          </h3>
+
+          <p>
+            A practical combination for couples who want the
+            essential wedding planning system plus a dedicated
+            honeymoon planner.
+          </p>
+
+          <div class="bundle-price">
+
+            <span class="old">
+              $29.99
+            </span>
+
+            <span class="current">
+              $14.99
+            </span>
+
+          </div>
+
+          <div class="bundle-saving">
+            Normally $17.98 · Save $2.99
+          </div>
+
+          <ul class="bundle-features">
+
+            <li>Essential Wedding Planner</li>
+            <li>Honeymoon Planner</li>
+            <li>Honeymoon planner is fillable</li>
+            <li>Digital delivery</li>
+            <li>One-time purchase</li>
+
+          </ul>
+
+          <a
+            href="Checkout.html?bundle=essential-honeymoon"
+            class="btn btn-dark"
+          >
+            Get The Bundle
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- ULTIMATE + HONEYMOON -->
+
+      <article class="bundle best-seller">
+
+        <div class="badge best">
+          BEST SELLER
+        </div>
+
+        <div class="bundle-image">
+
+          <img
+            src="assets/images/ultimate+honeymoon.png"
+            alt="YOVIRA Ultimate Wedding Command Center and Honeymoon Planner Bundle"
+          >
+
+        </div>
+
+        <div class="bundle-info">
+
+          <div class="bundle-label">
+            Complete Planning Collection
+          </div>
+
+          <h3>
+            Ultimate + Honeymoon
+          </h3>
+
+          <p>
+            Our most complete planning option — combining the
+            Ultimate Wedding Command Center with the dedicated
+            YOVIRA Honeymoon Planner.
+          </p>
+
+          <div class="bundle-price">
+
+            <span class="old">
+              $39.99
+            </span>
+
+            <span class="current">
+              $19.99
+            </span>
+
+          </div>
+
+          <div class="bundle-saving">
+            Normally $22.98 · Save $2.99
+          </div>
+
+          <ul class="bundle-features">
+
+            <li>Ultimate Wedding Command Center</li>
+            <li>Honeymoon Planner</li>
+            <li>Honeymoon planner is fillable</li>
+            <li>Complete wedding-to-honeymoon system</li>
+            <li>Digital delivery</li>
+            <li>One-time purchase</li>
+
+          </ul>
+
+          <a
+            href="Checkout.html?bundle=ultimate-honeymoon"
+            class="btn btn-dark"
+          >
+            Get Best Seller
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     COMPARISON
+========================================================= -->
 
 <section class="compare">
 
-<div class="container">
+  <div class="container">
 
-<div class="compare-head">
+    <div class="compare-head">
 
-<div class="eyebrow">
-Find Your Fit
-</div>
+      <div class="eyebrow">
+        Choose Your Level
+      </div>
 
-<h2>
-Essential or Ultimate?
-</h2>
+      <h2>
+        Find the right planning system.
+      </h2>
 
-<p>
-The difference is depth, not quality.
-</p>
+      <p>
+        Simple essentials or complete wedding-to-honeymoon planning.
+      </p>
 
-</div>
+    </div>
 
 
-<div class="table">
+    <div class="table-wrap">
 
-<table>
+      <table>
 
-<thead>
+        <thead>
 
-<tr>
+          <tr>
 
-<th>
-What's included
-</th>
+            <th>
+              Included
+            </th>
 
-<th>
-Essential<br>
-<small>$9.99</small>
-</th>
+            <th>
+              Essential
+              <br>$9.99
+            </th>
 
-<th>
-Ultimate<br>
-<small>$14.99</small>
-</th>
+            <th>
+              Ultimate
+              <br>$14.99
+            </th>
 
-</tr>
+            <th>
+              Honeymoon
+              <br>$7.99
+            </th>
 
-</thead>
+            <th>
+              Essential +
+              <br>Honeymoon
+              <br>$14.99
+            </th>
 
-<tbody>
+            <th>
+              Ultimate +
+              <br>Honeymoon
+              <br>$19.99
+            </th>
 
-<tr>
-<td>Core wedding planning</td>
-<td class="yes">✓</td>
-<td class="yes">✓</td>
-</tr>
+          </tr>
 
-<tr>
-<td>Budget & expense organization</td>
-<td class="yes">✓</td>
-<td class="yes">✓</td>
-</tr>
+        </thead>
 
-<tr>
-<td>Guest planning</td>
-<td class="yes">✓</td>
-<td class="yes">✓</td>
-</tr>
+        <tbody>
 
-<tr>
-<td>Vendor organization</td>
-<td class="yes">✓</td>
-<td class="yes">✓</td>
-</tr>
+          <tr>
+            <td>Wedding planning</td>
+            <td class="yes">✓</td>
+            <td class="yes">✓</td>
+            <td class="no">—</td>
+            <td class="yes">✓</td>
+            <td class="yes">✓</td>
+          </tr>
 
-<tr>
-<td>Wedding timeline</td>
-<td class="yes">✓</td>
-<td class="yes">✓</td>
-</tr>
+          <tr>
+            <td>Honeymoon planning</td>
+            <td class="no">—</td>
+            <td class="no">—</td>
+            <td class="yes">✓</td>
+            <td class="yes">✓</td>
+            <td class="yes">✓</td>
+          </tr>
 
-<tr>
-<td>Expanded worksheets</td>
-<td class="no">—</td>
-<td class="yes">✓</td>
-</tr>
+          <tr>
+            <td>Honeymoon fillable PDF</td>
+            <td class="no">—</td>
+            <td class="no">—</td>
+            <td class="yes">✓</td>
+            <td class="yes">✓</td>
+            <td class="yes">✓</td>
+          </tr>
 
-<tr>
-<td>Vision & inspiration planning</td>
-<td class="no">—</td>
-<td class="yes">✓</td>
-</tr>
+          <tr>
+            <td>Complete wedding system</td>
+            <td class="no">—</td>
+            <td class="yes">✓</td>
+            <td class="no">—</td>
+            <td class="no">—</td>
+            <td class="yes">✓</td>
+          </tr>
 
-<tr>
-<td>Dress comparison tools</td>
-<td class="no">—</td>
-<td class="yes">✓</td>
-</tr>
+          <tr>
+            <td>Bundle savings</td>
+            <td class="no">—</td>
+            <td class="no">—</td>
+            <td class="no">—</td>
+            <td class="yes">$2.99</td>
+            <td class="yes">$2.99</td>
+          </tr>
 
-<tr>
-<td>RSVP follow-up organization</td>
-<td class="no">—</td>
-<td class="yes">✓</td>
-</tr>
+        </tbody>
 
-<tr>
-<td>Detailed wedding-day organization</td>
-<td class="no">—</td>
-<td class="yes">✓</td>
-</tr>
+      </table>
 
-<tr>
-<td>Fillable PDF</td>
-<td class="no">—</td>
-<td class="yes">✓</td>
-</tr>
+    </div>
 
-<tr>
-<td>Printable PDF</td>
-<td class="yes">✓</td>
-<td class="yes">✓</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-<div class="compare-note">
-Ultimate includes both a fillable digital PDF and a printable PDF for flexible planning.
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= FORMAT ================= -->
+<!-- =========================================================
+     WHY YOVIRA
+========================================================= -->
 
-<section class="format">
+<section class="value">
 
-<div class="container">
+  <div class="container">
 
-<div class="eyebrow">
-Plan Your Way
-</div>
+    <div class="value-grid">
 
-<div class="format-grid">
+      <div class="value-title">
 
-<article class="format-card">
+        <div class="eyebrow">
+          Why YOVIRA
+        </div>
 
-<div class="eyebrow">
-01 · Printable
-</div>
+        <h2>
+          Planning should feel beautiful.
+        </h2>
 
-<h3>
-Print it.<br>
-<em>Write it.</em>
-</h3>
+        <p>
+          YOVIRA combines practical organization with an elegant,
+          calm visual experience — so planning feels less like
+          managing a spreadsheet and more like preparing for a
+          meaningful chapter of life.
+        </p>
 
-<p>
-Print the pages you need and plan by hand.
-Perfect for couples who enjoy a tactile planning experience.
-</p>
-
-<div class="format-badge">
-Printable PDF
-</div>
-
-<img
-src="assets/images/planning tools.png"
-alt="Printable YOVIRA wedding planner"
-loading="lazy"
->
-
-</article>
+      </div>
 
 
-<article class="format-card dark">
+      <div class="value-list">
 
-<div class="eyebrow">
-02 · Ultimate Format
-</div>
+        <div class="value-row">
 
-<h3>
-Fill it.<br>
-<em>Print it.</em>
-</h3>
+          <div class="value-number">
+            01
+          </div>
 
-<p>
-The Ultimate Wedding Planner includes a fillable PDF
-for digital planning plus a printable PDF when you
-prefer to write by hand.
-</p>
+          <div>
 
-<div class="format-badge">
-Fillable + Printable PDF
-</div>
+            <h3>
+              Everything in one place.
+            </h3>
 
-<img
-src="assets/images/monthly planner.png"
-alt="YOVIRA Ultimate Wedding Planner fillable and printable PDF"
-loading="lazy"
->
+            <p>
+              Keep important planning details, decisions and
+              trackers organized instead of scattered across
+              notes and apps.
+            </p>
 
-</article>
+          </div>
 
-</div>
+          <div class="value-arrow">
+            ↗
+          </div>
 
-</div>
+        </div>
+
+
+        <div class="value-row">
+
+          <div class="value-number">
+            02
+          </div>
+
+          <div>
+
+            <h3>
+              Built for real planning.
+            </h3>
+
+            <p>
+              Checklists, trackers, budgets, inspiration and
+              planning pages are designed around the actual
+              decisions couples need to make.
+            </p>
+
+          </div>
+
+          <div class="value-arrow">
+            ↗
+          </div>
+
+        </div>
+
+
+        <div class="value-row">
+
+          <div class="value-number">
+            03
+          </div>
+
+          <div>
+
+            <h3>
+              Wedding to honeymoon.
+            </h3>
+
+            <p>
+              The bundle collection lets you continue the
+              planning journey beyond the wedding day.
+            </p>
+
+          </div>
+
+          <div class="value-arrow">
+            ↗
+          </div>
+
+        </div>
+
+
+        <div class="value-row">
+
+          <div class="value-number">
+            04
+          </div>
+
+          <div>
+
+            <h3>
+              Digital & convenient.
+            </h3>
+
+            <p>
+              No physical shipping. Your digital planning
+              products are designed for convenient access
+              and use.
+            </p>
+
+          </div>
+
+          <div class="value-arrow">
+            ↗
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- ================= COMING SOON ================= -->
+<!-- =========================================================
+     CTA
+========================================================= -->
 
-<section class="coming">
+<section class="cta">
 
-<div class="container">
+  <div class="container">
 
-<div class="eyebrow">
-The Collection Is Growing
-</div>
+    <div
+      class="eyebrow"
+      style="color:#c5a77d;"
+    >
+      Your next chapter
+    </div>
 
-<h2>
-Wedding is only<br>
-<em>the beginning.</em>
-</h2>
+    <h2>
+      Start planning
+      beautifully.
+    </h2>
 
-<p>
-YOVIRA is building thoughtfully designed planners for
-different chapters of life. The wedding collection comes first.
-More are coming soon.
-</p>
+    <p>
+      Choose the planner that fits your journey — or get the
+      complete wedding-to-honeymoon collection.
+    </p>
 
+    <a href="#products" class="btn btn-light">
+      Explore YOVIRA
+    </a>
 
-<div class="coming-grid">
-
-<div class="coming-card">
-<h3>Life</h3>
-<span>Coming Soon</span>
-</div>
-
-<div class="coming-card">
-<h3>Wellness</h3>
-<span>Coming Soon</span>
-</div>
-
-<div class="coming-card">
-<h3>Finance</h3>
-<span>Coming Soon</span>
-</div>
-
-<div class="coming-card">
-<h3>Travel</h3>
-<span>Coming Soon</span>
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= FAQ ================= -->
-
-<section class="faq" id="faq">
-
-<div class="container faq-grid">
-
-<div>
-
-<div class="eyebrow">
-Questions
-</div>
-
-<h2>
-Before you<br>
-<em>choose.</em>
-</h2>
-
-</div>
-
-
-<div class="faq-list">
-
-<details open>
-
-<summary>
-Which planner should I choose?
-</summary>
-
-<p>
-Choose Essential if you want the core wedding planning
-system. Choose Ultimate if you want the expanded set of
-comparison, inspiration, RSVP and wedding-day worksheets,
-plus both fillable and printable PDF formats.
-</p>
-
-</details>
-
-
-<details>
-
-<summary>
-What is the difference?
-</summary>
-
-<p>
-Essential focuses on the fundamental planning tools.
-Ultimate includes everything in Essential plus additional
-worksheets for deeper planning and organization, as well
-as a fillable PDF and printable PDF.
-</p>
-
-</details>
-
-
-<details>
-
-<summary>
-Is the Ultimate Wedding Planner fillable?
-</summary>
-
-<p>
-Yes. The Ultimate Wedding Planner includes a fillable PDF
-version that allows you to enter information digitally using
-a compatible PDF application that supports PDF forms.
-</p>
-
-</details>
-
-
-<details>
-
-<summary>
-Can I print the Ultimate Wedding Planner?
-</summary>
-
-<p>
-Yes. The Ultimate Wedding Planner also includes a printable
-PDF version, so you can print the pages and write by hand.
-</p>
-
-</details>
-
-
-<details>
-
-<summary>
-Can I use the planner digitally?
-</summary>
-
-<p>
-Yes. The Ultimate Wedding Planner includes a fillable PDF
-designed for digital planning on compatible PDF applications
-that support filling PDF forms.
-</p>
-
-</details>
-
-
-<details>
-
-<summary>
-Is this a physical planner?
-</summary>
-
-<p>
-No. YOVIRA planners are digital products. You receive
-the applicable digital files after purchase.
-</p>
-
-</details>
-
-
-<details>
-
-<summary>
-Are more planners coming?
-</summary>
-
-<p>
-Yes. Life and additional planner categories are planned
-for future YOVIRA releases.
-</p>
-
-</details>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
-<div class="container">
+  <div class="container footer-inner">
 
-<div class="footer-top">
+    <div>
 
-<div class="footer-brand">
+      <div class="footer-logo">
+        YOVIRA
+      </div>
 
-<a href="index.html" class="logo">
-YOVIRA
-</a>
+      <div class="footer-copy">
+        Plan beautifully. Live fully.
+      </div>
 
-<p>
-Plan beautifully. Live fully.
-Digital planners for the moments that deserve intention.
-</p>
+    </div>
 
-</div>
+    <div class="footer-links">
 
+      <a href="about.html">
+        About
+      </a>
 
-<div class="footer-links">
+      <a href="contact.html">
+        Contact
+      </a>
 
-<div class="footer-column">
+      <a href="faq.html">
+        FAQ
+      </a>
 
-<strong>
-Explore
-</strong>
+      <a href="privacy.html">
+        Privacy
+      </a>
 
-<a href="index.html">
-Home
-</a>
+      <a href="refund.html">
+        Refund Policy
+      </a>
 
-<a href="planner.html">
-Wedding Planners
-</a>
+    </div>
 
-<a href="#inside">
-Inside
-</a>
-
-<a href="#faq">
-FAQ
-</a>
-
-</div>
-
-
-<div class="footer-column">
-
-<strong>
-YOVIRA
-</strong>
-
-<a href="about.html">
-About
-</a>
-
-<a href="contact.html">
-Contact
-</a>
-
-<a href="privacy.html">
-Privacy
-</a>
-
-<a href="terms.html">
-Terms
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-<span>
-© 2026 YOVIRA. All rights reserved.
-</span>
-
-<span>
-Plan beautifully. Live fully.
-</span>
-
-</div>
-
-</div>
+  </div>
 
 </footer>
 
-
-<script>
-
-const menu=document.querySelector(".menu");
-const nav=document.querySelector(".nav-links");
-
-menu.addEventListener("click",function(){
-
-if(nav.style.display==="flex"){
-
-nav.style.display="none";
-
-}else{
-
-nav.style.display="flex";
-nav.style.position="absolute";
-nav.style.top="68px";
-nav.style.left="14px";
-nav.style.right="14px";
-nav.style.padding="22px";
-nav.style.background="#211c18";
-nav.style.flexDirection="column";
-nav.style.alignItems="flex-start";
-nav.style.gap="18px";
-nav.style.border="1px solid rgba(255,255,255,.12)";
-
-}
-
-});
-
-</script>
 
 </body>
 </html>
