@@ -17,10 +17,6 @@ rel="stylesheet">
 
 <style>
 
-/* =====================================================
-   ROOT
-===================================================== */
-
 :root{
   --ink:#211b17;
   --soft:#665a50;
@@ -30,7 +26,7 @@ rel="stylesheet">
   --gold:#a68a61;
   --gold2:#806846;
   --dark:#211c18;
-  --line:rgba(33,27,23,.15);
+  --line:rgba(33,27,23,.14);
 
   --serif:"Cormorant Garamond",Georgia,serif;
   --sans:"Manrope",Arial,sans-serif;
@@ -173,7 +169,7 @@ header{
 
 .hero{
   position:relative;
-  min-height:690px;
+  min-height:700px;
   display:flex;
   align-items:flex-end;
   overflow:hidden;
@@ -188,8 +184,8 @@ header{
   linear-gradient(
     90deg,
     rgba(24,20,17,.88),
-    rgba(24,20,17,.50) 50%,
-    rgba(24,20,17,.16)
+    rgba(24,20,17,.55) 50%,
+    rgba(24,20,17,.18)
   ),
   url("assets/images/ultimate%20planner.png")
   center/cover no-repeat;
@@ -199,7 +195,7 @@ header{
   position:relative;
   z-index:2;
   width:100%;
-  padding:105px 0 85px;
+  padding:110px 0 85px;
   color:#fff9f1;
 }
 
@@ -225,7 +221,7 @@ header{
 }
 
 .hero-description{
-  max-width:600px;
+  max-width:610px;
   margin-top:30px;
   font-size:15px;
   line-height:1.9;
@@ -340,7 +336,7 @@ header{
 
 
 /* =====================================================
-   REAL PREVIEW GALLERY
+   PREVIEW GALLERY
 ===================================================== */
 
 .preview-gallery{
@@ -495,7 +491,7 @@ header{
 }
 
 .honeymoon-image{
-  min-height:570px;
+  min-height:560px;
   padding:45px;
   display:flex;
   align-items:center;
@@ -577,7 +573,7 @@ header{
 }
 
 .bundle-heading p{
-  max-width:620px;
+  max-width:650px;
   margin:auto;
   font-size:13px;
   color:rgba(255,248,238,.65);
@@ -600,6 +596,10 @@ header{
 
 .bundle:hover{
   transform:translateY(-6px);
+}
+
+.bundle.best-seller{
+  border:2px solid var(--gold);
 }
 
 .bundle-image{
@@ -712,17 +712,12 @@ header{
   width:100%;
 }
 
-.best-seller{
-  border:2px solid #a68a61;
-}
-
 .badge{
   position:absolute;
   top:18px;
   left:18px;
   z-index:5;
   padding:8px 13px;
-  background:var(--ink);
   color:white;
   font-size:8px;
   font-weight:700;
@@ -730,12 +725,12 @@ header{
   text-transform:uppercase;
 }
 
-.badge.best{
-  background:#9a7657;
-}
-
 .badge.value{
   background:#806846;
+}
+
+.badge.best{
+  background:#9a7657;
 }
 
 
@@ -793,7 +788,7 @@ td:first-child{
 
 th{
   font-family:var(--serif);
-  font-size:20px;
+  font-size:19px;
   font-weight:500;
   background:#eee4d8;
 }
@@ -805,11 +800,6 @@ th{
 
 .no{
   color:#aaa098;
-}
-
-.table-saving{
-  color:var(--gold2);
-  font-weight:700;
 }
 
 
@@ -1039,7 +1029,7 @@ footer{
   }
 
   .preview-gallery img{
-    height:110px;
+    height:105px;
   }
 
   .product-info{
@@ -1093,9 +1083,11 @@ footer{
     </a>
 
     <nav class="nav-links">
+
       <a href="#products">Wedding</a>
       <a href="#honeymoon">Honeymoon</a>
       <a href="#bundles">Bundles</a>
+
     </nav>
 
   </div>
@@ -1212,6 +1204,7 @@ footer{
           <img
             src="assets/images/essential%20planner.jpg"
             alt="YOVIRA Essential Wedding Planner"
+            loading="lazy"
           >
 
         </div>
@@ -1220,17 +1213,20 @@ footer{
 
           <img
             src="assets/images/wedding%20checklist.png"
-            alt="Wedding checklist preview"
+            alt="YOVIRA Wedding Checklist preview"
+            loading="lazy"
           >
 
           <img
             src="assets/images/wedding%20inspiration.png"
-            alt="Wedding inspiration preview"
+            alt="YOVIRA Wedding Inspiration preview"
+            loading="lazy"
           >
 
           <img
             src="assets/images/planning%20tools.png"
-            alt="Wedding planning tools preview"
+            alt="YOVIRA Planning Tools preview"
+            loading="lazy"
           >
 
         </div>
@@ -1304,6 +1300,7 @@ footer{
           <img
             src="assets/images/ultimate%20planner.png"
             alt="YOVIRA Ultimate Wedding Command Center"
+            loading="lazy"
           >
 
         </div>
@@ -1312,17 +1309,20 @@ footer{
 
           <img
             src="assets/images/wedding%20checklist.png"
-            alt="Ultimate Wedding Planner checklist preview"
+            alt="YOVIRA Wedding Checklist preview"
+            loading="lazy"
           >
 
           <img
             src="assets/images/wedding%20inspiration.png"
-            alt="Ultimate Wedding Planner inspiration preview"
+            alt="YOVIRA Wedding Inspiration preview"
+            loading="lazy"
           >
 
           <img
             src="assets/images/monthly%20planner.png"
-            alt="Ultimate Wedding Planner monthly planning preview"
+            alt="YOVIRA Monthly Planner preview"
+            loading="lazy"
           >
 
         </div>
@@ -1431,8 +1431,9 @@ footer{
         <div class="honeymoon-image">
 
           <img
-            src="assets/images/1790519634656.png"
+            src="assets/images/honeymoon%20planner%20page1.jpg"
             alt="YOVIRA Honeymoon Planner"
+            loading="lazy"
           >
 
         </div>
@@ -1440,18 +1441,21 @@ footer{
         <div class="preview-gallery">
 
           <img
+            src="assets/images/honeymoon%20planner%20page1.jpg"
+            alt="Honeymoon Planner page one"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/honeymoon%20planner%20page2.png"
+            alt="Honeymoon Planner page two"
+            loading="lazy"
+          >
+
+          <img
             src="assets/images/monthly%20planner.png"
-            alt="Honeymoon planning preview"
-          >
-
-          <img
-            src="assets/images/planning%20tools.png"
-            alt="Honeymoon planning tools preview"
-          >
-
-          <img
-            src="assets/images/Screenshot_2026-09-27-19-55-06-47_e5d3893ac03954c6bb675ef2555b879b.jpg"
-            alt="Honeymoon planner preview"
+            alt="Planning calendar preview"
+            loading="lazy"
           >
 
         </div>
@@ -1501,7 +1505,7 @@ footer{
           <li>Budget planning</li>
           <li>Accommodation details</li>
           <li>Activities & itinerary</li>
-          <li>Memory planning</li>
+          <li>Fillable PDF</li>
 
         </ul>
 
@@ -1532,7 +1536,7 @@ footer{
     <div class="bundle-heading">
 
       <div class="eyebrow">
-        Best Value · Complete Planning
+        Complete Planning · Better Value
       </div>
 
       <h2>
@@ -1541,9 +1545,8 @@ footer{
       </h2>
 
       <p>
-        Combine your wedding and honeymoon planning into one
-        convenient digital collection and save significantly
-        compared with buying the planners separately.
+        Get your wedding and honeymoon planning systems together
+        for significantly less than purchasing them separately.
       </p>
 
     </div>
@@ -1567,6 +1570,7 @@ footer{
           <img
             src="assets/images/essential%2Bhoneymoon.png"
             alt="YOVIRA Essential Wedding Planner and Honeymoon Planner Bundle"
+            loading="lazy"
           >
 
         </div>
@@ -1575,17 +1579,20 @@ footer{
 
           <img
             src="assets/images/essential%20planner.jpg"
-            alt="Essential Wedding Planner bundle preview"
+            alt="Essential Wedding Planner"
+            loading="lazy"
           >
 
           <img
-            src="assets/images/1790519634656.png"
-            alt="Honeymoon Planner bundle preview"
+            src="assets/images/honeymoon%20planner%20page1.jpg"
+            alt="Honeymoon Planner"
+            loading="lazy"
           >
 
           <img
-            src="assets/images/wedding%20checklist.png"
-            alt="Wedding checklist bundle preview"
+            src="assets/images/honeymoon%20planner%20page2.png"
+            alt="Honeymoon Planner page"
+            loading="lazy"
           >
 
         </div>
@@ -1602,14 +1609,14 @@ footer{
           </h3>
 
           <p>
-            The essential wedding planning system combined with
-            the dedicated YOVIRA Honeymoon Planner.
+            The Essential Wedding Planner combined with the
+            dedicated YOVIRA Honeymoon Planner.
           </p>
 
           <div class="bundle-price">
 
             <span class="old">
-              $34.98
+              $29.99
             </span>
 
             <span class="current">
@@ -1621,11 +1628,11 @@ footer{
           <div class="bundle-saving">
 
             <span class="save-money">
-              Save $19.99
+              Save $15
             </span>
 
             <span class="save-percent">
-              57% OFF
+              50% OFF
             </span>
 
           </div>
@@ -1667,6 +1674,7 @@ footer{
           <img
             src="assets/images/ultimate%2Bhoneymoon.png"
             alt="YOVIRA Ultimate Wedding Command Center and Honeymoon Planner Bundle"
+            loading="lazy"
           >
 
         </div>
@@ -1675,17 +1683,20 @@ footer{
 
           <img
             src="assets/images/ultimate%20planner.png"
-            alt="Ultimate Wedding Command Center preview"
+            alt="Ultimate Wedding Command Center"
+            loading="lazy"
           >
 
           <img
-            src="assets/images/1790519634656.png"
-            alt="Honeymoon Planner preview"
+            src="assets/images/honeymoon%20planner%20page1.jpg"
+            alt="Honeymoon Planner"
+            loading="lazy"
           >
 
           <img
-            src="assets/images/wedding%20inspiration.png"
-            alt="Wedding inspiration preview"
+            src="assets/images/honeymoon%20planner%20page2.png"
+            alt="Honeymoon Planner page"
+            loading="lazy"
           >
 
         </div>
@@ -1710,7 +1721,7 @@ footer{
           <div class="bundle-price">
 
             <span class="old">
-              $44.98
+              $39.99
             </span>
 
             <span class="current">
@@ -1722,11 +1733,11 @@ footer{
           <div class="bundle-saving">
 
             <span class="save-money">
-              Save $24.99
+              Save $20
             </span>
 
             <span class="save-percent">
-              56% OFF
+              50% OFF
             </span>
 
           </div>
@@ -1779,7 +1790,8 @@ footer{
       </h2>
 
       <p>
-        More planning coverage. More value. One simple purchase.
+        From focused wedding organization to complete
+        wedding-to-honeymoon planning.
       </p>
 
     </div>
@@ -1865,37 +1877,12 @@ footer{
           </tr>
 
           <tr>
-            <td>Wedding + honeymoon bundle</td>
+            <td>Discounted bundle</td>
             <td class="no">—</td>
             <td class="no">—</td>
             <td class="no">—</td>
-            <td class="yes">✓</td>
-            <td class="yes">✓</td>
-          </tr>
-
-          <tr>
-            <td>Customer savings</td>
-
-            <td class="table-saving">
-              $10
-            </td>
-
-            <td class="table-saving">
-              $15
-            </td>
-
-            <td class="table-saving">
-              $7
-            </td>
-
-            <td class="table-saving">
-              $19.99
-            </td>
-
-            <td class="table-saving">
-              $24.99
-            </td>
-
+            <td class="yes">$15 saved</td>
+            <td class="yes">$20 saved</td>
           </tr>
 
         </tbody>
@@ -1948,6 +1935,7 @@ footer{
           </div>
 
           <div>
+
             <h3>
               Everything in one place.
             </h3>
@@ -1957,6 +1945,7 @@ footer{
               trackers organized instead of scattered across
               notes and apps.
             </p>
+
           </div>
 
           <div class="value-arrow">
@@ -1973,15 +1962,17 @@ footer{
           </div>
 
           <div>
+
             <h3>
               Built for real planning.
             </h3>
 
             <p>
               Checklists, trackers, budgets, inspiration and
-              planning pages are designed around the actual
-              decisions couples need to make.
+              planning pages help keep the major decisions
+              organized.
             </p>
+
           </div>
 
           <div class="value-arrow">
@@ -1998,6 +1989,7 @@ footer{
           </div>
 
           <div>
+
             <h3>
               Wedding to honeymoon.
             </h3>
@@ -2006,6 +1998,7 @@ footer{
               Continue the planning journey beyond the wedding
               day with dedicated honeymoon organization.
             </p>
+
           </div>
 
           <div class="value-arrow">
@@ -2022,6 +2015,7 @@ footer{
           </div>
 
           <div>
+
             <h3>
               Digital & convenient.
             </h3>
@@ -2031,6 +2025,7 @@ footer{
               products are designed for convenient access
               and use.
             </p>
+
           </div>
 
           <div class="value-arrow">
@@ -2073,7 +2068,7 @@ footer{
       complete wedding-to-honeymoon collection.
     </p>
 
-    <a href="#bundles" class="btn btn-light">
+    <a href="#products" class="btn btn-light">
       Explore YOVIRA
     </a>
 
@@ -2104,17 +2099,32 @@ footer{
 
     <div class="footer-links">
 
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="faq.html">FAQ</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund Policy</a>
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+      <a href="faq.html">
+        FAQ
+      </a>
+
+      <a href="privacy.html">
+        Privacy
+      </a>
+
+      <a href="refund.html">
+        Refund Policy
+      </a>
 
     </div>
 
   </div>
 
 </footer>
+
 
 </body>
 </html>
