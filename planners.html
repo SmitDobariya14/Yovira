@@ -72,7 +72,6 @@ a{
   color:var(--gold2);
 }
 
-
 /* =====================================================
    HEADER
 ===================================================== */
@@ -120,7 +119,6 @@ header{
   opacity:1;
 }
 
-
 /* =====================================================
    HERO
 ===================================================== */
@@ -145,7 +143,7 @@ header{
     rgba(24,20,17,.48) 50%,
     rgba(24,20,17,.15)
   ),
-  url("assets/images/ultimate planner.png")
+  url("assets/images/ultimate%20planner.png")
   center/cover no-repeat;
 }
 
@@ -248,7 +246,6 @@ header{
   color:rgba(255,255,255,.65);
 }
 
-
 /* =====================================================
    INTRO
 ===================================================== */
@@ -282,9 +279,8 @@ header{
   margin:32px auto;
 }
 
-
 /* =====================================================
-   PRODUCT SECTION
+   PRODUCTS
 ===================================================== */
 
 .products{
@@ -326,23 +322,18 @@ header{
   box-shadow:0 28px 50px rgba(35,25,18,.2);
 }
 
-
-/* =====================================================
-   PREVIEW GALLERY
-===================================================== */
-
 .preview-gallery{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
   padding:12px;
   background:#e5d9cc;
 }
 
 .preview-gallery img{
   width:100%;
-  height:220px;
-  object-fit:cover;
+  height:145px;
+  object-fit:contain;
   background:#fff;
   border:1px solid rgba(33,27,23,.08);
   transition:.25s;
@@ -352,10 +343,13 @@ header{
   transform:scale(1.025);
 }
 
+.ultimate-gallery{
+  grid-template-columns:repeat(4,1fr);
+}
 
-/* =====================================================
-   PRODUCT INFO
-===================================================== */
+.ultimate-gallery img{
+  height:145px;
+}
 
 .product-info{
   padding:38px 40px 42px;
@@ -442,7 +436,6 @@ header{
 .product-bottom .btn{
   width:100%;
 }
-
 
 /* =====================================================
    HONEYMOON
@@ -535,7 +528,6 @@ header{
 .honeymoon-info .btn{
   width:100%;
 }
-
 
 /* =====================================================
    BUNDLES
@@ -726,7 +718,6 @@ header{
   background:#806846;
 }
 
-
 /* =====================================================
    COMPARISON
 ===================================================== */
@@ -794,7 +785,6 @@ th{
 .no{
   color:#aaa098;
 }
-
 
 /* =====================================================
    VALUE
@@ -864,7 +854,6 @@ th{
   color:var(--gold2);
 }
 
-
 /* =====================================================
    CTA
 ===================================================== */
@@ -896,7 +885,6 @@ th{
 .cta .btn{
   margin-top:30px;
 }
-
 
 /* =====================================================
    FOOTER
@@ -933,7 +921,6 @@ footer{
 .footer-copy{
   font-size:9px;
 }
-
 
 /* =====================================================
    MOBILE
@@ -996,11 +983,6 @@ footer{
     margin-bottom:40px;
   }
 
-  .footer-inner{
-    flex-direction:column;
-    text-align:center;
-  }
-
 }
 
 @media(max-width:600px){
@@ -1022,14 +1004,16 @@ footer{
     padding:30px;
   }
 
-  .preview-gallery{
-    grid-template-columns:1fr;
+  .preview-gallery img{
+    height:110px;
   }
 
-  .preview-gallery img{
-    height:auto;
-    max-height:none;
-    object-fit:contain;
+  .ultimate-gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .ultimate-gallery img{
+    height:120px;
   }
 
   .product-info{
@@ -1057,6 +1041,11 @@ footer{
     padding:30px 25px 35px;
   }
 
+  .footer-inner{
+    flex-direction:column;
+    text-align:center;
+  }
+
   .footer-links{
     flex-wrap:wrap;
     justify-content:center;
@@ -1067,9 +1056,7 @@ footer{
 </style>
 </head>
 
-
 <body>
-
 
 <!-- =====================================================
      HEADER
@@ -1084,11 +1071,9 @@ footer{
     </a>
 
     <nav class="nav-links">
-
       <a href="#products">Wedding</a>
       <a href="#honeymoon">Honeymoon</a>
       <a href="#bundles">Bundles</a>
-
     </nav>
 
   </div>
@@ -1194,38 +1179,37 @@ footer{
     <div class="product-grid">
 
 
-      <!-- =================================================
-           ESSENTIAL WEDDING PLANNER
-      ================================================== -->
+      <!-- ESSENTIAL -->
 
       <article class="product">
 
         <div class="product-image">
 
           <img
-            src="assets/images/essential planner.jpg"
+            src="assets/images/essential%20planner.jpg"
             alt="YOVIRA Essential Wedding Planner"
           >
 
         </div>
 
-
-        <!-- Essential planner pages -->
-
         <div class="preview-gallery">
 
           <img
-            src="assets/images/wedding checklist.png"
+            src="assets/images/monthly%20planner.png"
+            alt="YOVIRA Monthly Planner"
+          >
+
+          <img
+            src="assets/images/wedding%20checklist.png"
             alt="YOVIRA Wedding Checklist"
           >
 
           <img
-            src="assets/images/wedding inspiration.png"
+            src="assets/images/wedding%20inspiration.png"
             alt="YOVIRA Wedding Inspiration"
           >
 
         </div>
-
 
         <div class="product-info">
 
@@ -1262,19 +1246,20 @@ footer{
             <li>Wedding planning essentials</li>
             <li>Wedding checklist</li>
             <li>Wedding inspiration</li>
-            <li>Budget organization</li>
+            <li>Monthly planning</li>
             <li>Guest organization</li>
             <li>Digital format</li>
 
           </ul>
 
           <div class="product-bottom">
-<a
-  href="https://yovira.lemonsqueezy.com/checkout/buy/1493facc-64a7-4ce3-b6f9-be68e3cecc90"
-  class="btn btn-dark"
->
-  Get Your Planner
-</a>
+
+            <a
+              href="LEMON_SQUEEZY_ESSENTIAL_CHECKOUT_URL"
+              class="btn btn-dark"
+            >
+              Get Your Planner
+            </a>
 
           </div>
 
@@ -1283,48 +1268,42 @@ footer{
       </article>
 
 
-      <!-- =================================================
-           ULTIMATE WEDDING PLANNER
-      ================================================== -->
+      <!-- ULTIMATE -->
 
       <article class="product">
 
         <div class="product-image">
 
           <img
-            src="assets/images/ultimate planner.png"
+            src="assets/images/ultimate%20planner.png"
             alt="YOVIRA Ultimate Wedding Command Center"
           >
 
         </div>
 
-
-        <!-- Ultimate planner pages -->
-
-        <div class="preview-gallery">
+        <div class="preview-gallery ultimate-gallery">
 
           <img
-            src="assets/images/wedding planning tool.png"
-            alt="YOVIRA Wedding Planning Tool"
+            src="assets/images/ultimate%20planner.png"
+            alt="Ultimate Wedding Planner"
           >
 
           <img
-            src="assets/images/monthly planner.png"
-            alt="YOVIRA Monthly Planner"
+            src="assets/images/planning%20tools.png"
+            alt="Ultimate Wedding Planning Tools"
           >
 
           <img
-            src="assets/images/menu plan.png"
-            alt="YOVIRA Wedding Menu Plan"
+            src="assets/images/menu%20plan.jpg"
+            alt="Ultimate Wedding Menu Plan"
           >
 
           <img
-            src="assets/images/service provider.png"
-            alt="YOVIRA Wedding Service Provider Planner"
+            src="assets/images/service%20provider.jpg"
+            alt="Ultimate Wedding Service Provider Planner"
           >
 
         </div>
-
 
         <div class="product-info">
 
@@ -1359,11 +1338,11 @@ footer{
           <ul class="features">
 
             <li>100-page planning system</li>
-            <li>Wedding planning tool</li>
-            <li>Monthly planning pages</li>
+            <li>Detailed planning tools</li>
+            <li>Budget & vendor planning</li>
+            <li>Guest & RSVP organization</li>
             <li>Menu planning</li>
             <li>Service provider planning</li>
-            <li>Guest & RSVP organization</li>
 
           </ul>
 
@@ -1424,31 +1403,23 @@ footer{
 
     <div class="honeymoon-card">
 
-
-      <!-- Honeymoon images -->
-
       <div>
 
-        <!-- PAGE 1 / MAIN MOCKUP -->
+        <!-- HONEYMOON PAGE 1 — MAIN MOCKUP -->
 
         <div class="honeymoon-image">
 
           <img
-            src="assets/images/1790519634656.png"
+            src="assets/images/honeymoon%20planner%20page1.jpg"
             alt="YOVIRA Honeymoon Planner Page 1"
           >
 
         </div>
 
 
-        <!-- PAGE 1 + PAGE 2 -->
+        <!-- HONEYMOON PAGE 2 ADDED BELOW PAGE 1 -->
 
-        <div class="preview-gallery">
-
-          <img
-            src="assets/images/1790519634656.png"
-            alt="YOVIRA Honeymoon Planner Page 1"
-          >
+        <div class="honeymoon-image honeymoon-page-two">
 
           <img
             src="assets/images/honeymoon%20planner%20page2.png"
@@ -1459,8 +1430,6 @@ footer{
 
       </div>
 
-
-      <!-- Honeymoon information -->
 
       <div class="honeymoon-info">
 
@@ -1546,7 +1515,7 @@ footer{
       <p>
         Combine your wedding and honeymoon planning into one
         convenient digital collection and save significantly
-        compared with buying the planners separately.
+        compared with the original individual prices.
       </p>
 
     </div>
@@ -1555,9 +1524,7 @@ footer{
     <div class="bundle-grid">
 
 
-      <!-- =================================================
-           ESSENTIAL + HONEYMOON
-      ================================================== -->
+      <!-- ESSENTIAL + HONEYMOON -->
 
       <article class="bundle">
 
@@ -1568,27 +1535,11 @@ footer{
         <div class="bundle-image">
 
           <img
-            src="assets/images/essential+honeymoon.png"
+            src="assets/images/essential%2Bhoneymoon.png"
             alt="YOVIRA Essential Wedding Planner and Honeymoon Planner Bundle"
           >
 
         </div>
-
-
-        <div class="preview-gallery">
-
-          <img
-            src="assets/images/wedding checklist.png"
-            alt="Essential Wedding Planner checklist"
-          >
-
-          <img
-            src="assets/images/honeymoon%20planner%20page2.png"
-            alt="Honeymoon Planner Page 2"
-          >
-
-        </div>
-
 
         <div class="bundle-info">
 
@@ -1632,7 +1583,6 @@ footer{
           <ul class="bundle-features">
 
             <li>Essential Wedding Planner</li>
-            <li>Wedding checklist & inspiration</li>
             <li>Honeymoon Planner</li>
             <li>Honeymoon planner is fillable</li>
             <li>Digital delivery</li>
@@ -1652,9 +1602,7 @@ footer{
       </article>
 
 
-      <!-- =================================================
-           ULTIMATE + HONEYMOON
-      ================================================== -->
+      <!-- ULTIMATE + HONEYMOON -->
 
       <article class="bundle best-seller">
 
@@ -1665,27 +1613,11 @@ footer{
         <div class="bundle-image">
 
           <img
-            src="assets/images/ultimate+honeymoon.png"
+            src="assets/images/ultimate%2Bhoneymoon.png"
             alt="YOVIRA Ultimate Wedding Command Center and Honeymoon Planner Bundle"
           >
 
         </div>
-
-
-        <div class="preview-gallery">
-
-          <img
-            src="assets/images/wedding planning tool.png"
-            alt="Ultimate Wedding Planning Tool"
-          >
-
-          <img
-            src="assets/images/honeymoon%20planner%20page2.png"
-            alt="Honeymoon Planner Page 2"
-          >
-
-        </div>
-
 
         <div class="bundle-info">
 
@@ -1730,11 +1662,11 @@ footer{
           <ul class="bundle-features">
 
             <li>Ultimate Wedding Command Center</li>
-            <li>Wedding planning tools</li>
-            <li>Menu & service provider planning</li>
             <li>Honeymoon Planner</li>
             <li>Honeymoon planner is fillable</li>
             <li>Complete wedding-to-honeymoon system</li>
+            <li>Digital delivery</li>
+            <li>One-time purchase</li>
 
           </ul>
 
@@ -1779,7 +1711,6 @@ footer{
       </p>
 
     </div>
-
 
     <div class="table-wrap">
 
@@ -1830,42 +1761,6 @@ footer{
             <td class="yes">✓</td>
             <td class="no">—</td>
             <td class="yes">✓</td>
-            <td class="yes">✓</td>
-          </tr>
-
-          <tr>
-            <td>Wedding checklist</td>
-            <td class="yes">✓</td>
-            <td class="yes">✓</td>
-            <td class="no">—</td>
-            <td class="yes">✓</td>
-            <td class="yes">✓</td>
-          </tr>
-
-          <tr>
-            <td>Wedding inspiration</td>
-            <td class="yes">✓</td>
-            <td class="yes">✓</td>
-            <td class="no">—</td>
-            <td class="yes">✓</td>
-            <td class="yes">✓</td>
-          </tr>
-
-          <tr>
-            <td>Wedding planning tool</td>
-            <td class="no">—</td>
-            <td class="yes">✓</td>
-            <td class="no">—</td>
-            <td class="no">—</td>
-            <td class="yes">✓</td>
-          </tr>
-
-          <tr>
-            <td>Menu & service provider planning</td>
-            <td class="no">—</td>
-            <td class="yes">✓</td>
-            <td class="no">—</td>
-            <td class="no">—</td>
             <td class="yes">✓</td>
           </tr>
 
@@ -2098,7 +1993,6 @@ footer{
   </div>
 
 </footer>
-
 
 </body>
 </html>
