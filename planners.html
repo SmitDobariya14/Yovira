@@ -314,7 +314,7 @@ header{
   box-shadow:0 28px 50px rgba(35,25,18,.2);
 }
 
-/* PRODUCT GALLERY */
+/* NORMAL GALLERIES */
 
 .preview-gallery{
   display:grid;
@@ -335,6 +335,16 @@ header{
 
 .preview-gallery img:hover{
   transform:scale(1.025);
+}
+
+/* ULTIMATE FOUR-IMAGE GALLERY */
+
+.ultimate-gallery{
+  grid-template-columns:repeat(4,1fr);
+}
+
+.ultimate-gallery img{
+  height:145px;
 }
 
 /* PRODUCT INFO */
@@ -770,7 +780,7 @@ th{
 
 /* ================= VALUE ================= */
 
-.value-section{
+.value{
   padding:120px 0;
   background:var(--cream2);
 }
@@ -961,6 +971,11 @@ footer{
     flex-direction:column;
     text-align:center;
   }
+
+  .ultimate-gallery{
+    grid-template-columns:repeat(4,1fr);
+  }
+
 }
 
 @media(max-width:600px){
@@ -983,6 +998,15 @@ footer{
   }
 
   .preview-gallery img{
+    height:95px;
+  }
+
+  /* Ultimate remains 2x2 on mobile */
+  .ultimate-gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .ultimate-gallery img{
     height:110px;
   }
 
@@ -1015,6 +1039,7 @@ footer{
     flex-wrap:wrap;
     justify-content:center;
   }
+
 }
 
 </style>
@@ -1025,6 +1050,7 @@ footer{
 <!-- ================= HEADER ================= -->
 
 <header>
+
   <div class="container nav">
 
     <a href="index.html" class="logo">
@@ -1032,12 +1058,15 @@ footer{
     </a>
 
     <nav class="nav-links">
+
       <a href="#products">Wedding</a>
       <a href="#honeymoon">Honeymoon</a>
       <a href="#bundles">Bundles</a>
+
     </nav>
 
   </div>
+
 </header>
 
 
@@ -1133,7 +1162,7 @@ footer{
     <div class="product-grid">
 
 
-      <!-- ESSENTIAL -->
+      <!-- ================= ESSENTIAL ================= -->
 
       <article class="product">
 
@@ -1146,15 +1175,11 @@ footer{
 
         </div>
 
-
-        <!-- ESSENTIAL PREVIEWS:
-             MONTHLY + CHECKLIST + INSPIRATION -->
-
         <div class="preview-gallery">
 
           <img
             src="assets/images/monthly%20planner.png"
-            alt="YOVIRA Monthly Planner"
+            alt="YOVIRA Monthly Wedding Planner"
           >
 
           <img
@@ -1164,11 +1189,10 @@ footer{
 
           <img
             src="assets/images/wedding%20inspiration.png"
-            alt="YOVIRA Wedding Inspiration"
+            alt="YOVIRA Wedding Inspiration Planner"
           >
 
         </div>
-
 
         <div class="product-info">
 
@@ -1203,11 +1227,11 @@ footer{
           <ul class="features">
 
             <li>Wedding planning essentials</li>
-            <li>Monthly planning pages</li>
+            <li>Monthly planning</li>
             <li>Wedding checklist</li>
             <li>Wedding inspiration</li>
             <li>Budget organization</li>
-            <li>Guest organization</li>
+            <li>Digital format</li>
 
           </ul>
 
@@ -1227,7 +1251,7 @@ footer{
       </article>
 
 
-      <!-- ULTIMATE -->
+      <!-- ================= ULTIMATE ================= -->
 
       <article class="product">
 
@@ -1241,13 +1265,28 @@ footer{
         </div>
 
 
-        <!-- ULTIMATE PLANNING TOOL -->
+        <!-- FOUR ULTIMATE PREVIEW IMAGES -->
 
-        <div class="preview-gallery">
+        <div class="preview-gallery ultimate-gallery">
+
+          <img
+            src="assets/images/ultimate%20planner.png"
+            alt="YOVIRA Ultimate Wedding Planner"
+          >
 
           <img
             src="assets/images/planning%20tools.png"
             alt="YOVIRA Wedding Planning Tools"
+          >
+
+          <img
+            src="assets/images/menu%20plan.jpg"
+            alt="YOVIRA Wedding Menu Plan"
+          >
+
+          <img
+            src="assets/images/service%20provider.jpg"
+            alt="YOVIRA Wedding Service Provider Planner"
           >
 
         </div>
@@ -1286,10 +1325,10 @@ footer{
           <ul class="features">
 
             <li>100-page planning system</li>
-            <li>Wedding planning tools</li>
-            <li>Detailed trackers</li>
+            <li>Detailed planning tools</li>
+            <li>Menu planning</li>
+            <li>Service provider planning</li>
             <li>Budget & vendor planning</li>
-            <li>Guest & RSVP organization</li>
             <li>Premium planning experience</li>
 
           </ul>
@@ -1349,35 +1388,27 @@ footer{
 
     <div class="honeymoon-card">
 
-
-      <!-- HONEYMOON IMAGES -->
-
       <div>
-
-        <!-- MAIN MOCKUP: PAGE 1 -->
 
         <div class="honeymoon-image">
 
           <img
             src="assets/images/honeymoon%20planner%20page1.jpg"
-            alt="YOVIRA Honeymoon Planner page 1 mockup"
+            alt="YOVIRA Honeymoon Planner"
           >
 
         </div>
-
-
-        <!-- PAGE 1 + PAGE 2 -->
 
         <div class="preview-gallery">
 
           <img
             src="assets/images/honeymoon%20planner%20page1.jpg"
-            alt="YOVIRA Honeymoon Planner page 1"
+            alt="YOVIRA Honeymoon Planner Page 1"
           >
 
           <img
-            src="assets/images/honeymoon%20planner%20page2.png"
-            alt="YOVIRA Honeymoon Planner page 2"
+            src="assets/images/honeymoon%20planner%20page2.jpg"
+            alt="YOVIRA Honeymoon Planner Page 2"
           >
 
         </div>
@@ -1467,7 +1498,7 @@ footer{
       <p>
         Combine your wedding and honeymoon planning into one
         convenient digital collection and save significantly
-        compared with buying the planners individually.
+        compared with the original individual prices.
       </p>
 
     </div>
@@ -1476,7 +1507,7 @@ footer{
     <div class="bundle-grid">
 
 
-      <!-- ESSENTIAL + HONEYMOON -->
+      <!-- ================= ESSENTIAL + HONEYMOON ================= -->
 
       <article class="bundle">
 
@@ -1493,7 +1524,6 @@ footer{
 
         </div>
 
-
         <div class="bundle-info">
 
           <div class="bundle-label">
@@ -1505,7 +1535,7 @@ footer{
           </h3>
 
           <p>
-            The Essential Wedding Planner combined with
+            The essential wedding planning system combined with
             the dedicated YOVIRA Honeymoon Planner.
           </p>
 
@@ -1537,8 +1567,7 @@ footer{
 
             <li>Essential Wedding Planner</li>
             <li>Honeymoon Planner</li>
-            <li>Honeymoon Planner is fillable</li>
-            <li>Wedding checklist & inspiration</li>
+            <li>Honeymoon planner is fillable</li>
             <li>Digital delivery</li>
             <li>One-time purchase</li>
 
@@ -1556,7 +1585,7 @@ footer{
       </article>
 
 
-      <!-- ULTIMATE + HONEYMOON -->
+      <!-- ================= ULTIMATE + HONEYMOON ================= -->
 
       <article class="bundle best-seller">
 
@@ -1572,7 +1601,6 @@ footer{
           >
 
         </div>
-
 
         <div class="bundle-info">
 
@@ -1618,10 +1646,10 @@ footer{
 
             <li>Ultimate Wedding Command Center</li>
             <li>Honeymoon Planner</li>
-            <li>Honeymoon Planner is fillable</li>
-            <li>Wedding planning tools</li>
+            <li>Honeymoon planner is fillable</li>
             <li>Complete wedding-to-honeymoon system</li>
             <li>Digital delivery</li>
+            <li>One-time purchase</li>
 
           </ul>
 
@@ -1737,25 +1765,7 @@ footer{
           </tr>
 
           <tr>
-            <td>Wedding checklist</td>
-            <td class="yes">✓</td>
-            <td class="yes">✓</td>
-            <td class="no">—</td>
-            <td class="yes">✓</td>
-            <td class="yes">✓</td>
-          </tr>
-
-          <tr>
-            <td>Wedding inspiration</td>
-            <td class="yes">✓</td>
-            <td class="yes">✓</td>
-            <td class="no">—</td>
-            <td class="yes">✓</td>
-            <td class="yes">✓</td>
-          </tr>
-
-          <tr>
-            <td>Wedding planning tools</td>
+            <td>Complete wedding system</td>
             <td class="no">—</td>
             <td class="yes">✓</td>
             <td class="no">—</td>
@@ -1785,7 +1795,7 @@ footer{
 
 <!-- ================= WHY YOVIRA ================= -->
 
-<section class="value-section">
+<section class="value">
 
   <div class="container">
 
