@@ -72,7 +72,9 @@ a{
   color:var(--gold2);
 }
 
-/* ================= HEADER ================= */
+/* =====================================================
+   HEADER
+===================================================== */
 
 header{
   position:sticky;
@@ -117,7 +119,9 @@ header{
   opacity:1;
 }
 
-/* ================= HERO ================= */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
   position:relative;
@@ -242,7 +246,9 @@ header{
   color:rgba(255,255,255,.65);
 }
 
-/* ================= INTRO ================= */
+/* =====================================================
+   INTRO
+===================================================== */
 
 .intro{
   padding:115px 0 85px;
@@ -273,7 +279,9 @@ header{
   margin:32px auto;
 }
 
-/* ================= PRODUCTS ================= */
+/* =====================================================
+   PRODUCTS
+===================================================== */
 
 .products{
   padding:15px 0 125px;
@@ -314,8 +322,6 @@ header{
   box-shadow:0 28px 50px rgba(35,25,18,.2);
 }
 
-/* NORMAL GALLERIES */
-
 .preview-gallery{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -337,8 +343,6 @@ header{
   transform:scale(1.025);
 }
 
-/* ULTIMATE FOUR-IMAGE GALLERY */
-
 .ultimate-gallery{
   grid-template-columns:repeat(4,1fr);
 }
@@ -346,8 +350,6 @@ header{
 .ultimate-gallery img{
   height:145px;
 }
-
-/* PRODUCT INFO */
 
 .product-info{
   padding:38px 40px 42px;
@@ -435,7 +437,9 @@ header{
   width:100%;
 }
 
-/* ================= HONEYMOON ================= */
+/* =====================================================
+   HONEYMOON
+===================================================== */
 
 .honeymoon-section{
   padding:120px 0;
@@ -525,7 +529,9 @@ header{
   width:100%;
 }
 
-/* ================= BUNDLES ================= */
+/* =====================================================
+   BUNDLES
+===================================================== */
 
 .bundles{
   padding:125px 0;
@@ -712,7 +718,9 @@ header{
   background:#806846;
 }
 
-/* ================= COMPARISON ================= */
+/* =====================================================
+   COMPARISON
+===================================================== */
 
 .compare{
   padding:120px 0;
@@ -778,7 +786,9 @@ th{
   color:#aaa098;
 }
 
-/* ================= VALUE ================= */
+/* =====================================================
+   VALUE
+===================================================== */
 
 .value{
   padding:120px 0;
@@ -844,7 +854,9 @@ th{
   color:var(--gold2);
 }
 
-/* ================= CTA ================= */
+/* =====================================================
+   CTA
+===================================================== */
 
 .cta{
   padding:125px 0;
@@ -874,7 +886,9 @@ th{
   margin-top:30px;
 }
 
-/* ================= FOOTER ================= */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
   background:#181411;
@@ -908,7 +922,9 @@ footer{
   font-size:9px;
 }
 
-/* ================= MOBILE ================= */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:900px){
 
@@ -967,15 +983,6 @@ footer{
     margin-bottom:40px;
   }
 
-  .footer-inner{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .ultimate-gallery{
-    grid-template-columns:repeat(4,1fr);
-  }
-
 }
 
 @media(max-width:600px){
@@ -998,16 +1005,15 @@ footer{
   }
 
   .preview-gallery img{
-    height:95px;
+    height:110px;
   }
 
-  /* Ultimate remains 2x2 on mobile */
   .ultimate-gallery{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr 1fr;
   }
 
   .ultimate-gallery img{
-    height:110px;
+    height:120px;
   }
 
   .product-info{
@@ -1035,6 +1041,11 @@ footer{
     padding:30px 25px 35px;
   }
 
+  .footer-inner{
+    flex-direction:column;
+    text-align:center;
+  }
+
   .footer-links{
     flex-wrap:wrap;
     justify-content:center;
@@ -1047,7 +1058,9 @@ footer{
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
@@ -1058,11 +1071,9 @@ footer{
     </a>
 
     <nav class="nav-links">
-
       <a href="#products">Wedding</a>
       <a href="#honeymoon">Honeymoon</a>
       <a href="#bundles">Bundles</a>
-
     </nav>
 
   </div>
@@ -1070,7 +1081,9 @@ footer{
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
@@ -1126,7 +1139,9 @@ footer{
 </section>
 
 
-<!-- ================= INTRO ================= -->
+<!-- =====================================================
+     INTRO
+===================================================== -->
 
 <section class="intro">
 
@@ -1153,7 +1168,9 @@ footer{
 </section>
 
 
-<!-- ================= WEDDING PRODUCTS ================= -->
+<!-- =====================================================
+     WEDDING PRODUCTS
+===================================================== -->
 
 <section class="products" id="products">
 
@@ -1162,7 +1179,7 @@ footer{
     <div class="product-grid">
 
 
-      <!-- ================= ESSENTIAL ================= -->
+      <!-- ESSENTIAL -->
 
       <article class="product">
 
@@ -1179,7 +1196,7 @@ footer{
 
           <img
             src="assets/images/monthly%20planner.png"
-            alt="YOVIRA Monthly Wedding Planner"
+            alt="YOVIRA Monthly Planner"
           >
 
           <img
@@ -1189,7 +1206,7 @@ footer{
 
           <img
             src="assets/images/wedding%20inspiration.png"
-            alt="YOVIRA Wedding Inspiration Planner"
+            alt="YOVIRA Wedding Inspiration"
           >
 
         </div>
@@ -1227,10 +1244,10 @@ footer{
           <ul class="features">
 
             <li>Wedding planning essentials</li>
-            <li>Monthly planning</li>
             <li>Wedding checklist</li>
             <li>Wedding inspiration</li>
-            <li>Budget organization</li>
+            <li>Monthly planning</li>
+            <li>Guest organization</li>
             <li>Digital format</li>
 
           </ul>
@@ -1251,7 +1268,7 @@ footer{
       </article>
 
 
-      <!-- ================= ULTIMATE ================= -->
+      <!-- ULTIMATE -->
 
       <article class="product">
 
@@ -1264,33 +1281,29 @@ footer{
 
         </div>
 
-
-        <!-- FOUR ULTIMATE PREVIEW IMAGES -->
-
         <div class="preview-gallery ultimate-gallery">
 
           <img
             src="assets/images/ultimate%20planner.png"
-            alt="YOVIRA Ultimate Wedding Planner"
+            alt="Ultimate Wedding Planner"
           >
 
           <img
             src="assets/images/planning%20tools.png"
-            alt="YOVIRA Wedding Planning Tools"
+            alt="Ultimate Wedding Planning Tools"
           >
 
           <img
             src="assets/images/menu%20plan.jpg"
-            alt="YOVIRA Wedding Menu Plan"
+            alt="Ultimate Wedding Menu Plan"
           >
 
           <img
             src="assets/images/service%20provider.jpg"
-            alt="YOVIRA Wedding Service Provider Planner"
+            alt="Ultimate Wedding Service Provider Planner"
           >
 
         </div>
-
 
         <div class="product-info">
 
@@ -1326,10 +1339,10 @@ footer{
 
             <li>100-page planning system</li>
             <li>Detailed planning tools</li>
+            <li>Budget & vendor planning</li>
+            <li>Guest & RSVP organization</li>
             <li>Menu planning</li>
             <li>Service provider planning</li>
-            <li>Budget & vendor planning</li>
-            <li>Premium planning experience</li>
 
           </ul>
 
@@ -1355,7 +1368,9 @@ footer{
 </section>
 
 
-<!-- ================= HONEYMOON ================= -->
+<!-- =====================================================
+     HONEYMOON
+===================================================== -->
 
 <section class="honeymoon-section" id="honeymoon">
 
@@ -1390,24 +1405,24 @@ footer{
 
       <div>
 
+        <!-- HONEYMOON PAGE 1 — MAIN MOCKUP -->
+
         <div class="honeymoon-image">
-
-          <img
-            src="assets/images/honeymoon%20planner%20page1.jpg"
-            alt="YOVIRA Honeymoon Planner"
-          >
-
-        </div>
-
-        <div class="preview-gallery">
 
           <img
             src="assets/images/honeymoon%20planner%20page1.jpg"
             alt="YOVIRA Honeymoon Planner Page 1"
           >
 
+        </div>
+
+
+        <!-- HONEYMOON PAGE 2 ADDED BELOW PAGE 1 -->
+
+        <div class="honeymoon-image honeymoon-page-two">
+
           <img
-            src="assets/images/honeymoon%20planner%20page2.jpg"
+            src="assets/images/honeymoon%20planner%20page2.png"
             alt="YOVIRA Honeymoon Planner Page 2"
           >
 
@@ -1478,7 +1493,9 @@ footer{
 </section>
 
 
-<!-- ================= BUNDLES ================= -->
+<!-- =====================================================
+     BUNDLES
+===================================================== -->
 
 <section class="bundles" id="bundles">
 
@@ -1507,7 +1524,7 @@ footer{
     <div class="bundle-grid">
 
 
-      <!-- ================= ESSENTIAL + HONEYMOON ================= -->
+      <!-- ESSENTIAL + HONEYMOON -->
 
       <article class="bundle">
 
@@ -1585,7 +1602,7 @@ footer{
       </article>
 
 
-      <!-- ================= ULTIMATE + HONEYMOON ================= -->
+      <!-- ULTIMATE + HONEYMOON -->
 
       <article class="bundle best-seller">
 
@@ -1671,7 +1688,9 @@ footer{
 </section>
 
 
-<!-- ================= COMPARISON ================= -->
+<!-- =====================================================
+     COMPARISON
+===================================================== -->
 
 <section class="compare">
 
@@ -1692,7 +1711,6 @@ footer{
       </p>
 
     </div>
-
 
     <div class="table-wrap">
 
@@ -1793,7 +1811,9 @@ footer{
 </section>
 
 
-<!-- ================= WHY YOVIRA ================= -->
+<!-- =====================================================
+     WHY YOVIRA
+===================================================== -->
 
 <section class="value">
 
@@ -1906,7 +1926,9 @@ footer{
 </section>
 
 
-<!-- ================= CTA ================= -->
+<!-- =====================================================
+     CTA
+===================================================== -->
 
 <section class="cta">
 
@@ -1938,7 +1960,9 @@ footer{
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
